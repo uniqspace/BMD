@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "artists": "Artists",
+    "about": "About",
+    "book" : "Book artist",
+    "booking": "booking",
+    "nav": "navigation"
+  },
+
+  "btns": {
+    "loadMore": "load more",
+    "submitBtn": "submit"
+  },
+
+  "home": {
+    "title": "Curatorial artist agency uniting the best musicians and DJs of Uzbekistan"
+  },
+
+  "about": {
+    "title": "About us",
+    "desc": "Агентство BMD Talent Agency  <b> – это тщательно отобранное агентство, объединяющее лучших музыкантов и диджеев Узбекистана. Мы оказываем полную поддержку: </b> от подбора артистов для конкретного формата площадки до организации выступлений и контроля качества. <b> Работая с нами, вы гарантированно получите профессионализм, </b> высококачественное представление и уникальную атмосферу.",
+    "slider": {
+      "title": "Why we re",
+      "slide1": {
+        "title": "Ручной отбор артистов,",
+        "text": "лучшие на рынке Узбекистана"
+      },
+      "slide2": {
+        "title": "Полная ответственность за качество, ",
+        "text": "тайминг и сценическую подачу"
+      },
+      "slide3": {
+        "title": "Артисты готовы работать под формат площадки, ",
+        "text": "а не для себя"
+      },
+      "slide4": {
+        "title": "Сопровождение мероприятий, ",
+        "text": "от продюсирования до подбора репертуара"
+      },
+      "slide5": {
+        "title": "Возможность привоза артистов ",
+        "text": "с международного уровня"
+      },
+      "slide6": {
+        "title": "Гарантия уникальной атмосферы ",
+        "text": "и эмоционального эффекта для гостей"
+      }
+    }
+  },
+
+
+
+  "categories": {
+    "viewAll": "View all",
+    "vocal": "Vocal Artist",
+    "live": "Live Project",
+    "dj": "DJ",
+    "visual": "Visual Production"
+  },
+
+  "singers": {
+    "emeli": {
+      "name": "Emeli",
+      "desc": "A live vocal performer known for emotional and powerful performances."
+    },
+
+    "ravshan": {
+      "name": "Ravshan Nematov",
+      "desc": "A DJ delivering energetic sets with modern electronic sound."
+    },
+
+    "mosaiq8e": {
+      "name": "Mosaiq8e",
+      "desc": "A visual artist creating immersive audiovisual experiences."
+    },
+
+    "madlen": {
+      "name": "Madlen",
+      "desc": "A live performer blending atmosphere and stage presence."
+    },
+
+    "hansley": {
+      "name": "Hansley",
+      "desc": "A vocal artist with a distinctive tone and expressive delivery."
+    },
+
+    "alexey": {
+      "name": "Alexey",
+      "desc": "A versatile live and vocal performer with strong stage energy."
+    },
+
+    "qaraqoom": {
+      "name": "Qaraqoom",
+      "desc": "A live act inspired by deep soundscapes and modern rhythms."
+    },
+
+    "mitch": {
+      "name": "Mitch",
+      "desc": "A vocal performer with a smooth and modern sound."
+    },
+
+    "kmrn": {
+      "name": "KMRN",
+      "desc": "A DJ focused on electronic music and club-oriented performances."
+    }
+  },
+
+  "footer": {
+    "aboutText": "BMD Talent Agency — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
+    "rights": "All Rights Reserved",
+    "privacyText": "Privacy Policy",
+    "termsText": "Terms and Conditions"
+  },
+
+  "contact": {
+    "adress": "Address",
+    "adressText": "C/ de Bailèn, 129, L’Eixample, 08037 Barcelona",
+    "contactUs": "Contact Us",
+    "contactName1": "marat bikineev",
+    "contactName2": "dima mitch"
+  },
+
+  "bookModal": {
+    "title": "Book artist",
+    "desc": "Please fill in the form below. Provide as much information as possible about your upcoming event.",
+    "nameInput": "Name",
+    "telNumInput": "Contact number",
+    "messageInput": "Your message",
+    "thankyouTitle": "Thank you!",
+    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly."
+  },
+
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "content": [
+      {
+        "title": "Last updated: January 3, 2025",
+        "text": [
+          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information.",
+          "When you make a purchase or otherwise utilize the Site, we may need to provide your information, including the information indicated above, to certain third-party service providers. The categories of third-party service providers we may share with include payment processors, email and SMS marketing providers, social networks, analytics providers, product manufacturers, shipping companies, parties used in the sending of postal mail or emails, accounting and record-keeping parties, security and fraud prevention providers, advertisers, and other web-based services. Your information is disclosed to such third-party service providers only as necessary to complete the transaction for which they have been engaged by us"
+        ]
+      },
+      { 
+        "title": "OPT-OUT POLICY",
+        "text": [
+          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information."
+        ]
+      },
+      { 
+        "title": "OTHER INFORMATION COLLECTED BY THE SITE",
+        "text": [
+          "The Site automatically collects information as you navigate through the Site. Information collected automatically may include Internet Protocol addresses, details relating to your use of the Site and information collected through cookies and other tracking technologies. This information collected is generally statistical data and does not identify you specifically. We will not re-identify such statistical or de-identified data. This information is used by us to improve the Site and to deliver better service to the Site's users."
+        ]
+      },
+      { 
+        "title": "QUESTIONS AND CONTACT INFORMATION",
+        "text": [
+          "If you would like to: access, correct, amend or delete any personal information we have about you, make changes to your account, register a complaint, or simply want more information, please contact our Privacy Compliance Officer at the following:",
+          "NUTRL Skin LLC <br>15260 Ventura Boulevard <br>Sherman Oaks CA 91403 <br>CS #: 702-425-5164 <br>support@nutrlskin.com"
+        ]
+      }
+    ]
+  }
+}
