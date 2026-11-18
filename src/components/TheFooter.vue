@@ -1,87 +1,90 @@
 <script setup lang="ts">
-import ContactUsInfo from './ContactUsInfo.vue';
-import Logo from './Logo.vue';
 import { useI18n } from 'vue-i18n'
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 import BookArtistModal from './BookArtistModal.vue';
-// import SocialIcons from './SocialIcons.vue';
+
+const INSTAGRAM = { href: 'https://www.instagram.com/sht.product', label: '@sht.product' }
+const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
+
 const isOpenBookModal = ref(false)
 const currentYear = new Date().getFullYear();
 
 const { t } = useI18n()
+
+const linkClass = 'text-[14px]/[100%] uppercase transition-opacity hover:opacity-60'
+const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.5px] text-[#6b6b6b]'
 </script>
 
 <template>
-    <footer class="pt-18.75 bg-[#181818] pb-17.5 md:pt-16.25 lg:pb-12 lg:pt-13.75">
+    <footer class="bg-[#f8f8f5] text-[#181818] border-t border-[#18181814] pt-15 pb-8 md:pt-18 md:pb-10">
         <div class="container">
-            <div class="flex-col border-b border-[#FFFFFF1A] pb-11 md:pb-15 lg:pb-13.75">
-                <div class="flex justify-between">
-                    <div class="flex flex-col">
-                        <div class="mb-6 flex flex-col gap-6.5 max-w-65.5  md:mb-8 lg:max-w-99.5 lg:mb-0">
-                            <Logo color="text-white" />
-                            <p class="text-sm/[120%] text-white opacity-30">{{ t("footer.aboutText") }}</p>
-                        </div>
-    
-                        <!-- <SocialIcons /> -->
+            <div class="flex flex-col gap-12 md:grid md:grid-cols-12 md:gap-5">
+                <p class="font-heading text-[24px]/[1.25] tracking-[-0.5px] md:col-span-12 md:text-[28px]/[1.25] lg:col-span-5 lg:text-[30px]/[1.25]">
+                    {{ t("footer.aboutText") }}
+                </p>
+
+                <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6">
+                    <div>
+                        <span :class="titleClass">{{ t("nav.nav") }}</span>
+                        <ul class="flex flex-col gap-3">
+                            <li><RouterLink to="/about" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
+                            <li><RouterLink to="/" :class="linkClass">{{ t("nav.artists") }}</RouterLink></li>
+                            <li><RouterLink to="/about#events" :class="linkClass">{{ t("nav.events") }}</RouterLink></li>
+                            <li><a :href="INSTAGRAM.href" target="_blank" rel="noopener" :class="linkClass">{{ t("nav.instagram") }}</a></li>
+                            <li><button type="button" @click="isOpenBookModal = true" :class="[linkClass, 'cursor-pointer']">{{ t("nav.book") }}</button></li>
+                        </ul>
                     </div>
-    
-                    <div class="hidden flex-col gap-16.25 md:flex">
-                        <div class="flex mr-13.5 uppercase flex-col gap-10 lg:mr-0 lg:gap-16.25 lg:flex-row">
-                            <div class="w-fit lg:w-51.25">
-                                <h6 class="text-sm/[100%] text-[#FFFFFF4D] mb-5">{{ t("nav.nav") }}</h6>
-        
-                                <ul class="flex flex-col gap-2.5">
-                                    <li class="text-white text-sm/[100%]">
-                                        <RouterLink to="/about">
-                                            {{ t("nav.about") }}
-                                        </RouterLink>
-                                    </li>
-                                    <li class="text-white text-sm/[100%]">
-                                        <RouterLink to="/">
-                                            {{ t("nav.artists") }}
-                                        </RouterLink>
-                                    </li>
-                                    <li class="text-white text-sm/[100%]">
-                                        <RouterLink to="/about#events">
-                                            {{ t("nav.events") }}
-                                        </RouterLink>
-                                    </li>
-                                    <li @click="isOpenBookModal = true" class="text-white text-sm/[100%] cursor-pointer">{{ t("nav.booking") }}</li>
-                                </ul>
-                            </div>
-        
-                            <div class="w-fit lg:w-86.5">
-                                <h6  class="text-sm/[100%] text-[#FFFFFF4D] mb-5">{{ t("contact.adress") }}</h6>
-        
-                                <p class="text-white text-sm/[150%] normal-case max-w-62.5" v-html="t('contact.adressText')"/>
-                                <a href="tel:+998992226632" class="block mt-5 text-white text-sm/[100%] transition-opacity hover:opacity-70">+998 99 222 66 32</a>
-                                <a href="https://www.instagram.com/sht.product" target="_blank" rel="noopener" class="block mt-2.5 text-white text-sm/[100%] normal-case transition-opacity hover:opacity-70">@sht.product</a>
-        
-                            </div>
+
+                    <div>
+                        <span :class="titleClass">{{ t("footer.contacts") }}</span>
+                        <div class="flex flex-col gap-3 text-[14px]/[100%]">
+                            <a :href="PHONE.href" class="transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
+                            <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ INSTAGRAM.label }}</a>
+                            <button type="button" @click="isOpenBookModal = true" class="text-left uppercase cursor-pointer transition-opacity hover:opacity-60">{{ t("nav.book") }} →</button>
                         </div>
-                        
-                        <!-- <ContactUsInfo class="flex-col hidden lg:flex" /> -->
+                    </div>
+
+                    <div class="col-span-2 md:col-span-1">
+                        <span :class="titleClass">{{ t("contact.adress") }}</span>
+                        <p class="text-[14px]/[1.5]" v-html="t('contact.adressText')" />
                     </div>
                 </div>
-
-                
-                <ContactUsInfo class="pt-13.5 mt-11 border-t border-[#FFFFFF0D] md:border-0 md:py-0 md:mt-13.25  lg:hidden" />
             </div>
 
-            <div class="mt-10 flex flex-col gap-5 md:mt-7.5 md:flex-row md:justify-between lg:justify-start lg:gap-14.5  lg:mt-10">
-                <p class="text-[#FFFFFF66] text-sm/[100%]">{{currentYear}}, The Show Time. {{t("footer.rights")}}.</p>
+            <RouterLink to="/" class="footer-wordmark block font-heading whitespace-nowrap mt-14 mb-7 md:mt-18 md:mb-9" aria-label="The Show Time">
+                The Show Time
+            </RouterLink>
 
-                <RouterLink to="/privacy-policy" class="text-[#FFFFFF66] text-sm/[100%] underline underline-offset-4 hover:no-underline">
+            <div class="flex flex-col gap-3 text-[13px]/[100%] text-[#6b6b6b] md:flex-row md:justify-between md:text-[14px]/[100%]">
+                <span>{{ currentYear }}, The Show Time. {{ t("footer.rights") }}.</span>
+                <RouterLink to="/privacy-policy" class="underline underline-offset-4 hover:no-underline">
                     {{ t("footer.privacyText") }}
                 </RouterLink>
-
-                <!-- <div class="flex gap-2.5 flex-col md:flex-row md:gap-6.25">
-                    <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/privacy-policy"> Privacy Policy </RouterLink>
-                    <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/Terms"> Terms and Conditions </RouterLink>
-                </div> -->
             </div>
         </div>
     </footer>
 
     <BookArtistModal v-model:open="isOpenBookModal" />
 </template>
+
+<style scoped>
+/*
+  The wordmark always spans the full content width.
+  Playfair Display "The Show Time" is ~6.29em wide with -0.0524em letter spacing,
+  so font-size = content width / 6.29 ≈ 0.159 × content width.
+  Content width = min(viewport, 1382px container) − side paddings.
+*/
+.footer-wordmark {
+    --content-width: calc(min(100vw, 1382px) - 120px);
+    font-size: calc(var(--content-width) * 0.159);
+    line-height: 0.85;
+    letter-spacing: -0.0524em;
+}
+
+@media (max-width: 767px) {
+    .footer-wordmark {
+        --content-width: calc(100vw - 70px);
+    }
+}
+</style>
