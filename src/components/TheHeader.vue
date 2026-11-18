@@ -14,6 +14,7 @@
     import { scrollToContacts } from '@/lib/scrollToContacts';
 
     const route = useRoute()
+    const isAboutPage = computed(() => route.path === '/about')
 
     const headerRef = ref<HTMLElement | null>(null)
 
@@ -49,7 +50,8 @@
 
 <template>
     <!-- Keeps page content below the fixed header (height of the header at the top of the page) -->
-    <div class="h-19 md:h-21 lg:h-23" aria-hidden="true"></div>
+    <!-- On the About page the area behind the header matches the page's cream background -->
+    <div :class="cn('h-19 md:h-21 lg:h-23', isAboutPage && 'bg-[#f8f8f5]')" aria-hidden="true"></div>
 
     <header
         ref="headerRef"
