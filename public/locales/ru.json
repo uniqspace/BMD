@@ -290,7 +290,7 @@
   "footer": {
     "aboutText": "The Show Time — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
     "rights": "Все права защищены",
-    "privacyText": "Privacy Policy ru",
+    "privacyText": "Политика конфиденциальности",
     "termsText": "Terms and Conditions ru"
   },
   "contact": {
@@ -312,35 +312,72 @@
     "errorDesc": "There was some issue. please try after sometime"
   },
   "PrivacyPolicy": {
-    "title": "Privacy Policy",
+    "title": "Политика конфиденциальности",
     "content": [
       {
-        "title": "Last updated: January 3, 2025",
+        "title": "1. Общие положения",
         "text": [
-          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information.",
-          "When you make a purchase or otherwise utilize the Site, we may need to provide your information, including the information indicated above, to certain third-party service providers. The categories of third-party service providers we may share with include payment processors, email and SMS marketing providers, social networks, analytics providers, product manufacturers, shipping companies, parties used in the sending of postal mail or emails, accounting and record-keeping parties, security and fraud prevention providers, advertisers, and other web-based services. Your information is disclosed to such third-party service providers only as necessary to complete the transaction for which they have been engaged by us"
+          "Настоящая политика описывает, какие персональные данные собирает сайт The Show Time (далее — «Агентство», «мы»), как мы их используем и защищаем.",
+          "Обработка персональных данных осуществляется в соответствии с Законом Республики Узбекистан «О персональных данных». Пользуясь сайтом и отправляя форму бронирования, вы соглашаетесь с условиями этой политики."
         ]
       },
       {
-        "title": "OPT-OUT POLICY",
+        "title": "2. Какие данные мы собираем",
         "text": [
-          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information."
+          "Данные, которые вы указываете в форме бронирования: имя, номер телефона и текст сообщения о мероприятии.",
+          "Технические данные, которые собираются автоматически: IP-адрес, тип браузера и устройства, просмотренные страницы, время и источник посещения. Эти данные обезличены и не позволяют определить вашу личность."
         ]
       },
       {
-        "title": "OTHER INFORMATION COLLECTED BY THE SITE",
+        "title": "3. Зачем мы используем данные",
         "text": [
-          "The Site automatically collects information as you navigate through the Site. Information collected automatically may include Internet Protocol addresses, details relating to your use of the Site and information collected through cookies and other tracking technologies. This information collected is generally statistical data and does not identify you specifically. We will not re-identify such statistical or de-identified data. This information is used by us to improve the Site and to deliver better service to the Site's users."
+          "Чтобы связаться с вами по заявке, обсудить мероприятие и подобрать артиста.",
+          "Чтобы анализировать посещаемость и улучшать работу сайта.",
+          "Мы не используем ваши данные для рассылок без вашего согласия и не продаём их третьим лицам."
         ]
       },
       {
-        "title": "QUESTIONS AND CONTACT INFORMATION",
+        "title": "4. Передача данных третьим лицам",
         "text": [
-          "If you would like to: access, correct, amend or delete any personal information we have about you, make changes to your account, register a complaint, or simply want more information, please contact our Privacy Compliance Officer at the following:",
-          "NUTRL Skin LLC <br>15260 Ventura Boulevard <br>Sherman Oaks CA 91403 <br>CS #: 702-425-5164 <br>support@nutrlskin.com"
+          "Заявки из формы бронирования передаются сотрудникам Агентства через мессенджер Telegram.",
+          "Для статистики посещений используется сервис Яндекс.Метрика (ООО «Яндекс»), который обрабатывает обезличенные технические данные по собственной политике конфиденциальности.",
+          "В остальных случаях данные могут быть переданы только по требованию, предусмотренному законодательством Республики Узбекистан."
+        ]
+      },
+      {
+        "title": "5. Файлы cookie и локальное хранилище",
+        "text": [
+          "Сайт использует файлы cookie и локальное хранилище браузера, чтобы запоминать выбранный язык и собирать статистику посещений через Яндекс.Метрику.",
+          "Вы можете отключить cookie в настройках браузера — при этом основные функции сайта останутся доступны."
+        ]
+      },
+      {
+        "title": "6. Хранение и защита данных",
+        "text": [
+          "Данные из заявок хранятся столько, сколько нужно для обработки заявки и организации мероприятия, после чего удаляются или обезличиваются.",
+          "Мы принимаем организационные и технические меры, чтобы защитить данные от несанкционированного доступа, изменения или удаления."
+        ]
+      },
+      {
+        "title": "7. Ваши права",
+        "text": [
+          "Вы можете запросить сведения о своих персональных данных, попросить исправить или удалить их, а также отозвать согласие на обработку. Для этого свяжитесь с нами любым удобным способом."
+        ]
+      },
+      {
+        "title": "8. Изменения политики",
+        "text": [
+          "Мы можем обновлять эту политику. Новая редакция вступает в силу с момента публикации на этой странице."
+        ]
+      },
+      {
+        "title": "9. Контакты",
+        "text": [
+          "The Show Time<br>Ташкент, ул. Тараса Шевченко, 24 (Community)<br>Телефон: <a href=\"tel:+998903350106\" class=\"underline\">+998 90 335 01 06</a>"
         ]
       }
-    ]
+    ],
+    "updated": "Редакция от 18 ноября 2026 г."
   },
   "artist": {
     "allArtists": "Все артисты",

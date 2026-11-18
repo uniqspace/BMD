@@ -69,6 +69,10 @@ const { t } = useI18n()
             <div class="mt-10 flex flex-col gap-5 md:mt-7.5 md:flex-row md:justify-between lg:justify-start lg:gap-14.5  lg:mt-10">
                 <p class="text-[#FFFFFF66] text-sm/[100%]">{{currentYear}}, The Show Time. {{t("footer.rights")}}.</p>
 
+                <RouterLink to="/privacy-policy" class="text-[#FFFFFF66] text-sm/[100%] underline underline-offset-4 transition-colors hover:text-white">
+                    {{ t("footer.privacyText") }}
+                </RouterLink>
+
                 <!-- <div class="flex gap-2.5 flex-col md:flex-row md:gap-6.25">
                     <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/privacy-policy"> Privacy Policy </RouterLink>
                     <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/Terms"> Terms and Conditions </RouterLink>

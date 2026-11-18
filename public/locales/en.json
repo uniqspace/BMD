@@ -315,32 +315,69 @@
     "title": "Privacy Policy",
     "content": [
       {
-        "title": "Last updated: January 3, 2025",
+        "title": "1. General",
         "text": [
-          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information.",
-          "When you make a purchase or otherwise utilize the Site, we may need to provide your information, including the information indicated above, to certain third-party service providers. The categories of third-party service providers we may share with include payment processors, email and SMS marketing providers, social networks, analytics providers, product manufacturers, shipping companies, parties used in the sending of postal mail or emails, accounting and record-keeping parties, security and fraud prevention providers, advertisers, and other web-based services. Your information is disclosed to such third-party service providers only as necessary to complete the transaction for which they have been engaged by us"
+          "This policy explains what personal data The Show Time website (the “Agency”, “we”) collects, how we use it and how we protect it.",
+          "Personal data is processed in accordance with the Law of the Republic of Uzbekistan “On Personal Data”. By using the website and submitting the booking form, you agree to this policy."
         ]
       },
       {
-        "title": "OPT-OUT POLICY",
+        "title": "2. Data we collect",
         "text": [
-          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information."
+          "Data you enter in the booking form: your name, phone number and a message about your event.",
+          "Technical data collected automatically: IP address, browser and device type, pages viewed, time and source of the visit. This data is anonymised and does not identify you."
         ]
       },
       {
-        "title": "OTHER INFORMATION COLLECTED BY THE SITE",
+        "title": "3. How we use the data",
         "text": [
-          "The Site automatically collects information as you navigate through the Site. Information collected automatically may include Internet Protocol addresses, details relating to your use of the Site and information collected through cookies and other tracking technologies. This information collected is generally statistical data and does not identify you specifically. We will not re-identify such statistical or de-identified data. This information is used by us to improve the Site and to deliver better service to the Site's users."
+          "To contact you about your request, discuss the event and select an artist.",
+          "To analyse traffic and improve the website.",
+          "We do not send you newsletters without your consent and we do not sell your data to third parties."
         ]
       },
       {
-        "title": "QUESTIONS AND CONTACT INFORMATION",
+        "title": "4. Sharing with third parties",
         "text": [
-          "If you would like to: access, correct, amend or delete any personal information we have about you, make changes to your account, register a complaint, or simply want more information, please contact our Privacy Compliance Officer at the following:",
-          "NUTRL Skin LLC <br>15260 Ventura Boulevard <br>Sherman Oaks CA 91403 <br>CS #: 702-425-5164 <br>support@nutrlskin.com"
+          "Booking requests are delivered to the Agency team via Telegram.",
+          "Visit statistics are collected with Yandex Metrica (Yandex LLC), which processes anonymised technical data under its own privacy policy.",
+          "Otherwise, data may only be disclosed when required by the laws of the Republic of Uzbekistan."
+        ]
+      },
+      {
+        "title": "5. Cookies and local storage",
+        "text": [
+          "The website uses cookies and browser local storage to remember your language and to collect visit statistics with Yandex Metrica.",
+          "You can disable cookies in your browser settings; the main features of the website will remain available."
+        ]
+      },
+      {
+        "title": "6. Storage and protection",
+        "text": [
+          "Data from booking requests is kept as long as needed to handle the request and organise the event, and is then deleted or anonymised.",
+          "We take organisational and technical measures to protect data from unauthorised access, alteration or deletion."
+        ]
+      },
+      {
+        "title": "7. Your rights",
+        "text": [
+          "You can ask what personal data we hold about you, request that it be corrected or deleted, or withdraw your consent to processing. To do so, contact us in any convenient way."
+        ]
+      },
+      {
+        "title": "8. Changes to this policy",
+        "text": [
+          "We may update this policy. A new version takes effect when it is published on this page."
+        ]
+      },
+      {
+        "title": "9. Contact",
+        "text": [
+          "The Show Time<br>Community, 24 Taras Shevchenko St, Tashkent<br>Phone: <a href=\"tel:+998903350106\" class=\"underline\">+998 90 335 01 06</a>"
         ]
       }
-    ]
+    ],
+    "updated": "Version of 18 November 2026"
   },
   "artist": {
     "allArtists": "All artists",
