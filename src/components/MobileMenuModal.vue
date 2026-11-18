@@ -60,7 +60,6 @@ function goToContacts() {
                 <RouterLink to="/" :class="rowClass" @click="close">{{ t('nav.about') }}<ArrowIcon /></RouterLink>
                 <RouterLink to="/artists" :class="rowClass" @click="close">{{ t('nav.artists') }}<ArrowIcon /></RouterLink>
                 <RouterLink to="/#events" :class="rowClass" @click="close">{{ t('nav.events') }}<ArrowIcon /></RouterLink>
-                <a :href="INSTAGRAM" target="_blank" rel="noopener" :class="rowClass">{{ t('nav.instagram') }}<ArrowIcon /></a>
                 <button type="button" :class="[rowClass, 'w-full cursor-pointer']" @click="goToContacts">{{ t('nav.feedback') }}<ArrowIcon /></button>
             </nav>
 
