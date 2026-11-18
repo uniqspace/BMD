@@ -49,7 +49,6 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                             <li><RouterLink to="/" :class="linkClass">{{ t("nav.artists") }}</RouterLink></li>
                             <li><RouterLink to="/about#events" :class="linkClass">{{ t("nav.events") }}</RouterLink></li>
                             <li><a :href="INSTAGRAM.href" target="_blank" rel="noopener" :class="linkClass">{{ t("nav.instagram") }}</a></li>
-                            <li><button type="button" @click="isOpenBookModal = true" :class="[linkClass, 'cursor-pointer']">{{ t("nav.book") }}</button></li>
                         </ul>
                     </div>
 
