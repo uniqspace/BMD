@@ -3,6 +3,8 @@ import { useI18n } from 'vue-i18n'
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import BookArtistModal from './BookArtistModal.vue';
+import ArrowIcon from './icons/ArrowUpRight.vue';
+import { scrollToContacts } from '@/lib/scrollToContacts';
 
 const INSTAGRAM = { href: 'https://www.instagram.com/sht.product', label: '@sht.product' }
 const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
@@ -12,8 +14,8 @@ const currentYear = new Date().getFullYear();
 
 const { t } = useI18n()
 
-const ARROW_ICON = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13L13 3M5 3h8v8" stroke="currentColor" stroke-width="1.2"/></svg>'
-const mobileRowClass = 'flex justify-between items-center py-4.5 border-b border-white/12 text-[15px]/[100%] uppercase'
+// Same rows as the mobile menu (MobileMenuModal.vue)
+const mobileRowClass = 'flex justify-between items-center py-5 border-b border-white/12 text-[17px]/[100%] uppercase'
 const linkClass = 'text-[14px]/[100%] uppercase transition-opacity hover:opacity-60'
 // Dark footer on mobile/tablet, light on desktop (lg+)
 const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.5px] text-white/50 lg:text-[#6b6b6b]'
@@ -40,10 +42,10 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
             <!-- Mobile: menu as full-width rows, round contact buttons, phone and address -->
             <div class="mt-11 md:hidden">
                 <nav :aria-label="t('nav.nav')" class="border-t border-white/12">
-                    <RouterLink to="/" :class="mobileRowClass">{{ t("nav.about") }}<span v-html="ARROW_ICON" /></RouterLink>
-                    <RouterLink to="/artists" :class="mobileRowClass">{{ t("nav.artists") }}<span v-html="ARROW_ICON" /></RouterLink>
-                    <RouterLink to="/#events" :class="mobileRowClass">{{ t("nav.events") }}<span v-html="ARROW_ICON" /></RouterLink>
-                    <a :href="INSTAGRAM.href" target="_blank" rel="noopener" :class="mobileRowClass">{{ t("nav.instagram") }}<span v-html="ARROW_ICON" /></a>
+                    <RouterLink to="/" :class="mobileRowClass">{{ t("nav.about") }}<ArrowIcon /></RouterLink>
+                    <RouterLink to="/artists" :class="mobileRowClass">{{ t("nav.artists") }}<ArrowIcon /></RouterLink>
+                    <RouterLink to="/#events" :class="mobileRowClass">{{ t("nav.events") }}<ArrowIcon /></RouterLink>
+                    <button type="button" :class="[mobileRowClass, 'w-full cursor-pointer']" @click="scrollToContacts">{{ t("nav.feedback") }}<ArrowIcon /></button>
                 </nav>
 
                 <div class="flex gap-3 mt-9">
