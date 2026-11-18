@@ -220,10 +220,6 @@
       ],
       "facts": [
         {
-          "label": "Откуда",
-          "value": "Узбекистан"
-        },
-        {
           "label": "Жанры",
           "value": "Indie dance · Deep house · Dark tech-house"
         },
@@ -391,6 +387,10 @@
     "bookShort": "Забронировать",
     "moreArtists": "Другие артисты",
     "category": "Категория",
-    "website": "Сайт"
+    "website": "Сайт",
+    "openPhoto": "Открыть фото {n}",
+    "close": "Закрыть",
+    "prevPhoto": "Предыдущее фото",
+    "nextPhoto": "Следующее фото"
   }
 }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NotFound from "@/components/NotFound.vue"
 import BookArtistModal from "@/components/BookArtistModal.vue"
+import GalleryLightbox from "@/components/GalleryLightbox.vue"
 import singers from "@/data/singers.json"
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -19,6 +20,7 @@ const currentSinger: Singer | undefined = allSingers[currentIndex]
 const key = currentSinger ? currentSinger.nameKey.split('.')[1] : ''
 
 const isBookOpen = ref(false)
+const lightboxIndex = ref<number | null>(null)
 
 const name = computed(() => (currentSinger ? t(currentSinger.nameKey) : ''))
 
@@ -248,14 +250,26 @@ const hasListenSection = computed(() => !!currentSinger && (currentSinger.stream
                 <span class="text-[12px] md:text-[13px] text-[#6b6b6b]">{{ t('artist.photos', { n: gallery.length }) }}</span>
             </div>
             <div class="grid grid-cols-2 gap-2.5 md:gap-4 lg:grid-cols-3 lg:gap-5">
-                <img
+                <button
                     v-for="(photo, index) in gallery"
                     :key="index"
-                    :src="photo.coverPhoto.src"
-                    :alt="photo.coverPhoto.alt"
-                    :class="['block w-full object-cover', photo.cls]"
-                    loading="lazy"
+                    type="button"
+                    @click="lightboxIndex = index"
+                    :aria-label="t('artist.openPhoto', { n: index + 1 })"
+                    :class="['group relative block w-full overflow-hidden cursor-zoom-in', photo.cls]"
                 >
+                    <img
+                        :src="photo.coverPhoto.src"
+                        :alt="photo.coverPhoto.alt"
+                        class="block w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                    >
+                    <span class="absolute inset-0 flex items-center justify-center bg-[#18181833] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">
+                        <span class="size-16 rounded-full bg-white flex items-center justify-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#181818" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg>
+                        </span>
+                    </span>
+                </button>
             </div>
         </div>
         </section>
@@ -300,6 +314,10 @@ const hasListenSection = computed(() => !!currentSinger && (currentSinger.stream
         </section>
 
         <BookArtistModal v-model:open="isBookOpen" />
+        <GalleryLightbox
+            :images="gallery.map(photo => photo.coverPhoto)"
+            v-model:index="lightboxIndex"
+        />
     </main>
 
     <NotFound v-else />

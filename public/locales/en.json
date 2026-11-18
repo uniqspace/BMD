@@ -220,10 +220,6 @@
       ],
       "facts": [
         {
-          "label": "Based in",
-          "value": "Uzbekistan"
-        },
-        {
           "label": "Genres",
           "value": "Indie dance · Deep house · Dark tech-house"
         },
@@ -391,6 +387,10 @@
     "bookShort": "Book",
     "moreArtists": "More artists",
     "category": "Category",
-    "website": "Website"
+    "website": "Website",
+    "openPhoto": "Open photo {n}",
+    "close": "Close",
+    "prevPhoto": "Previous photo",
+    "nextPhoto": "Next photo"
   }
 }
