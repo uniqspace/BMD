@@ -39,7 +39,7 @@ function goToContacts() {
 </script>
 
 <template>
-    <div v-if="open" class="w-full bg-white fixed top-[var(--header-height)] left-0 z-10 overflow-auto pb-12 h-[calc(100vh-var(--header-height))]">
+    <div v-if="open" class="w-full bg-white fixed inset-0 z-10 overflow-auto pt-[var(--header-height)] pb-12 h-dvh">
         <div class="container">
             <div class="pt-5">
                 <ul  class="flex flex-col gap-5 mb-35.75">

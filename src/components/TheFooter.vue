@@ -12,6 +12,8 @@ const currentYear = new Date().getFullYear();
 
 const { t } = useI18n()
 
+const ARROW_ICON = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13L13 3M5 3h8v8" stroke="currentColor" stroke-width="1.2"/></svg>'
+const mobileRowClass = 'flex justify-between items-center py-4.5 border-b border-white/12 text-[15px]/[100%] uppercase'
 const linkClass = 'text-[14px]/[100%] uppercase transition-opacity hover:opacity-60'
 // Dark footer on mobile/tablet, light on desktop (lg+)
 const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.5px] text-white/50 lg:text-[#6b6b6b]'
@@ -35,8 +37,32 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 </button>
             </div>
 
-            <!-- Info columns -->
-            <div class="flex flex-col gap-10 mt-12 pt-10 border-t border-white/12 lg:border-[#18181814] md:grid md:grid-cols-12 md:gap-5 md:mt-16">
+            <!-- Mobile: menu as full-width rows, round contact buttons, phone and address -->
+            <div class="mt-11 md:hidden">
+                <nav :aria-label="t('nav.nav')" class="border-t border-white/12">
+                    <RouterLink to="/" :class="mobileRowClass">{{ t("nav.about") }}<span v-html="ARROW_ICON" /></RouterLink>
+                    <RouterLink to="/artists" :class="mobileRowClass">{{ t("nav.artists") }}<span v-html="ARROW_ICON" /></RouterLink>
+                    <RouterLink to="/#events" :class="mobileRowClass">{{ t("nav.events") }}<span v-html="ARROW_ICON" /></RouterLink>
+                    <a :href="INSTAGRAM.href" target="_blank" rel="noopener" :class="mobileRowClass">{{ t("nav.instagram") }}<span v-html="ARROW_ICON" /></a>
+                </nav>
+
+                <div class="flex gap-3 mt-9">
+                    <a :href="PHONE.href" :aria-label="PHONE.label" class="size-14 rounded-full border border-white/25 flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>
+                    </a>
+                    <a :href="INSTAGRAM.href" target="_blank" rel="noopener" aria-label="Instagram" class="size-14 rounded-full border border-white/25 flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+                    </a>
+                </div>
+
+                <div class="flex flex-col gap-2.5 mt-6 text-[15px]/[1.45]">
+                    <a :href="PHONE.href">{{ PHONE.label }}</a>
+                    <p class="font-normal text-white/55" v-html="t('contact.adressText')" />
+                </div>
+            </div>
+
+            <!-- Info columns (tablet and desktop) -->
+            <div class="hidden flex-col gap-10 mt-12 pt-10 border-t border-white/12 lg:border-[#18181814] md:grid md:grid-cols-12 md:gap-5 md:mt-16">
                 <div class="flex flex-col gap-4 md:col-span-12 lg:col-span-5">
                     <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
                     <p class="font-normal text-[14px]/[1.45] text-white/65 lg:text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
@@ -68,7 +94,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 </div>
             </div>
 
-            <div class="font-normal flex flex-col gap-3 mt-12 text-[13px]/[100%] text-white/55 lg:text-[#6b6b6b] md:flex-row md:justify-between md:mt-14 md:text-[14px]/[100%]">
+            <div class="font-normal flex flex-col gap-2 mt-11 text-[13px]/[100%] md:gap-3 md:mt-12 text-white/55 lg:text-[#6b6b6b] md:flex-row md:justify-between md:mt-14 md:text-[14px]/[100%]">
                 <span>{{ currentYear }}, The Show Time. {{ t("footer.rights") }}.</span>
                 <RouterLink to="/privacy-policy" class="underline underline-offset-4 hover:no-underline">
                     {{ t("footer.privacyText") }}
