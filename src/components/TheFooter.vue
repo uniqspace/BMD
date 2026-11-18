@@ -32,13 +32,13 @@ const { t } = useI18n()
         
                                 <ul class="flex flex-col gap-2.5">
                                     <li class="text-white text-sm/[100%]">
-                                        <RouterLink to="/">
-                                            {{ t("nav.artists") }}
+                                        <RouterLink to="/about">
+                                            {{ t("nav.about") }}
                                         </RouterLink>
                                     </li>
                                     <li class="text-white text-sm/[100%]">
-                                        <RouterLink to="/about">
-                                            {{ t("nav.about") }}
+                                        <RouterLink to="/">
+                                            {{ t("nav.artists") }}
                                         </RouterLink>
                                     </li>
                                     <li class="text-white text-sm/[100%]">

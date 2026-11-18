@@ -38,8 +38,8 @@
     })
 
     const navItems = computed(() => [
-        { to: '/', label: t('nav.artists'), active: route.path === '/' || route.path.startsWith('/singers') },
         { to: '/about', label: t('nav.about'), active: route.path === '/about' && route.hash !== '#events' },
+        { to: '/', label: t('nav.artists'), active: route.path === '/' || route.path.startsWith('/singers') },
         { to: '/about#events', label: t('nav.events'), active: route.path === '/about' && route.hash === '#events' },
         { to: '#!', label: t('nav.instagram'), active: false },
     ])
