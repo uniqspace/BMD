@@ -7,7 +7,7 @@ import Spinner from './icons/Spinner.vue';
 import TIckIcon from './icons/TIckIcon.vue';
 
 const API_URL = "https://the-show-time.agency/api"
-const PHONE = { href: 'tel:+998903350106', label: '+998 90 335 01 06' }
+const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
 
 const { t } = useI18n()
 

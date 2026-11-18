@@ -46,7 +46,7 @@ watch(
                         <RouterLink to="/about#events">{{ t('nav.events') }}</RouterLink>
                     </li>
                     <li class="text-[22px]/[100%] uppercase">
-                        <RouterLink to="#!">{{ t('nav.instagram') }}</RouterLink>
+                        <a href="https://www.instagram.com/sht.product" target="_blank" rel="noopener">{{ t('nav.instagram') }}</a>
                     </li>
                     <li @click="emit('update:open', true)" class="text-[22px]/[100%] uppercase">
                         {{ t('nav.book') }}

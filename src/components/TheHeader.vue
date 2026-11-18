@@ -41,7 +41,7 @@
         { to: '/about', label: t('nav.about'), active: route.path === '/about' && route.hash !== '#events' },
         { to: '/', label: t('nav.artists'), active: route.path === '/' || route.path.startsWith('/singers') },
         { to: '/about#events', label: t('nav.events'), active: route.path === '/about' && route.hash === '#events' },
-        { to: '#!', label: t('nav.instagram'), active: false },
+        { to: 'https://www.instagram.com/sht.product', label: t('nav.instagram'), active: false, external: true },
     ])
 </script>
 
@@ -70,7 +70,20 @@
             <nav class="hidden lg:block" :aria-label="t('nav.nav')">
                 <ul :class="cn('flex items-center gap-11 transition-[gap] duration-300', isScrolled && 'gap-8.5')">
                     <li v-for="item in navItems" :key="item.to">
+                        <a
+                            v-if="item.external"
+                            :href="item.to"
+                            target="_blank"
+                            rel="noopener"
+                            :class="cn(
+                                'block uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
+                                isScrolled && 'text-[12px]/[100%]',
+                                item.active && !isScrolled && 'border-white',
+                                item.active && isScrolled && 'text-white/60',
+                            )"
+                        >{{ item.label }}</a>
                         <RouterLink
+                            v-else
                             :to="item.to"
                             :class="cn(
                                 'block uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',

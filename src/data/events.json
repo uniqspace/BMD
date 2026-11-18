@@ -1,13 +1,13 @@
 [
-  {"id": "event1", "date": "15.06.2026", "image": "/images/events/futsal-championship.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event2", "date": "15.06.2026", "image": "/images/events/hokei-ligasy.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event3", "date": "15.06.2026", "image": "/images/events/sco-show.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event4", "date": "15.06.2026", "image": "/images/events/sharq-taronalari.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event5", "date": "15.06.2026", "image": "/images/events/independence-day.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event6", "date": "15.06.2026", "image": "/images/events/luna-hilton.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event7", "date": "15.06.2026", "image": "/images/events/raqs-festival.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event8", "date": "15.06.2026", "image": "/images/events/afterparty-blackcoffee.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event9", "date": "15.06.2026", "image": "/images/events/main.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event10", "date": "15.06.2026", "image": "/images/events/main.jpg", "tags": ["free", "dogFriendly"]},
-  {"id": "event11", "date": "15.06.2026", "image": "/images/events/main.jpg", "tags": ["free", "dogFriendly"]}
+  {"id": "event1", "date": "15.06.2026", "image": "/images/events/futsal-championship.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event2", "date": "15.06.2026", "image": "/images/events/hokei-ligasy.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event3", "date": "15.06.2026", "image": "/images/events/sco-show.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event4", "date": "15.06.2026", "image": "/images/events/sharq-taronalari.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event5", "date": "15.06.2026", "image": "/images/events/independence-day.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event6", "date": "15.06.2026", "image": "/images/events/luna-hilton.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event7", "date": "15.06.2026", "image": "/images/events/raqs-festival.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event8", "date": "15.06.2026", "image": "/images/events/afterparty-blackcoffee.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event9", "date": "15.06.2026", "image": "/images/events/main.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event10", "date": "15.06.2026", "image": "/images/events/main.webp", "tags": ["free", "dogFriendly"]},
+  {"id": "event11", "date": "15.06.2026", "image": "/images/events/main.webp", "tags": ["free", "dogFriendly"]}
 ]

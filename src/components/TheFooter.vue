@@ -54,6 +54,8 @@ const { t } = useI18n()
                                 <h6  class="text-sm/[100%] text-[#FFFFFF4D] mb-5">{{ t("contact.adress") }}</h6>
         
                                 <p class="text-white text-sm max-w-54.25" v-html="t('contact.adressText')"/>
+                                <a href="tel:+998992226632" class="block mt-5 text-white text-sm/[100%] transition-opacity hover:opacity-70">+998 99 222 66 32</a>
+                                <a href="https://www.instagram.com/sht.product" target="_blank" rel="noopener" class="block mt-2.5 text-white text-sm/[100%] normal-case transition-opacity hover:opacity-70">@sht.product</a>
         
                             </div>
                         </div>
@@ -69,7 +71,7 @@ const { t } = useI18n()
             <div class="mt-10 flex flex-col gap-5 md:mt-7.5 md:flex-row md:justify-between lg:justify-start lg:gap-14.5  lg:mt-10">
                 <p class="text-[#FFFFFF66] text-sm/[100%]">{{currentYear}}, The Show Time. {{t("footer.rights")}}.</p>
 
-                <RouterLink to="/privacy-policy" class="text-[#FFFFFF66] text-sm/[100%] underline underline-offset-4 transition-colors hover:text-white">
+                <RouterLink to="/privacy-policy" class="text-[#FFFFFF66] text-sm/[100%] underline underline-offset-4 hover:no-underline">
                     {{ t("footer.privacyText") }}
                 </RouterLink>
 

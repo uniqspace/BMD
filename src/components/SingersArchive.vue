@@ -44,7 +44,7 @@ const filteredSingers = computed<Singer[]>(() => {
                 </div>
     
                 <RouterLink :to="'/singers/' + singer.id" class="w-full h-92.5 transition-all duration-300  hover:opacity-80 md:h-101.5 lg:h-124.25">
-                    <img class="w-full h-full object-cover" :src="singer.image" :style="{ objectPosition: singer.imagePosition }" :alt="t(singer.nameKey)">
+                    <img class="w-full h-full object-cover" :src="singer.image" :style="{ objectPosition: singer.imagePosition }" :alt="t(singer.nameKey)" :loading="index < 3 ? 'eager' : 'lazy'" decoding="async">
                 </RouterLink>
                 
                 <RouterLink :to="'/singers/' + singer.id" class="flex gap-3 items-center ">
