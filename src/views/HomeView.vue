@@ -18,7 +18,7 @@ onUnmounted(() => {
   <main>
     <div class="container">
       <div class="mt-5 mb-15 md:mb-17.5 lg:mb-25 lg:mt-15">
-        <h1 v-html="t('home.title')" class=" tracking-tighter text-[41px]/[100%] sm:text-[62px]/[100%] lg:text-[70px]/[100%]" />
+        <h1 v-html="t('home.title')" class="text-[46px]/[0.95] tracking-[-1.8px] sm:text-[76px]/[0.93] sm:tracking-[-3px] md:text-[96px]/[0.92] md:tracking-[-3.8px] lg:text-[112px]/[0.92] lg:tracking-[-4.5px] xl:text-[128px]/[0.92] xl:tracking-[-5px]" />
       </div>
 
       <SingersCategoryList />
