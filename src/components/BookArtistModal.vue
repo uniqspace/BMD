@@ -1,125 +1,253 @@
 <script setup lang="ts">
-import { ref, toRef, watch } from 'vue'
-import CloseIcon from './icons/CloseIcon.vue';
+import { nextTick, onMounted, onUnmounted, reactive, ref, toRef, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import BaseInput from './ui/BaseInput.vue';
 import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
 import { cn } from '@/lib/cn';
 import Spinner from './icons/Spinner.vue';
 import TIckIcon from './icons/TIckIcon.vue';
 
 const API_URL = "https://the-show-time.agency/api"
+const PHONE = { href: 'tel:+998903350106', label: '+998 90 335 01 06' }
+
 const { t } = useI18n()
-const error = ref<boolean>(false)
-const isLoading = ref<boolean>(false)
-const isSuccess = ref<boolean | null>(null)
-
-
-if (!API_URL) {
-  console.error('VITE_API_URL is not defined')
-}
 
 const props = defineProps<{
   open: boolean
 }>()
 
-async function onSubmit(e: Event) {
-    e.preventDefault();
+const emit = defineEmits<{
+  (e: 'update:open', value: boolean): void
+}>()
 
-    const form = e.target as HTMLFormElement
-    const formData = new FormData(form)
-    const name = formData.get('name')?.toString().trim()
-    const tel = formData.get('tel')?.toString().trim()
-    const message = formData.get('message')?.toString().trim()
-    
-    if(!name || !tel || !message) {
-        error.value = false
+const form = reactive({ name: '', tel: '', message: '' })
+const errors = reactive({ name: false, tel: false, message: false })
+const shake = ref(false)
+const isLoading = ref(false)
+const isSuccess = ref<boolean | null>(null)
+const nameInput = ref<HTMLInputElement | null>(null)
+
+type Field = keyof typeof form
+
+function onInput(field: Field) {
+    errors[field] = false
+}
+
+function close() {
+    emit('update:open', false)
+}
+
+async function onSubmit(e: Event) {
+    e.preventDefault()
+
+    const name = form.name.trim()
+    const tel = form.tel.trim()
+    const message = form.message.trim()
+
+    errors.name = !name
+    errors.tel = !tel
+    errors.message = !message
+
+    if (errors.name || errors.tel || errors.message) {
+        // Restart the shake animation on every failed submit
+        shake.value = false
         requestAnimationFrame(() => {
-            error.value = true 
+            shake.value = true
         })
         return
     }
 
-    try{
+    try {
         isLoading.value = true
         const res = await fetch(`${API_URL}/send-to-telegram`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                name,
-                tel,
-                message,
-            }),
+            body: JSON.stringify({ name, tel, message }),
         })
         isSuccess.value = res.ok
-    } catch (err) {
+    } catch {
         isSuccess.value = false
     } finally {
         isLoading.value = false
     }
-
 }
 
-const emit = defineEmits<{
-  (e: 'update:open', value: boolean): void
-}>()
+function reset() {
+    form.name = ''
+    form.tel = ''
+    form.message = ''
+    errors.name = errors.tel = errors.message = false
+    shake.value = false
+    isLoading.value = false
+    isSuccess.value = null
+}
 
 useBodyScrollLock(toRef(props, 'open'))
 
 watch(
   () => props.open,
-  (open) => {
+  async (open) => {
     if (open) {
-      error.value = false
-      isLoading.value = false
-      isSuccess.value = null
+      // Keep what the visitor typed if they close and reopen without sending
+      if (isSuccess.value !== null) reset()
+      shake.value = false
+      await nextTick()
+      nameInput.value?.focus({ preventScroll: true })
     }
   }
 )
+
+function onKeydown(e: KeyboardEvent) {
+    if (props.open && e.key === 'Escape') close()
+}
+
+onMounted(() => window.addEventListener('keydown', onKeydown))
+onUnmounted(() => window.removeEventListener('keydown', onKeydown))
+
+const fieldClass = 'w-full bg-[#F3F3F3] border-0 outline-none text-[#181818] placeholder:text-[#8f8f8f] font-normal text-[14px]/[130%] md:text-[15px]/[130%] px-5 py-4.5 md:px-5.5 md:py-5 transition-shadow duration-200'
+const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
 </script>
 
 <template>
     <Teleport to="body">
-        <div 
-            v-if="open" 
-            @click.self="emit('update:open', false)"
-            class="bg-[#3d3d3db0] fixed flex top-0 left-0 w-full h-full px-11.25 z-10 overflow-auto"
-        >
-            <div class="m-auto py-13 px-6.25 bg-white w-full relative min-h-141.25 md:w-125 md:p-13 lg:min-h-147.5">
-                <button @click="emit('update:open', false)" class="absolute cursor-pointer p-1.5 bg-[#181818] w-fit translate-x-1/2 -translate-y-1/2 top-0 right-1/2 md:translate-0 md:p-0 md:bg-transparent md:top-6.75 md:right-6.75"><CloseIcon class="[&_path]:fill-white md:[&_path]:fill-[#C8CDCF]"/></button>
-            
-                <div class="flex flex-col">
-                    <h2 class="text-[32px]/[100%] mb-5 text-center md:text-[40px]/[100%]">{{t("bookModal.title")}}</h2>
-                    <p class="text-sm/[130%] mb-7.5 text-center tracking-tighter">{{t("bookModal.desc")}}</p>
-    
-                    <form v-if="isSuccess == null" @submit="onSubmit" class="flex flex-col gap-2.5">
-                        <BaseInput type="text" name="name" id="name" :placeholder="t('bookModal.nameInput')" />
-                        <BaseInput type="tel" name="tel" id="tel" :placeholder="t('bookModal.telNumInput')" />
-                        <BaseInput class="h-31.75 md:h-36.5" input-type="textarea" name="message" id="message" :placeholder="t('bookModal.messageInput')"></BaseInput>
-                        <button 
-                            :class="cn('px-13.75 py-5.5 min-w-48.75 flex justify-center items-center bg-[#181818] text-sm/[100%] text-white uppercase mt-2.5 opacity-100! w-full md:w-fit md:mx-auto', error && 'form-error' )" 
-                            type="submit"
-                            :disabled="isLoading"
+        <Transition name="drawer" :duration="{ enter: 450, leave: 300 }">
+            <div v-if="open" class="fixed inset-0 z-30">
+                <div class="drawer-backdrop absolute inset-0 bg-[#18181880]" @click="close" aria-hidden="true"></div>
+
+                <div
+                    role="dialog"
+                    aria-modal="true"
+                    :aria-label="t('bookModal.title')"
+                    class="drawer-panel absolute top-0 right-0 h-full w-full bg-white flex flex-col overflow-y-auto px-6 pt-5 pb-6 md:w-140 md:px-14 md:pt-10 md:pb-10"
+                >
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-[18px]/[100%]">The Show Time</span>
+                        <button
+                            type="button"
+                            @click="close"
+                            class="h-11 flex items-center gap-3 text-[13px] uppercase cursor-pointer transition-opacity hover:opacity-60"
                         >
-                            <Spinner v-if="isLoading" />
-                            <span v-else>
-                                {{ t("btns.submitBtn") }}
-                            </span>
+                            {{ t('bookModal.close') }}
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.6"/></svg>
                         </button>
-                    </form>
-                    <div v-else class="flex flex-col justify-center items-center mt-15 lg:mt-22.5">
-                        <TIckIcon v-if="isSuccess" />
-                        <h5 class="text-center text-[24px]/[130%] mb-3.5 mt-6.75">
-                            <span v-if="isSuccess" >{{t("bookModal.thankyouTitle")}}</span>
-                            <span v-else >{{t("bookModal.errorTitle")}}</span>
-                        </h5>
-                        <p class="text-center text-[14px]/[130%] text-[#18181866] max-w-50 mx-auto">
-                            <span v-if="isSuccess" >{{t("bookModal.thankyouDesc")}}</span>
-                            <span v-else >{{t("bookModal.errorDesc")}}</span>
-                        </p>
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-center py-10 md:py-12">
+                        <form v-if="isSuccess === null" @submit="onSubmit" novalidate class="flex flex-col gap-8 md:gap-9">
+                            <div class="flex flex-col gap-4 md:gap-4.5">
+                                <h2 class="text-[40px]/[0.95] tracking-[-1.5px] md:text-[56px]/[0.95] md:tracking-[-2.5px]">{{ t('bookModal.title') }}</h2>
+                                <p class="text-[14px]/[1.45] md:text-[15px]/[1.45] font-normal text-[#181818a6] max-w-100">{{ t('bookModal.desc') }}</p>
+                            </div>
+
+                            <div class="flex flex-col gap-3">
+                                <label class="flex flex-col">
+                                    <span class="sr-only">{{ t('bookModal.nameInput') }}</span>
+                                    <input
+                                        ref="nameInput"
+                                        v-model="form.name"
+                                        @input="onInput('name')"
+                                        type="text"
+                                        name="name"
+                                        autocomplete="name"
+                                        :placeholder="t('bookModal.nameInput')"
+                                        :aria-invalid="errors.name"
+                                        :class="cn(fieldClass, errors.name && errorClass)"
+                                    >
+                                </label>
+                                <label class="flex flex-col">
+                                    <span class="sr-only">{{ t('bookModal.telNumInput') }}</span>
+                                    <input
+                                        v-model="form.tel"
+                                        @input="onInput('tel')"
+                                        type="tel"
+                                        name="tel"
+                                        autocomplete="tel"
+                                        :placeholder="t('bookModal.telNumInput')"
+                                        :aria-invalid="errors.tel"
+                                        :class="cn(fieldClass, errors.tel && errorClass)"
+                                    >
+                                </label>
+                                <label class="flex flex-col">
+                                    <span class="sr-only">{{ t('bookModal.messageInput') }}</span>
+                                    <textarea
+                                        v-model="form.message"
+                                        @input="onInput('message')"
+                                        name="message"
+                                        :placeholder="t('bookModal.messageInput')"
+                                        :aria-invalid="errors.message"
+                                        :class="cn(fieldClass, 'h-32 md:h-35 resize-none', errors.message && errorClass)"
+                                    ></textarea>
+                                </label>
+                            </div>
+
+                            <button
+                                type="submit"
+                                :disabled="isLoading"
+                                :class="cn(
+                                    'relative w-full h-16 flex justify-center items-center bg-[#181818] text-white text-[14px]/[100%] font-semibold uppercase cursor-pointer transition-colors hover:bg-[#333333] disabled:cursor-wait',
+                                    shake && 'form-error',
+                                )"
+                                @animationend="shake = false"
+                            >
+                                <Spinner v-if="isLoading" />
+                                <span v-else>{{ t('btns.submitBtn') }}</span>
+                            </button>
+                        </form>
+
+                        <div v-else class="flex flex-col items-start gap-5">
+                            <TIckIcon v-if="isSuccess" />
+                            <h2 class="text-[40px]/[1] tracking-[-1.5px] md:text-[48px]/[1] md:tracking-[-2px]">
+                                {{ isSuccess ? t('bookModal.thankyouTitle') : t('bookModal.errorTitle') }}
+                            </h2>
+                            <p class="text-[15px]/[1.45] font-normal text-[#181818a6] max-w-90">
+                                {{ isSuccess ? t('bookModal.thankyouDesc') : t('bookModal.errorDesc') }}
+                            </p>
+                            <button
+                                v-if="!isSuccess"
+                                type="button"
+                                @click="isSuccess = null"
+                                class="mt-2 bg-[#181818] text-white px-10 py-5 text-[14px] font-semibold uppercase cursor-pointer"
+                            >{{ t('bookModal.tryAgain') }}</button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center gap-4 border-t border-[#18181814] pt-5.5 text-[13px] md:text-[14px]">
+                        <span class="text-[#6b6b6b]">{{ t('bookModal.orCall') }}</span>
+                        <a :href="PHONE.href" class="text-[#181818] transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </Transition>
     </Teleport>
 </template>
+
+<style scoped>
+.drawer-enter-active .drawer-backdrop,
+.drawer-leave-active .drawer-backdrop {
+    transition: opacity 0.3s ease;
+}
+
+.drawer-enter-active .drawer-panel {
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.drawer-leave-active .drawer-panel {
+    transition: transform 0.3s ease-in;
+}
+
+.drawer-enter-from .drawer-backdrop,
+.drawer-leave-to .drawer-backdrop {
+    opacity: 0;
+}
+
+.drawer-enter-from .drawer-panel,
+.drawer-leave-to .drawer-panel {
+    transform: translateX(100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .drawer-enter-active .drawer-panel,
+    .drawer-leave-active .drawer-panel {
+        transition: none;
+    }
+}
+</style>

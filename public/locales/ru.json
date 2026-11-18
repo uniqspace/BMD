@@ -296,15 +296,18 @@
     "contactName2": "Дима Митч"
   },
   "bookModal": {
-    "title": "Book artist",
-    "description": "Please fill in the form below. Provide as much information as possible about your upcoming event.",
-    "nameInput": "Name",
-    "telNumInput": "Contact number",
-    "messageInput": "Your message",
-    "thankyouTitle": "Thank you!",
-    "errorTitle": "Sorry",
-    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly.",
-    "errorDesc": "There was some issue. please try after sometime"
+    "title": "Забронировать артиста",
+    "desc": "Заполните форму — расскажите как можно больше о вашем мероприятии: дата, площадка, формат.",
+    "nameInput": "Имя",
+    "telNumInput": "Контактный номер",
+    "messageInput": "Коротко о мероприятии",
+    "thankyouTitle": "Спасибо!",
+    "errorTitle": "Не удалось отправить",
+    "thankyouDesc": "Заявка отправлена. Мы скоро свяжемся с вами.",
+    "errorDesc": "Попробуйте ещё раз чуть позже или позвоните нам.",
+    "close": "Закрыть",
+    "orCall": "Или позвоните",
+    "tryAgain": "Попробовать снова"
   },
   "PrivacyPolicy": {
     "title": "Политика конфиденциальности",

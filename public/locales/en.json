@@ -296,15 +296,18 @@
     "contactName2": "dima mitch"
   },
   "bookModal": {
-    "title": "Booking",
-    "desc": "Please fill in the form below. Provide as much information as possible about your upcoming event.",
+    "title": "Book an artist",
+    "desc": "Fill in the form — tell us as much as you can about your event: date, venue, format.",
     "nameInput": "Name",
     "telNumInput": "Contact number",
-    "messageInput": "Your message",
+    "messageInput": "A few words about your event",
     "thankyouTitle": "Thank you!",
-    "errorTitle": "Sorry",
-    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly.",
-    "errorDesc": "There was some issue. please try after sometime"
+    "errorTitle": "Couldn’t send your request",
+    "thankyouDesc": "Your request has been sent. We’ll be in touch shortly.",
+    "errorDesc": "Please try again a bit later or give us a call.",
+    "close": "Close",
+    "orCall": "Or call us",
+    "tryAgain": "Try again"
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",
