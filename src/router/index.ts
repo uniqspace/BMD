@@ -36,11 +36,6 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue'),
     },
     {
-      // Old address of the About page — keep links working
-      path: '/about',
-      redirect: (to) => ({ path: '/', hash: to.hash }),
-    },
-    {
       path: '/privacy-policy',
       name: 'privacy policy',
       component: () => import('../views/PrivacyPolicyView.vue'),
