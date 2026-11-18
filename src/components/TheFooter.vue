@@ -53,7 +53,7 @@ const { t } = useI18n()
                             <div class="w-fit lg:w-86.5">
                                 <h6  class="text-sm/[100%] text-[#FFFFFF4D] mb-5">{{ t("contact.adress") }}</h6>
         
-                                <p class="text-white text-sm max-w-54.25" v-html="t('contact.adressText')"/>
+                                <p class="text-white text-sm/[150%] normal-case max-w-62.5" v-html="t('contact.adressText')"/>
                                 <a href="tel:+998992226632" class="block mt-5 text-white text-sm/[100%] transition-opacity hover:opacity-70">+998 99 222 66 32</a>
                                 <a href="https://www.instagram.com/sht.product" target="_blank" rel="noopener" class="block mt-2.5 text-white text-sm/[100%] normal-case transition-opacity hover:opacity-70">@sht.product</a>
         

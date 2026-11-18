@@ -290,7 +290,7 @@
   },
   "contact": {
     "adress": "Address",
-    "adressText": "COMMUNITY <br>TARAS SHEVCHENKO, 24 <br>Tashkent, uzbekistan",
+    "adressText": "24 Taras Shevchenko St<br>Tashkent 100000, Uzbekistan",
     "contactUs": "Contact Us",
     "contactName1": "marat bikineev",
     "contactName2": "dima mitch"
@@ -371,7 +371,7 @@
       {
         "title": "9. Contact",
         "text": [
-          "The Show Time<br>Community, 24 Taras Shevchenko St, Tashkent<br>Phone: <a href=\"tel:+998992226632\" class=\"underline\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"underline\" target=\"_blank\" rel=\"noopener\">@sht.product</a>"
+          "The Show Time<br>24 Taras Shevchenko St<br>Tashkent 100000, Uzbekistan<br>Phone: <a href=\"tel:+998992226632\" class=\"underline\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"underline\" target=\"_blank\" rel=\"noopener\">@sht.product</a>"
         ]
       }
     ],
