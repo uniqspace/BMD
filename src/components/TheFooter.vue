@@ -22,7 +22,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
             <!-- Booking call -->
             <div class="flex flex-col gap-7 md:flex-row md:items-end md:justify-between md:gap-10">
                 <h2
-                    class="font-heading font-normal max-w-225 text-[32px]/[1.08] tracking-[-1px] md:text-[42px]/[1.05] md:tracking-[-1.6px] lg:text-[52px]/[1.02] lg:tracking-[-2.2px] [&_span]:text-[#18181873]"
+                    class="font-heading font-normal max-w-225 text-[28px]/[1.12] tracking-[-0.8px] md:text-[34px]/[1.1] md:tracking-[-1.2px] lg:text-[40px]/[1.08] lg:tracking-[-1.5px] [&_span]:text-[#18181873]"
                     v-html="t('footer.ctaTitle')"
                 />
                 <button
