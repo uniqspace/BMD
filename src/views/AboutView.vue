@@ -5,6 +5,7 @@
   import AboutPartners from '@/components/AboutPartners.vue'
   import AboutEvents from '@/components/AboutEvents.vue'
   import { onMounted, ref } from 'vue'
+  import BookArtistModal from '@/components/BookArtistModal.vue'
 
   const { t } = useI18n()
 
@@ -15,34 +16,69 @@
       heroVideo.value?.pause()
     }
   })
+
+  const isBookOpen = ref(false)
+
+  // Scroll cue: jump to the first section after the hero
+  const afterHero = ref<HTMLElement | null>(null)
+  function scrollPastHero() {
+    afterHero.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 </script>
 
 <template>
   <main class="bg-[#f8f8f5]">
-    <!-- Hero: full-width background video with the title on top -->
-    <section class="px-3 pt-3 md:px-4 md:pt-4 lg:px-5 lg:pt-5">
-      <div class="relative mx-auto max-w-[1400px] h-[56svh] min-h-95 max-h-150 overflow-hidden bg-[#181818] md:h-[50vh] lg:h-[60vh]">
-        <video
-          ref="heroVideo"
-          class="absolute inset-0 w-full h-full object-cover"
-          src="/videos/hero.mp4"
-          poster="/videos/hero-poster.webp"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          aria-hidden="true"
-        />
-        <div class="absolute inset-0 bg-linear-to-t from-black/75 via-black/25 to-black/10" aria-hidden="true" />
+    <!-- Hero: full-screen background video (runs under the floating header) -->
+    <section class="relative -mt-19 h-svh min-h-160 overflow-hidden bg-[#111] text-white md:-mt-21 md:min-h-180 lg:-mt-23 lg:min-h-170">
+      <video
+        ref="heroVideo"
+        class="absolute inset-0 w-full h-full object-cover"
+        src="/videos/hero.mp4"
+        poster="/videos/hero-poster.webp"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      />
+      <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.3)_50%,rgba(0,0,0,0.4)_100%)]" aria-hidden="true" />
 
-        <div class="absolute inset-x-0 bottom-0 px-5 pb-8 md:px-7 md:pb-10 lg:px-8 lg:pb-14">
-          <h1 v-html="t('home.title')" class="text-white tracking-tighter text-[41px]/[100%] sm:text-[62px]/[100%] lg:text-[70px]/[100%]" />
+      <div class="absolute inset-x-0 bottom-0 pb-16 md:pb-18 lg:pb-14">
+        <div class="container">
+          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:items-end lg:gap-5">
+            <div class="lg:col-span-8">
+              <span class="block mb-5 text-[12px]/[100%] uppercase tracking-[2px] text-white/75 md:mb-7 md:text-[13px]/[100%]">{{ t('about.heroEyebrow') }}</span>
+              <h1
+                v-html="t('about.heroTitle')"
+                class="font-heading font-normal text-[40px]/[1.02] tracking-[-1.4px] md:text-[60px]/[1] md:tracking-[-2.4px] lg:text-[min(66px,9vh)]/[0.98] lg:tracking-[-0.042em] xl:text-[min(80px,10vh)]/[0.98] xl:tracking-[-0.042em]"
+              />
+            </div>
+            <div class="flex flex-col gap-6 md:max-w-110 lg:col-start-10 lg:col-span-3 lg:max-w-none lg:gap-7">
+              <p class="font-normal text-[15px]/[1.5] text-white/80">{{ t('about.heroText') }}</p>
+              <button
+                type="button"
+                @click="isBookOpen = true"
+                class="self-start bg-white text-[#181818] px-7.5 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-colors hover:bg-white/85 lg:self-stretch"
+              >
+                {{ t('nav.book') }}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+
+      <button
+        type="button"
+        @click="scrollPastHero"
+        :aria-label="t('about.heroScroll')"
+        class="hero-cue absolute left-1/2 bottom-5 -translate-x-1/2 p-2 text-white/60 cursor-pointer transition-colors hover:text-white"
+      >
+        <svg width="14" height="22" viewBox="0 0 14 22" fill="none" aria-hidden="true"><path d="M7 0v20M1 14l6 6 6-6" stroke="currentColor" stroke-width="1.2"/></svg>
+      </button>
     </section>
 
-    <section class="pt-10 pb-12.5 md:pt-15 md:pb-15 lg:pt-20 lg:pb-30">
+    <section ref="afterHero" class="pt-10 pb-12.5 md:pt-15 md:pb-15 lg:pt-20 lg:pb-30 scroll-mt-24">
       <div class="container">
         <p
           v-html="t('about.desc')"
@@ -67,4 +103,23 @@
     <!-- Featured Events -->
     <AboutEvents />
   </main>
+
+  <BookArtistModal v-model:open="isBookOpen" />
 </template>
+
+<style scoped>
+@keyframes hero-cue {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 6px); }
+}
+
+.hero-cue {
+  animation: hero-cue 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cue {
+    animation: none;
+  }
+}
+</style>
