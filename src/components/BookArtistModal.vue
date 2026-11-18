@@ -83,6 +83,11 @@ function reset() {
 
 useBodyScrollLock(toRef(props, 'open'))
 
+// Slide-in drawer only on desktop (lg+); on mobile/tablet the popup just appears
+const desktopMq = typeof window !== 'undefined' ? window.matchMedia('(min-width: 1024px)') : null
+const isDesktop = ref(desktopMq?.matches ?? true)
+function onMqChange(e: MediaQueryListEvent) { isDesktop.value = e.matches }
+
 watch(
   () => props.open,
   async (open) => {
@@ -91,7 +96,9 @@ watch(
       if (isSuccess.value !== null) reset()
       shake.value = false
       await nextTick()
-      nameInput.value?.focus({ preventScroll: true })
+      // Autofocus on desktop only: on phones/tablets it pops the keyboard and iOS pans the
+      // whole popup up, so the logo no longer lines up with the header
+      if (isDesktop.value) nameInput.value?.focus({ preventScroll: true })
     }
   }
 )
@@ -100,10 +107,6 @@ function onKeydown(e: KeyboardEvent) {
     if (props.open && e.key === 'Escape') close()
 }
 
-// Slide-in drawer only on desktop (lg+); on mobile/tablet the popup just appears
-const desktopMq = typeof window !== 'undefined' ? window.matchMedia('(min-width: 1024px)') : null
-const isDesktop = ref(desktopMq?.matches ?? true)
-function onMqChange(e: MediaQueryListEvent) { isDesktop.value = e.matches }
 
 onMounted(() => {
     window.addEventListener('keydown', onKeydown)
