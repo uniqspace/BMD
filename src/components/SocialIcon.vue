@@ -8,6 +8,8 @@ import WhatsAppIcon from './icons/WhatsAppIcon.vue';
 import TiktokIcon from './icons/TiktokIcon.vue';
 import YoutubeIcon from './icons/YoutubeIcon.vue';
 import LinkIcon from './icons/LinkIcon.vue';
+import SoundcloudIcon from './icons/SoundcloudIcon.vue';
+import ThreadsIcon from './icons/ThreadsIcon.vue';
 import { cn } from '@/lib/cn';
 
 const props = defineProps<{
@@ -35,6 +37,10 @@ const icon = computed(() => {
       return YoutubeIcon
     case 'link':
       return LinkIcon
+    case 'soundcloud':
+      return SoundcloudIcon
+    case 'threads':
+      return ThreadsIcon
     default:
       return null
   }

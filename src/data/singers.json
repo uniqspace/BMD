@@ -2,60 +2,56 @@
   {
     "id": "emily",
     "nameKey": "singers.emily.name",
-    "categoryIds": ["vocal", "live"],
+    "categoryIds": [
+      "vocal",
+      "live"
+    ],
     "descKey": "singers.emily.desc",
-    "image": "/images/Emily/emily_main.webp",
-    "spotifyLink": "https://cln.sh/YzC0DGJs",
-    "yandexLink": "https/yand",
+    "image": "/images/Emily/emily-gallery-4.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Emily/emily-gallery-4.webp",
+    "heroPosition": "center",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/r_emi_r"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
+        "id": "telegram",
+        "link": "https://t.me/remiremily"
       },
       {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }            ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "threads",
+        "link": "https://www.threads.com/@r_emi_r"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Emily/emily1.webp"
+          "alt": "EMILY — photo 1",
+          "src": "/images/Emily/emily-gallery-4.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Emily/emily2.webp"
+          "alt": "EMILY — photo 2",
+          "src": "/images/Emily/emily-gallery-1.webp"
         },
         "video": null
       },
-            {
+      {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Emily/emily3.webp"
+          "alt": "EMILY — photo 3",
+          "src": "/images/Emily/emily-gallery-3.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "EMILY — photo 4",
+          "src": "/images/Emily/emily-gallery-2.webp"
         },
         "video": null
       }
@@ -64,67 +60,72 @@
   {
     "id": "kmrn",
     "nameKey": "singers.kmrn.name",
-    "categoryIds": ["dj"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.kmrn.desc",
-    "image": "/images/KMRN/kmrn_main.webp",
-    "spotifyLink": "singers.kmrnhttps/spot",
-    "yandexLink": "singers.kmrnhttps/yand",
+    "image": "/images/KMRN/kmrn.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/KMRN/kmrn-gallery-main.webp",
+    "heroPosition": "center",
+    "streaming": [
+      {
+        "id": "spotify",
+        "label": "Spotify",
+        "link": "https://open.spotify.com/artist/6uQxaulkJxEWDoBa9FcmzJ"
+      },
+      {
+        "id": "apple",
+        "label": "Apple Music",
+        "link": "https://music.apple.com/ru/artist/kmrn/1597144551"
+      },
+      {
+        "id": "yandex",
+        "label": "Yandex Music",
+        "link": "https://music.yandex.uz/artist/4149279"
+      },
+      {
+        "id": "youtubeMusic",
+        "label": "YouTube Music",
+        "link": "https://music.youtube.com/channel/UCp8mVtTEuLkM4v6elUW6BxQ"
+      }
+    ],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/imkmrnmusic"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "threads",
+        "link": "https://www.threads.com/@imkmrnmusic"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/KMRN/kmrn1.webp"
+          "alt": "KMRN — photo 1",
+          "src": "/images/KMRN/kmrn-gallery-main.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/KMRN/kmrn2.webp"
+          "alt": "KMRN — photo 2",
+          "src": "/images/KMRN/kmrn-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/KMRN/kmrn3.webp"
+          "alt": "KMRN — photo 3",
+          "src": "/images/KMRN/kmrn-gallery-2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/KMRN/kmrn4.webp"
+          "alt": "KMRN — photo 4",
+          "src": "/images/KMRN/kmrn-gallery-4.webp"
         },
         "video": null
       }
@@ -133,129 +134,76 @@
   {
     "id": "mosaiq8e",
     "nameKey": "singers.mosaiq8e.name",
-    "categoryIds": ["visual"],
+    "categoryIds": [
+      "live"
+    ],
     "descKey": "singers.mosaiq8e.desc",
-    "image": "/images/Mosaiq8e/mosaiq8e_main.webp",
-    "spotifyLink": "https/spot",
-    "yandexLink": "https/yand",
+    "image": "/images/Mosaiq8e/mosaiq8e-2.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Mosaiq8e/mosaiq8e-2.webp",
+    "heroPosition": "center",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/mosaiq8e"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Mosaiq8e/mosaiq8e1.webp"
+          "alt": "MOSAIQ8E — photo 1",
+          "src": "/images/Mosaiq8e/mosaiq8e-2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Mosaiq8e/mosaiq8e2.webp"
+          "alt": "MOSAIQ8E — photo 2",
+          "src": "/images/Mosaiq8e/mosaiq8e-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Mosaiq8e/mosaiq8e3.webp"
+          "alt": "MOSAIQ8E — photo 3",
+          "src": "/images/Mosaiq8e/mosaiq8e-3.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Mosaiq8e/mosaiq8e4.webp"
+          "alt": "MOSAIQ8E — photo 4",
+          "src": "/images/Mosaiq8e/mosaiq8e-4.webp"
         },
         "video": null
       }
     ]
   },
-    {
+  {
     "id": "madlen",
     "nameKey": "singers.madlen.name",
-    "categoryIds": ["live"],
+    "categoryIds": [
+      "vocal",
+      "live"
+    ],
     "descKey": "singers.madlen.desc",
-    "image": "/images/Madlen/madlen_main.webp",
-    "spotifyLink": "https/spot",
-    "yandexLink": "singers.madlenhttps/yand",
+    "image": "/images/Madlen/madlen.webp",
+    "imagePosition": "center 52%",
+    "heroImage": "/images/Madlen/madlen.webp",
+    "heroPosition": "center",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/madlen.offi"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Madlen/madlen1.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Madlen/madlen2.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Madlen/madlen3.webp"
+          "alt": "MADLEN — photo 1",
+          "src": "/images/Madlen/madlen.webp"
         },
         "video": null
       }
@@ -264,46 +212,28 @@
   {
     "id": "eya",
     "nameKey": "singers.eya.name",
-    "categoryIds": ["vocal"],
-    "descKey": "singers.eya.desc",
-    "image": "/images/Eya/eya_main.webp",
-    "spotifyLink": "singers.hansleyhttps/spot",
-    "yandexLink": "https/yand",
-    "socials": [
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      }
+    "categoryIds": [
+      "vocal"
     ],
+    "descKey": "singers.eya.desc",
+    "image": "/images/Eya/eya.webp",
+    "imagePosition": "center 25%",
+    "heroImage": "/images/Eya/eya.webp",
+    "heroPosition": "center",
+    "streaming": [],
+    "socials": [],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Eya/eya1.webp"
+          "alt": "EYA — photo 1",
+          "src": "/images/Eya/eya.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "EYA — photo 2",
+          "src": "/images/Eya/eya-gallery-1.webp"
         },
         "video": null
       }
@@ -312,60 +242,55 @@
   {
     "id": "mone",
     "nameKey": "singers.mone.name",
-    "categoryIds": ["vocal", "live"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.mone.desc",
-    "image": "/images/Mone/mone_main.webp",
-    "spotifyLink": "singers.alexeyhttps/spot",
-    "yandexLink": "singers.alexeyhttps/yand",
+    "image": "/images/Mone/mone-gallery-4.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Mone/mone-gallery-4.webp",
+    "heroPosition": "center",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/dj__mone_uz"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
+        "id": "telegram",
+        "link": "https://t.me/dj_mone"
       },
       {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "threads",
+        "link": "https://www.threads.com/@dj__mone_uz"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Mone/mone1.webp"
+          "alt": "MONE — photo 1",
+          "src": "/images/Mone/mone-gallery-4.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Mone/mone2.webp"
+          "alt": "MONE — photo 2",
+          "src": "/images/Mone/mone-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Mone/mone3.webp"
+          "alt": "MONE — photo 3",
+          "src": "/images/Mone/mone-gallery-2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "MONE — photo 4",
+          "src": "/images/Mone/mone-gallery-3.webp"
         },
         "video": null
       }
@@ -374,60 +299,45 @@
   {
     "id": "proof",
     "nameKey": "singers.proof.name",
-    "categoryIds": ["dj"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.proof.desc",
-    "image": "/images/Proof/proof_main.webp",
-    "spotifyLink": "singers.kmrnhttps/spot",
-    "yandexLink": "singers.kmrnhttps/yand",
+    "image": "/images/Proof/proof.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Proof/proof-gallery-1.webp",
+    "heroPosition": "30% center",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/proof_dj_"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
+        "id": "link",
+        "link": "https://www.proofdj.com"
       },
       {
-        "id":"instagram",
-        "link": "https/t.me"
+        "id": "threads",
+        "link": "https://www.threads.com/@proof_dj_"
       },
       {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "soundcloud",
+        "link": "https://soundcloud.com/proof_dj"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Proof/proof1.webp"
+          "alt": "PROOF — photo 1",
+          "src": "/images/Proof/proof-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Proof/proof2.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Proof/proof3.webp"
+          "alt": "PROOF — photo 2",
+          "src": "/images/Proof/proof-gallery-2.webp"
         },
         "video": null
       }
@@ -436,60 +346,59 @@
   {
     "id": "itni",
     "nameKey": "singers.itni.name",
-    "categoryIds": ["dj"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.itni.desc",
-    "image": "/images/Itni/itni_main.webp",
-    "spotifyLink": "https/spot",
-    "yandexLink": "https/yand",
+    "image": "/images/Itni/itni.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Itni/itni-gallery-4.webp",
+    "heroPosition": "center",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/itni_roz"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
+        "id": "soundcloud",
+        "link": "https://soundcloud.com/rytmabad/itni-261124"
       },
       {
-        "id":"instagram",
-        "link": "https/t.me"
+        "id": "threads",
+        "link": "https://www.threads.com/@itni_roz"
       },
       {
-        "id":"tiktok",
-        "link": "https/t.me"
-      },
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "youtube",
+        "link": "https://www.youtube.com/watch?v=lDhMS5ww5WA"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Itni/itni1.webp"
+          "alt": "ITNI — photo 1",
+          "src": "/images/Itni/itni-gallery-4.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Itni/itni2.webp"
+          "alt": "ITNI — photo 2",
+          "src": "/images/Itni/itni-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Itni/itni3.webp"
+          "alt": "ITNI — photo 3",
+          "src": "/images/Itni/itni-gallery-2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "ITNI — photo 4",
+          "src": "/images/Itni/itni-gallery-3.webp"
         },
         "video": null
       }
@@ -498,60 +407,35 @@
   {
     "id": "pogosyan",
     "nameKey": "singers.pogosyan.name",
-    "categoryIds": ["visual"],
-    "descKey": "singers.pogosyan.desc",
-    "image": "/images/Pogosyan/pogosyan_main.webp",
-    "spotifyLink": "singers.kmrnhttps/spot",
-    "yandexLink": "singers.kmrnhttps/yand",
-    "socials": [
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      }
+    "categoryIds": [
+      "visual"
     ],
+    "descKey": "singers.pogosyan.desc",
+    "image": "/images/Pogosyan/pogosyan-gallery-1.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Pogosyan/pogosyan-gallery-1.webp",
+    "heroPosition": "center",
+    "streaming": [],
+    "socials": [],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Pogosyan/pogosyan1.webp"
+          "alt": "СЕРГЕЙ ПОГОСЯН — photo 1",
+          "src": "/images/Pogosyan/pogosyan-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Pogosyan/pogosyan2.webp"
+          "alt": "СЕРГЕЙ ПОГОСЯН — photo 2",
+          "src": "/images/Pogosyan/pogosyan-gallery-2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Pogosyan/pogosyan3.webp"
+          "alt": "СЕРГЕЙ ПОГОСЯН — photo 3",
+          "src": "/images/Pogosyan/pogosyan-gallery-4.webp"
         },
         "video": null
       }
@@ -560,60 +444,59 @@
   {
     "id": "roxy",
     "nameKey": "singers.roxy.name",
-    "categoryIds": ["dj"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.roxy.desc",
-    "image": "/images/Roxy/roxy_main.webp",
-    "spotifyLink": "singers.kmrnhttps/spot",
-    "yandexLink": "singers.kmrnhttps/yand",
+    "image": "/images/Roxy/roxy-gallery-1.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Roxy/roxy-gallery-1.webp",
+    "heroPosition": "center 15%",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/roxykamil_"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
+        "id": "soundcloud",
+        "link": "https://soundcloud.com/user-15479347"
       },
       {
-        "id":"instagram",
-        "link": "https/t.me"
+        "id": "threads",
+        "link": "https://www.threads.com/@roxykamil_"
       },
       {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "youtube",
+        "link": "https://www.youtube.com/@roxymusiqa"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Roxy/roxy1.webp"
+          "alt": "ROXY — photo 1",
+          "src": "/images/Roxy/roxy-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Roxy/roxy2.webp"
+          "alt": "ROXY — photo 2",
+          "src": "/images/Roxy/roxy-gallery-3.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Roxy/roxy3.webp"
+          "alt": "ROXY — photo 3",
+          "src": "/images/Roxy/roxy-gallery-4.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "ROXY — photo 4",
+          "src": "/images/Roxy/roxy-gallery-2.webp"
         },
         "video": null
       }
@@ -622,398 +505,336 @@
   {
     "id": "silkband",
     "nameKey": "singers.silkband.name",
-    "categoryIds": ["dj"],
-    "descKey": "singers.silkband.desc",
-    "image": "/images/Silk band/silkband_main.webp",
-    "spotifyLink": "singers.kmrnhttps/spot",
-    "yandexLink": "singers.kmrnhttps/yand",
-    "socials": [
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      }
+    "categoryIds": [
+      "live"
     ],
-    "projects": [
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Silk band/silk1.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Silk band/silk2.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Silk band/silk3.webp"
-        },
-        "video": null
-      }
-    ]
+    "descKey": "singers.silkband.desc",
+    "image": "/images/founder-placeholder.svg",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/founder-placeholder.svg",
+    "heroPosition": "center 12%",
+    "streaming": [],
+    "socials": [],
+    "projects": []
   },
-    {
+  {
     "id": "qaraqoom",
     "nameKey": "singers.qaraqoom.name",
-    "categoryIds": ["live"],
+    "categoryIds": [
+      "live"
+    ],
     "descKey": "singers.qaraqoom.desc",
-    "image": "/images/Qaraqoom/qaraqoom_main.webp",
-    "spotifyLink": "singers.qaraqoomhttps/spot",
-    "yandexLink": "singers.qaraqoomhttps/yand",
+    "image": "/images/Qaraqoom/qaraqoom-gallery-2.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Qaraqoom/qaraqoom-gallery-2.webp",
+    "heroPosition": "center",
+    "streaming": [
+      {
+        "id": "spotify",
+        "label": "Spotify",
+        "link": "https://open.spotify.com/artist/3Hv8hjCKtQd16OCuNUj6jP"
+      },
+      {
+        "id": "apple",
+        "label": "Apple Music",
+        "link": "https://music.apple.com/tj/artist/qaraqoom/1510131309"
+      },
+      {
+        "id": "yandex",
+        "label": "Yandex Music",
+        "link": "https://music.yandex.uz/artist/9113683"
+      },
+      {
+        "id": "beatport",
+        "label": "Beatport",
+        "link": "https://www.beatport.com/release/sumalak/5708661"
+      }
+    ],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://instagram.com/_qaraqoom_"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
+        "id": "telegram",
+        "link": "https://t.me/qaraqoom"
       },
       {
-        "id":"instagram",
-        "link": "https/t.me"
+        "id": "youtube",
+        "link": "https://www.youtube.com/@QARAQOOM"
       },
       {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "link",
+        "link": "https://linktr.ee/_qaraqoom_"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Qaraqoom/qaraqoom1.webp"
+          "alt": "QARAQOOM — photo 1",
+          "src": "/images/Qaraqoom/qaraqoom-gallery-2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Qaraqoom/qaraqoom2.webp"
+          "alt": "QARAQOOM — photo 2",
+          "src": "/images/Qaraqoom/qaraqoom-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Qaraqoom/qaraqoom3.webp"
+          "alt": "QARAQOOM — photo 3",
+          "src": "/images/Qaraqoom/qaraqoom-gallery-3.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "QARAQOOM — photo 4",
+          "src": "/images/Qaraqoom/qaraqoom-gallery-4.webp"
         },
         "video": null
       }
     ]
   },
-    {
+  {
     "id": "Ben",
     "nameKey": "singers.ben.name",
-    "categoryIds": ["live"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.ben.desc",
-    "image": "/images/Ben Zaplavski/ben_main.webp",
-    "spotifyLink": "singers.qaraqoomhttps/spot",
-    "yandexLink": "singers.qaraqoomhttps/yand",
+    "image": "/images/Ben Zaplavski/ben-zaplavski-gallery-2.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Ben Zaplavski/ben-zaplavski-gallery-2.webp",
+    "heroPosition": "center",
+    "streaming": [
+      {
+        "id": "spotify",
+        "label": "Spotify",
+        "link": "https://open.spotify.com/artist/1PI0ZHyrng51Uv628STh9g?si=T2-oYRU4QRCOppVMjUvKkw"
+      },
+      {
+        "id": "apple",
+        "label": "Apple Music",
+        "link": "https://music.apple.com/us/artist/ben-zaplavski/1791116302"
+      },
+      {
+        "id": "yandex",
+        "label": "Yandex Music",
+        "link": "https://music.yandex.uz/artist/23726839"
+      },
+      {
+        "id": "beatport",
+        "label": "Beatport",
+        "link": "https://www.beatport.com/artist/ben-zaplavski/1283811?srsltid=AfmBOoqsO8G92igDrqhMxc_68nSuSDHOYIfKe4v8F6n-g9uxoweZvohe"
+      }
+    ],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/benzaplavski"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
+        "id": "soundcloud",
+        "link": "https://soundcloud.com/benzaplavski"
       },
       {
-        "id":"instagram",
-        "link": "https/t.me"
+        "id": "link",
+        "link": "https://taplink.cc/benzaplavski"
       },
       {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "facebook",
+        "link": "https://www.facebook.com/benzaplavski"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ben Zaplavski/ben1.webp"
+          "alt": "BEN ZAPLAVSKI — photo 1",
+          "src": "/images/Ben Zaplavski/ben-zaplavski-gallery-2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ben Zaplavski/ben2.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ben Zaplavski/ben3.webp"
+          "alt": "BEN ZAPLAVSKI — photo 2",
+          "src": "/images/Ben Zaplavski/ben-zaplavski-gallery-3.webp"
         },
         "video": null
       }
     ]
   },
-    {
+  {
     "id": "elizaveta",
     "nameKey": "singers.elizaveta.name",
-    "categoryIds": ["live"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.elizaveta.desc",
-    "image": "/images/Elizaveta Shus/elizaveta_main.webp",
-    "spotifyLink": "singers.qaraqoomhttps/spot",
-    "yandexLink": "singers.qaraqoomhttps/yand",
+    "image": "/images/Elizaveta Shus/elizaveta-shus-gallery-4.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Elizaveta Shus/elizaveta-shus-gallery-4.webp",
+    "heroPosition": "center 12%",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/djelizaveta_shus"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "telegram",
+        "link": "https://t.me/Dj_Elizaveta_Shus"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Elizaveta Shus/elizaveta1.webp"
+          "alt": "ELIZAVETA SHUS — photo 1",
+          "src": "/images/Elizaveta Shus/elizaveta-shus-gallery-4.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Elizaveta Shus/elizaveta2.webp"
+          "alt": "ELIZAVETA SHUS — photo 2",
+          "src": "/images/Elizaveta Shus/elizaveta-shus-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Elizaveta Shus/elizaveta3.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Elizaveta Shus/elizaveta4.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Elizaveta Shus/elizaveta5.webp"
+          "alt": "ELIZAVETA SHUS — photo 3",
+          "src": "/images/Elizaveta Shus/elizaveta-shus-gallery-3.webp"
         },
         "video": null
       }
     ]
   },
-    {
+  {
     "id": "djcami",
     "nameKey": "singers.djcami.name",
-    "categoryIds": ["live"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.djcami.desc",
-    "image": "/images/DJ Cami/djcami_main.webp",
-    "spotifyLink": "singers.qaraqoomhttps/spot",
-    "yandexLink": "singers.qaraqoomhttps/yand",
+    "image": "/images/DJ Cami/dj-cami-gallery-1.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/DJ Cami/dj-cami-gallery-1.webp",
+    "heroPosition": "center 15%",
+    "streaming": [],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/djcami"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "telegram",
+        "link": "https://www.t.me/djcamimusic"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/DJ Cami/djcami1.webp"
+          "alt": "DJ CAMI — photo 1",
+          "src": "/images/DJ Cami/dj-cami-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/DJ Cami/djcami2.webp"
+          "alt": "DJ CAMI — photo 2",
+          "src": "/images/DJ Cami/dj-cami-gallery-2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/DJ Cami/djcami3.webp"
+          "alt": "DJ CAMI — photo 3",
+          "src": "/images/DJ Cami/dj-cami-gallery-3.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "DJ CAMI — photo 4",
+          "src": "/images/DJ Cami/dj-cami-gallery-4.webp"
         },
         "video": null
       }
     ]
   },
-    {
+  {
     "id": "ronan",
     "nameKey": "singers.ronan.name",
-    "categoryIds": ["live"],
+    "categoryIds": [
+      "dj"
+    ],
     "descKey": "singers.ronan.desc",
-    "image": "/images/Ronan Gaidi/ronan_main.webp",
-    "spotifyLink": "singers.qaraqoomhttps/spot",
-    "yandexLink": "singers.qaraqoomhttps/yand",
+    "image": "/images/Ronan Gaidi/ronan-gaidi.webp",
+    "imagePosition": "center 12%",
+    "heroImage": "/images/Ronan Gaidi/ronan-gaidi-gallery-1.webp",
+    "heroPosition": "center",
+    "streaming": [
+      {
+        "id": "spotify",
+        "label": "Spotify",
+        "link": "https://open.spotify.com/artist/5yF6d3tHwKVCqAmN9eEogL"
+      },
+      {
+        "id": "apple",
+        "label": "Apple Music",
+        "link": "https://music.apple.com/us/artist/gaidi/1734092094"
+      },
+      {
+        "id": "yandex",
+        "label": "Yandex Music",
+        "link": "https://music.yandex.com/artist/21769544?ref_id=1ECFC357-88ED-4A3C-9704-E3790C1F7EBE&utm_medium=copy_link"
+      },
+      {
+        "id": "vk",
+        "label": "VK Music",
+        "link": "https://music.vk.com/link/JYLfo"
+      }
+    ],
     "socials": [
       {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "instagram",
+        "link": "https://www.instagram.com/ronan.gaidi"
       },
       {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
+        "id": "threads",
+        "link": "https://www.threads.com/@ronan.gaidi"
       }
     ],
     "projects": [
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ronan Gaidi/ronan1.webp"
+          "alt": "RONAN GAIDI — photo 1",
+          "src": "/images/Ronan Gaidi/ronan-gaidi-gallery-1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ronan Gaidi/ronan2.webp"
+          "alt": "RONAN GAIDI — photo 2",
+          "src": "/images/Ronan Gaidi/ronan-gaidi-gallery-2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ronan Gaidi/ronan3.webp"
+          "alt": "RONAN GAIDI — photo 3",
+          "src": "/images/Ronan Gaidi/ronan-gaidi-gallery-3.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ronan Gaidi/ronan4.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Ronan Gaidi/ronan5.webp"
+          "alt": "RONAN GAIDI — photo 4",
+          "src": "/images/Ronan Gaidi/ronan-gaidi-gallery-4.webp"
         },
         "video": null
       }

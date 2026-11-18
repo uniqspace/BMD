@@ -36,22 +36,31 @@ const textContent = computed(() =>
                     </div>
                     <div class="flex flex-col my-7.5 md:my-10 gap-2.5">
                         <BaseButton class="lg:max-w-75.25 lg:hidden bg-[#181818] text-white">book artist</BaseButton>
-                        <BaseButton class="lg:max-w-75.25 lg:hover:bg-[#181818] lg:hover:text-white transition-colors duration-300" :href="currentSinger.spotifyLink" :link="true">spotify</BaseButton>
-                        <BaseButton class="lg:max-w-75.25 lg:hover:bg-[#181818] lg:hover:text-white transition-colors duration-300" :href="currentSinger.yandexLink" :link="true">Yandex music</BaseButton>
+                        <BaseButton
+                            v-for="service in currentSinger.streaming"
+                            :key="service.id"
+                            class="lg:max-w-75.25 lg:hover:bg-[#181818] lg:hover:text-white transition-colors duration-300"
+                            :href="service.link"
+                            target="_blank"
+                            rel="noopener"
+                            :link="true"
+                        >{{ service.label }}</BaseButton>
                     </div>
 
-                    <SocialIconsWrapper>
+                    <SocialIconsWrapper v-if="currentSinger.socials.length">
                         <SocialIcon 
                             v-for="social in currentSinger.socials" 
                             :key="social.id" 
                             :content="social.id" 
                             :href="social.link" 
+                            target="_blank"
+                            rel="noopener"
                             mode="white"
                         />
                     </SocialIconsWrapper>
                 </div>
                 <div class="relative">
-                    <img class="w-full object-cover h-100 md:h-168 lg:h-142.75 lg:w-128.5 lg:mb-5" :src="currentSinger.image" :alt="t(currentSinger.nameKey)">
+                    <img class="w-full object-cover h-100 md:h-168 lg:h-142.75 lg:w-128.5 lg:mb-5" :src="currentSinger.heroImage || currentSinger.image" :style="{ objectPosition: currentSinger.heroPosition }" :alt="t(currentSinger.nameKey)">
                     <div class="flex gap-2 lg:gap-1.5 absolute left-6.5 top-6.5 lg:relative lg:left-0 lg:top-0 ">
                         <span 
                             v-for="catId in currentSinger.categoryIds"
@@ -66,6 +75,6 @@ const textContent = computed(() =>
     </section>
     <NotFound v-if="!currentSinger" />
 
-    <ProjectsSlider v-if="currentSinger" :projects="currentSinger.projects" />
+    <ProjectsSlider v-if="currentSinger && currentSinger.projects.length" :projects="currentSinger.projects" />
 
 </template>

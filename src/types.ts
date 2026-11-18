@@ -3,9 +3,17 @@ export interface Singer {
   nameKey: string
   descKey: string
   image: string
+  // CSS object-position for the catalog card photo
+  imagePosition?: string
+  // Photo on the artist page (falls back to `image`)
+  heroImage?: string
+  heroPosition?: string
   categoryIds: string[]
-  spotifyLink: string
-  yandexLink: string
+  streaming: {
+    id: string,
+    label: string,
+    link: string
+  }[]
   socials: {
     id: string,
     link: string
