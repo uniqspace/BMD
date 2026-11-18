@@ -5,8 +5,8 @@
   "nav": {
     "artists": "Artists",
     "about": "Main",
-    "book": "Booking",
-    "booking": "booking",
+    "book": "Discuss your event",
+    "booking": "Discuss your event",
     "nav": "navigation",
     "events": "Events",
     "instagram": "Instagram"
@@ -289,7 +289,7 @@
     "termsText": "Terms and Conditions",
     "contacts": "Contacts",
     "ctaTitle": "The best artists<br>for your event",
-    "ctaButton": "Book an artist"
+    "ctaButton": "Discuss your event"
   },
   "contact": {
     "adress": "Address",
@@ -299,7 +299,7 @@
     "contactName2": "dima mitch"
   },
   "bookModal": {
-    "title": "Book an artist",
+    "title": "Discuss your event",
     "desc": "Fill in the form — tell us as much as you can about your event: date, venue, format.",
     "nameInput": "Name",
     "telNumInput": "Contact number",
@@ -374,7 +374,7 @@
       {
         "title": "9. Contact",
         "text": [
-          "The Show Time<br>24 Taras Shevchenko St<br>Tashkent 100000, Uzbekistan<br>Phone: <a href=\"tel:+998992226632\" class=\"underline\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"underline\" target=\"_blank\" rel=\"noopener\">@sht.product</a>"
+          "The Show Time<br>24 Taras Shevchenko St<br>Tashkent 100000, Uzbekistan<br>Phone: <a href=\"tel:+998992226632\" class=\"underline\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"underline\" target=\"_blank\" rel=\"noopener\">{'@'}sht.product</a>"
         ]
       }
     ],
@@ -382,7 +382,7 @@
   },
   "artist": {
     "allArtists": "All artists",
-    "book": "Book artist",
+    "book": "Discuss your event",
     "listen": "Listen",
     "about": "About the artist",
     "socials": "Socials",
@@ -390,7 +390,7 @@
     "photos": "{n} photos",
     "inviteTitle": "Invite {name}",
     "inviteText": "Tell us about your event — we’ll suggest the right format and get back to you.",
-    "bookShort": "Book",
+    "bookShort": "Discuss your event",
     "moreArtists": "More artists",
     "category": "Category",
     "website": "Website",

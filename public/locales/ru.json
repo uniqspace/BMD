@@ -5,8 +5,8 @@
   "nav": {
     "artists": "Артисты",
     "about": "Главная",
-    "book": "Бронь",
-    "booking": "Бронь",
+    "book": "Обсудить событие",
+    "booking": "Обсудить событие",
     "nav": "Навигация",
     "events": "Ивенты",
     "instagram": "Инстаграм"
@@ -289,7 +289,7 @@
     "termsText": "Terms and Conditions ru",
     "contacts": "Контакты",
     "ctaTitle": "Лучшие артисты<br>для вашего события",
-    "ctaButton": "Забронировать артиста"
+    "ctaButton": "Обсудить событие"
   },
   "contact": {
     "adress": "Адрес",
@@ -299,7 +299,7 @@
     "contactName2": "Дима Митч"
   },
   "bookModal": {
-    "title": "Забронировать артиста",
+    "title": "Обсудить событие",
     "desc": "Заполните форму — расскажите как можно больше о вашем мероприятии: дата, площадка, формат.",
     "nameInput": "Имя",
     "telNumInput": "Контактный номер",
@@ -374,7 +374,7 @@
       {
         "title": "9. Контакты",
         "text": [
-          "The Show Time<br>ул. Тараса Шевченко, 24<br>Ташкент 100000, Узбекистан<br>Телефон: <a href=\"tel:+998992226632\" class=\"underline\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"underline\" target=\"_blank\" rel=\"noopener\">@sht.product</a>"
+          "The Show Time<br>ул. Тараса Шевченко, 24<br>Ташкент 100000, Узбекистан<br>Телефон: <a href=\"tel:+998992226632\" class=\"underline\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"underline\" target=\"_blank\" rel=\"noopener\">{'@'}sht.product</a>"
         ]
       }
     ],
@@ -382,7 +382,7 @@
   },
   "artist": {
     "allArtists": "Все артисты",
-    "book": "Забронировать артиста",
+    "book": "Обсудить событие",
     "listen": "Слушать",
     "about": "Об артисте",
     "socials": "Соцсети",
@@ -390,7 +390,7 @@
     "photos": "{n} фото",
     "inviteTitle": "Пригласить {name}",
     "inviteText": "Расскажите о мероприятии — подберём формат и свяжемся с вами.",
-    "bookShort": "Забронировать",
+    "bookShort": "Обсудить событие",
     "moreArtists": "Другие артисты",
     "category": "Категория",
     "website": "Сайт",
