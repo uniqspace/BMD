@@ -14,7 +14,7 @@
     import { scrollToContacts } from '@/lib/scrollToContacts';
 
     const route = useRoute()
-    const isAboutPage = computed(() => route.path === '/about')
+    const isAboutPage = computed(() => route.path === '/')
 
     const headerRef = ref<HTMLElement | null>(null)
 
@@ -40,9 +40,9 @@
     })
 
     const navItems = computed(() => [
-        { to: '/about', label: t('nav.about'), active: route.path === '/about' && route.hash !== '#events' },
-        { to: '/', label: t('nav.artists'), active: route.path === '/' || route.path.startsWith('/singers') },
-        { to: '/about#events', label: t('nav.events'), active: route.path === '/about' && route.hash === '#events' },
+        { to: '/', label: t('nav.about'), active: route.path === '/' && route.hash !== '#events' },
+        { to: '/artists', label: t('nav.artists'), active: route.path === '/artists' || route.path.startsWith('/singers') },
+        { to: '/#events', label: t('nav.events'), active: route.path === '/' && route.hash === '#events' },
         { to: 'https://www.instagram.com/sht.product', label: t('nav.instagram'), active: false, external: true },
         { to: '#contacts', label: t('nav.feedback'), active: false, scroll: true },
     ])

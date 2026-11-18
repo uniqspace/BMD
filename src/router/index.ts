@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
 import { i18n } from '@/i18n'
 
 const router = createRouter({
@@ -10,7 +10,7 @@ const router = createRouter({
       return savedPosition
     }
 
-    // anchor link (e.g. /about#events) — wait for the (lazy) page to render
+    // anchor link (e.g. /#events) — wait for the (lazy) page to render
     if (to.hash) {
       return new Promise((resolve) => {
         setTimeout(() => resolve({ el: to.hash, behavior: 'smooth' }), 350)
@@ -22,20 +22,23 @@ const router = createRouter({
   },
   routes: [
     {
+      // Main page of the site: the agency ("О нас")
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: AboutView,
       meta: {
         titleKey: 'meta.homeTitle'
       }
     },
     {
+      path: '/artists',
+      name: 'artists',
+      component: () => import('../views/HomeView.vue'),
+    },
+    {
+      // Old address of the About page — keep links working
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      redirect: (to) => ({ path: '/', hash: to.hash }),
     },
     {
       path: '/privacy-policy',

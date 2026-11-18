@@ -37,7 +37,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
             <!-- Info columns -->
             <div class="flex flex-col gap-10 mt-12 pt-10 border-t border-[#18181814] md:grid md:grid-cols-12 md:gap-5 md:mt-16">
                 <div class="flex flex-col gap-4 md:col-span-12 lg:col-span-5">
-                    <RouterLink to="/about" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
+                    <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
                     <p class="font-normal text-[14px]/[1.45] text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
                 </div>
 
@@ -45,9 +45,9 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <div>
                         <span :class="titleClass">{{ t("nav.nav") }}</span>
                         <ul class="flex flex-col gap-3">
-                            <li><RouterLink to="/about" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
-                            <li><RouterLink to="/" :class="linkClass">{{ t("nav.artists") }}</RouterLink></li>
-                            <li><RouterLink to="/about#events" :class="linkClass">{{ t("nav.events") }}</RouterLink></li>
+                            <li><RouterLink to="/" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
+                            <li><RouterLink to="/artists" :class="linkClass">{{ t("nav.artists") }}</RouterLink></li>
+                            <li><RouterLink to="/#events" :class="linkClass">{{ t("nav.events") }}</RouterLink></li>
                             <li><a :href="INSTAGRAM.href" target="_blank" rel="noopener" :class="linkClass">{{ t("nav.instagram") }}</a></li>
                         </ul>
                     </div>

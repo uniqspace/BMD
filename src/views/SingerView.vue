@@ -129,14 +129,14 @@ const hasListenSection = computed(() => !!currentSinger && (currentSinger.stream
     <main v-if="currentSinger">
         <!-- Hero -->
         <section class="pt-1 md:pt-4 lg:pt-10"><div class="container">
-            <RouterLink to="/" class="flex items-center gap-2.5 min-h-11 text-[12px] md:text-[13px] uppercase text-[#6b6b6b] mb-5 md:mb-7 lg:hidden">
+            <RouterLink to="/artists" class="flex items-center gap-2.5 min-h-11 text-[12px] md:text-[13px] uppercase text-[#6b6b6b] mb-5 md:mb-7 lg:hidden">
                 <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><path d="M7 1L1 7l6 6M1 7h16" stroke="currentColor" stroke-width="1.6"/></svg>
                 {{ t('artist.allArtists') }}
             </RouterLink>
 
             <div class="flex flex-col gap-5 md:gap-7 lg:grid lg:grid-cols-2 lg:gap-20 lg:items-end">
                 <div class="flex flex-col gap-5 md:gap-7 lg:gap-10 lg:pb-2">
-                    <RouterLink to="/" class="hidden lg:flex items-center gap-2.5 text-[13px] uppercase text-[#6b6b6b]">
+                    <RouterLink to="/artists" class="hidden lg:flex items-center gap-2.5 text-[13px] uppercase text-[#6b6b6b]">
                         <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><path d="M7 1L1 7l6 6M1 7h16" stroke="currentColor" stroke-width="1.6"/></svg>
                         {{ t('artist.allArtists') }}
                     </RouterLink>

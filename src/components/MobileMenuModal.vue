@@ -44,13 +44,13 @@ function goToContacts() {
             <div class="pt-5">
                 <ul  class="flex flex-col gap-5 mb-35.75">
                     <li class="text-[22px]/[100%] uppercase">
-                        <RouterLink to="/about">{{ t('nav.about') }}</RouterLink>
+                        <RouterLink to="/">{{ t('nav.about') }}</RouterLink>
                     </li>
                     <li class="text-[22px]/[100%] uppercase">
-                        <RouterLink to="/">{{ t('nav.artists') }}</RouterLink>
+                        <RouterLink to="/artists">{{ t('nav.artists') }}</RouterLink>
                     </li>
                     <li class="text-[22px]/[100%] uppercase">
-                        <RouterLink to="/about#events">{{ t('nav.events') }}</RouterLink>
+                        <RouterLink to="/#events">{{ t('nav.events') }}</RouterLink>
                     </li>
                     <li class="text-[22px]/[100%] uppercase">
                         <a href="https://www.instagram.com/sht.product" target="_blank" rel="noopener">{{ t('nav.instagram') }}</a>
