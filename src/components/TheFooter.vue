@@ -26,7 +26,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                         class="font-heading font-normal text-[32px]/[1.08] tracking-[-1px] md:text-[42px]/[1.05] md:tracking-[-1.6px] lg:text-[52px]/[1.02] lg:tracking-[-2.2px]"
                         v-html="t('footer.ctaTitle')"
                     />
-                    <p class="text-[15px]/[1.4] text-[#181818a6] md:text-[16px]/[1.4]">{{ t('footer.ctaSubtitle') }}</p>
+                    <p class="font-heading text-[20px]/[1.3] tracking-[-0.3px] text-[#181818a6] md:text-[24px]/[1.3] lg:text-[26px]/[1.3]">{{ t('footer.ctaSubtitle') }}</p>
                 </div>
                 <button
                     type="button"
