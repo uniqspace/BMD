@@ -21,6 +21,16 @@
 
     html {
         scroll-behavior: smooth;
+        /* Page canvas behind the content: dark like the mobile/tablet footer, so iOS Safari
+           fills the area under its toolbar (and the overscroll) with the footer colour.
+           The body keeps the white page background. */
+        background-color: #181818;
+    }
+
+    @media (min-width: 1024px) {
+        html {
+            background-color: #FFFFFF;
+        }
     }
 
     *{
