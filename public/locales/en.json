@@ -5,8 +5,8 @@
   "nav": {
     "artists": "Artists",
     "about": "About",
-    "book": "Discuss your event",
-    "booking": "Discuss your event",
+    "book": "Send a request",
+    "booking": "Send a request",
     "nav": "navigation",
     "events": "Events",
     "instagram": "Instagram",
@@ -294,7 +294,7 @@
     "termsText": "Terms and Conditions",
     "contacts": "Contacts",
     "ctaTitle": "Designing <i>immersive</i> events & <i>powerful</i> visual experiences <span>— from concept to execution.</span>",
-    "ctaButton": "Discuss your event"
+    "ctaButton": "Send a request"
   },
   "contact": {
     "adress": "Address",
@@ -304,7 +304,7 @@
     "contactName2": "dima mitch"
   },
   "bookModal": {
-    "title": "Discuss your event",
+    "title": "Send a request",
     "desc": "Fill in the form — tell us as much as you can about your event: date, venue, format.",
     "nameInput": "Name",
     "telNumInput": "Contact number",
@@ -387,7 +387,7 @@
   },
   "artist": {
     "allArtists": "All artists",
-    "book": "Discuss your event",
+    "book": "Send a request",
     "listen": "Listen",
     "about": "About the artist",
     "socials": "Socials",
@@ -395,7 +395,7 @@
     "photos": "{n} photos",
     "inviteTitle": "Invite {name}",
     "inviteText": "Tell us about your event — we’ll suggest the right format and get back to you.",
-    "bookShort": "Discuss your event",
+    "bookShort": "Send a request",
     "moreArtists": "More artists",
     "category": "Category",
     "website": "Website",

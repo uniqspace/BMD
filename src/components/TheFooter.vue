@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import ContactIcons from './ContactIcons.vue'
 import { useI18n } from 'vue-i18n'
-import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
-import BookArtistModal from './BookArtistModal.vue';
 import ArrowIcon from './icons/ArrowUpRight.vue';
 import { scrollToContacts } from '@/lib/scrollToContacts';
 
@@ -12,7 +10,6 @@ const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
 const WHATSAPP = { href: 'https://wa.me/998992226632', label: 'WhatsApp' }
 const TELEGRAM = { href: 'https://t.me/+998992226632', label: 'Telegram' }
 
-const isOpenBookModal = ref(false)
 const currentYear = new Date().getFullYear();
 
 const { t } = useI18n()
@@ -33,13 +30,6 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     class="font-heading font-normal max-w-225 text-[32px]/[1.08] tracking-[-1px] md:text-[42px]/[1.05] md:tracking-[-1.6px] lg:text-[52px]/[1.02] lg:tracking-[-2.2px] [&_span]:text-white/45 lg:[&_span]:text-[#18181873]"
                     v-html="t('footer.ctaTitle')"
                 />
-                <button
-                    type="button"
-                    @click="isOpenBookModal = true"
-                    class="hidden lg:block shrink-0 bg-[#181818] text-white px-8 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-opacity hover:opacity-80"
-                >
-                    {{ t("footer.ctaButton") }}
-                </button>
             </div>
 
             <!-- Logo + about text under the heading (mobile and tablet; desktop shows it in the info columns) -->
@@ -109,5 +99,4 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
         </div>
     </footer>
 
-    <BookArtistModal v-model:open="isOpenBookModal" />
 </template>

@@ -5,8 +5,8 @@
   "nav": {
     "artists": "Артисты",
     "about": "О нас",
-    "book": "Обсудить событие",
-    "booking": "Обсудить событие",
+    "book": "Оставить заявку",
+    "booking": "Оставить заявку",
     "nav": "Навигация",
     "events": "Ивенты",
     "instagram": "Инстаграм",
@@ -294,7 +294,7 @@
     "termsText": "Terms and Conditions ru",
     "contacts": "Контакты",
     "ctaTitle": "Designing <i>immersive</i> events & <i>powerful</i> visual experiences <span>— from concept to execution.</span>",
-    "ctaButton": "Обсудить событие"
+    "ctaButton": "Оставить заявку"
   },
   "contact": {
     "adress": "Адрес",
@@ -304,7 +304,7 @@
     "contactName2": "Дима Митч"
   },
   "bookModal": {
-    "title": "Обсудить событие",
+    "title": "Оставить заявку",
     "desc": "Заполните форму — расскажите как можно больше о вашем мероприятии: дата, площадка, формат.",
     "nameInput": "Имя",
     "telNumInput": "Контактный номер",
@@ -387,7 +387,7 @@
   },
   "artist": {
     "allArtists": "Все артисты",
-    "book": "Обсудить событие",
+    "book": "Оставить заявку",
     "listen": "Слушать",
     "about": "Об артисте",
     "socials": "Соцсети",
@@ -395,7 +395,7 @@
     "photos": "{n} фото",
     "inviteTitle": "Пригласить {name}",
     "inviteText": "Расскажите о мероприятии — подберём формат и свяжемся с вами.",
-    "bookShort": "Обсудить событие",
+    "bookShort": "Оставить заявку",
     "moreArtists": "Другие артисты",
     "category": "Категория",
     "website": "Сайт",

@@ -5,7 +5,6 @@
   import AboutPartners from '@/components/AboutPartners.vue'
   import AboutEvents from '@/components/AboutEvents.vue'
   import { onMounted, ref } from 'vue'
-  import BookArtistModal from '@/components/BookArtistModal.vue'
 
   const { t } = useI18n()
 
@@ -16,14 +15,6 @@
       heroVideo.value?.pause()
     }
   })
-
-  const isBookOpen = ref(false)
-
-  // Scroll cue: jump to the first section after the hero
-  const afterHero = ref<HTMLElement | null>(null)
-  function scrollPastHero() {
-    afterHero.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
 </script>
 
 <template>
@@ -56,29 +47,14 @@
             </div>
             <div class="flex flex-col gap-6 lg:col-start-10 lg:col-span-3 lg:max-w-none lg:gap-7">
               <p class="font-normal text-[15px]/[1.5] text-white/80">{{ t('about.heroText') }}</p>
-              <button
-                type="button"
-                @click="isBookOpen = true"
-                class="hidden lg:block w-full bg-white text-[#181818] px-7.5 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-colors hover:bg-white/85"
-              >
-                {{ t('nav.book') }}
-              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <button
-        type="button"
-        @click="scrollPastHero"
-        :aria-label="t('about.heroScroll')"
-        class="hero-cue hidden lg:block absolute left-1/2 bottom-5 -translate-x-1/2 p-2 text-white/60 cursor-pointer transition-colors hover:text-white"
-      >
-        <svg width="14" height="22" viewBox="0 0 14 22" fill="none" aria-hidden="true"><path d="M7 0v20M1 14l6 6 6-6" stroke="currentColor" stroke-width="1.2"/></svg>
-      </button>
     </section>
 
-    <section ref="afterHero" class="pt-10 pb-12.5 md:pt-15 md:pb-15 lg:pt-20 lg:pb-30 scroll-mt-24">
+    <section class="pt-10 pb-12.5 md:pt-15 md:pb-15 lg:pt-20 lg:pb-30 scroll-mt-24">
       <div class="container">
         <p
           v-html="t('about.desc')"
@@ -104,22 +80,4 @@
     <AboutEvents />
   </main>
 
-  <BookArtistModal v-model:open="isBookOpen" />
 </template>
-
-<style scoped>
-@keyframes hero-cue {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 6px); }
-}
-
-.hero-cue {
-  animation: hero-cue 2s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-cue {
-    animation: none;
-  }
-}
-</style>
