@@ -1,24 +1,111 @@
 {
+  "meta": {
+    "homeTitle": "The Show Time. Кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана."
+  },
   "nav": {
     "artists": "Артисты",
     "about": "О нас",
-    "book": "Забронировать",
-    "booking": "Забронировать",
-    "nav": "Навигация"
+    "book": "Бронь",
+    "booking": "Бронь",
+    "nav": "Навигация",
+    "events": "Ивенты",
+    "instagram": "Инстаграм"
   },
-
   "btns": {
     "loadMore": "Загрузить ещё",
-    "submitBtn": "Отправить"
+    "submitBtn": "Отправить",
+    "yandexBtn": "Yandex music ru",
+    "spotifyBtn": "spotify ru"
   },
-
   "home": {
-    "title": "Кураторское артистическое агентство, объединяющее лучших музыкантов и диджеев Узбекистана"
+    "title": "17 лет создаем мероприятия, <br> которые вдохновляют, объединяют и приносят результат"
   },
-
-    "about": {
+  "about": {
     "title": "About us",
-    "desc": "Агентство BMD Talent Agency – это тщательно отобранное агентство, объединяющее лучших музыкантов и диджеев Узбекистана. Мы оказываем полную поддержку: от подбора артистов для конкретного формата площадки до организации выступлений и контроля качества. Работая с нами, вы гарантированно получите профессионализм, высококачественное представление и уникальную атмосферу.",
+    "desc": " <b>The Show Time Agency </b> — одно из ведущих event-агентств Узбекистана, специализирующееся на создании мероприятий любого масштаба и уровня сложности. Мы обеспечиваем полный цикл организации — <b>от разработки креативной концепции и подбора лучших артистов до технического продакшена,</b> координации всех процессов и контроля качества на каждом этапе.",
+    "advantagesTitle": "Преимущества",
+    "partnersCaption": "имеем честь работать с лучшими",
+    "eventsTitle": "Главные события",
+    "eventsBtn": "Показать все события",
+    "eventsBtnLess": "Скрыть",
+    "founders": {
+      "founder1": {
+        "name": "Azizbek Gazinazarov",
+        "role": "Основатель, CEO",
+        "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
+      },
+      "founder2": {
+        "name": "Iskandar ikrami",
+        "role": "Исполнительный продюсер",
+        "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
+      },
+      "founder3": {
+        "name": "marat bikineev",
+        "role": "Креативный продюсер",
+        "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
+      }
+    },
+    "eventTags": {
+      "free": "Бесплатно",
+      "dogFriendly": "Можно с собакой"
+    },
+    "events": {
+      "event1": {
+        "title": "Чемпионат мира по футзалу",
+        "location": "Ташкент",
+        "description": "Project managing the Technical Information flow for all sites and creating reports and dashboards of all site-related activities\n\n—  Overlay Cluster management – daily management of Overlay cluster managers\n\n—  Ensuring overlay compliance with the law, FIFA requirements, and local jurisdiction"
+      },
+      "event2": {
+        "title": "Pro Hokei Ligasy (Чемпионат Казахстана)",
+        "location": "Ташкент",
+        "description": "Complete hosting and organization of Hockey matches and Directing Sports events.\n\nWriting timings and script for each hockey match.\n\nCreation of pre-match show. Creation of Ice mapping show.\n\nMarketing."
+      },
+      "event3": {
+        "title": "Организация шоу для ШОС",
+        "location": "Ташкент",
+        "description": "Participation in organizing the SCO Summit in Samarkand (2022)\n\nEstablishment of a design team to develop the “Eternal City” for the SCO Summit in Samarkand."
+      },
+      "event4": {
+        "title": "Шарк тароналари Самарканд",
+        "location": "Самарканд",
+        "description": "3D mapping show Registan — Managed the project in subordination of 80 people. Joint work with foreign technical specialists from Europe (“Adhoc4acpф GmbH”) to organize the event. Managed the processes: organization of visas and tickets, hotel booking, all logistics processes and organization of installation and dismantling of sound, light and 3d equipment.\n\nhttps://www.youtube.com/watch?v=DbU_ywvMVyc&t=255s"
+      },
+      "event5": {
+        "title": "День независимости Узбекистана",
+        "location": "Ташкент",
+        "description": "Carrying out state events “Mustaqillik” and “Shark Taronalari” Since 2014/2015/2016.\n\nDevelopment and approval of “Mustaqillik” project protocol for the Cabinet of Ministers\n\nInviting foreign technical specialists from Europe to organize events, Managed processes such as organizing and providing visas for foreign specialists, tickets, hotel reservations, complete logistics, organizing the installation and dismantling of sound and lighting equipment."
+      },
+      "event6": {
+        "title": "Открытие Luna by Double Tree by Hilton",
+        "location": "Ташкент",
+        "description": "Carrying out state events “Mustaqillik” and “Shark Taronalari” Since 2014/2015/2016.\n\nDevelopment and approval of “Mustaqillik” project protocol for the Cabinet of Ministers\n\nInviting foreign technical specialists from Europe to organize events, Managed processes such as organizing and providing visas for foreign specialists, tickets, hotel reservations, complete logistics, organizing the installation and dismantling of sound and lighting equipment."
+      },
+      "event7": {
+        "title": "Фестиваль электронной музыки Raqs",
+        "location": "Ташкент",
+        "description": "текст будет позже\n\nCarrying out state events “Mustaqillik” and “Shark Taronalari” Since 2014/2015/2016.\n\nDevelopment and approval of “Mustaqillik” project protocol for the Cabinet of Ministers\n\nInviting foreign technical specialists from Europe to organize events, Managed processes such as organizing and providing visas for foreign specialists, tickets, hotel reservations, complete logistics, organizing the installation and dismantling of sound and lighting equipment."
+      },
+      "event8": {
+        "title": "After party Black Coffee",
+        "location": "Ташкент",
+        "description": "текст будет позже\n\nCarrying out state events “Mustaqillik” and “Shark Taronalari” Since 2014/2015/2016.\n\nDevelopment and approval of “Mustaqillik” project protocol for the Cabinet of Ministers\n\nInviting foreign technical specialists from Europe to organize events, Managed processes such as organizing and providing visas for foreign specialists, tickets, hotel reservations, complete logistics, organizing the installation and dismantling of sound and lighting equipment."
+      },
+      "event9": {
+        "title": "Концерты симфонического оркестра Bravo",
+        "location": "Ташкент",
+        "description": "текст будет позже\n\nCarrying out state events “Mustaqillik” and “Shark Taronalari” Since 2014/2015/2016.\n\nDevelopment and approval of “Mustaqillik” project protocol for the Cabinet of Ministers\n\nInviting foreign technical specialists from Europe to organize events, Managed processes such as organizing and providing visas for foreign specialists, tickets, hotel reservations, complete logistics, organizing the installation and dismantling of sound and lighting equipment."
+      },
+      "event10": {
+        "title": "Coca-Cola Fest - New Year",
+        "location": "Ташкент",
+        "description": "50 people in the subordination. Organization of concert events of any complexity (includes a complete organization of concerts, organizing the arrival of celebrities, accompaniment and conduct of the concert, installation and dismantling of the stage: sound and lighting equipment)."
+      },
+      "event11": {
+        "title": "Организация концертов",
+        "location": "Ташкент",
+        "description": "текст будет позже\n\n“concert organization: Basta / Polina Gagarina / Philipp Kirkorov / Dima Bilan / Baskov / Gazmanov / Ricchi e Poveri / Emin.”"
+      }
+    },
     "slider": {
       "title": "Why we re",
       "slide1": {
@@ -26,7 +113,7 @@
         "text": "лучшие на рынке Узбекистана"
       },
       "slide2": {
-        "title": "Полная ответственность за качество, ",
+        "title": "Ответственность за качество, ",
         "text": "тайминг и сценическую подачу"
       },
       "slide3": {
@@ -42,12 +129,11 @@
         "text": "с международного уровня"
       },
       "slide6": {
-        "title": "Гарантия уникальной атмосферы ",
+        "title": "Уникальная атмосферы ",
         "text": "и эмоционального эффекта для гостей"
       }
     }
   },
-
   "categories": {
     "viewAll": "View all ru",
     "vocal": "Вокальный артист",
@@ -55,69 +141,165 @@
     "dj": "Диджей",
     "visual": "Визуальное продакшн"
   },
-
   "singers": {
-    "emeli": {
-      "name": "Emeli",
-      "desc": "Вокальная исполнительница, известная эмоциональными и мощными живыми выступлениями."
+    "emily": {
+      "name": "Emily",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     },
-
-    "ravshan": {
-      "name": "Равшан Нематoв",
-      "desc": "Диджей, создающий энергичные сеты с современным электронным звучанием."
+    "ronan": {
+      "name": "Ronan Gaidi",
+      "desc": [
+        "RONVN (Ronan) — музыкальный продюсер и DJ, создающий авторскую электронную музыку в жанрах House, Melodic House, Afro House, Organic House, Deep House и Downtempo. Его звучание сочетает атмосферную электронику, вокальные элементы и современные музыкальные тенденции.",
+        "Выступает в ведущих заведениях столицы и на международных площадках, представляя авторские и сольные сеты. Является участником проекта QARAQOOM, который объединяет этническое наследие Центральной Азии с современной электронной эстетикой и ориентирован на мировую аудиторию.",
+        "В своих сетах RONVN делает ставку на качественную селекцию, актуальное звучание и глубокую музыкальную атмосферу, создавая уникальный опыт для каждого выступления.",
+        "В числе фестивалей и площадок, на которых выступал артист: Spirit of Tengri, KolFest, Foure, Sublimation, Stihia, а также международные площадки в Thailand."
+      ]
     },
-
     "mosaiq8e": {
       "name": "Mosaiq8e",
-      "desc": "Визуальный артист, создающий иммерсивные аудиовизуальные проекты."
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     },
-
     "madlen": {
       "name": "Madlen",
-      "desc": "Артист живых выступлений с атмосферной подачей и ярким сценическим присутствием."
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     },
-
-    "hansley": {
-      "name": "Hansley",
-      "desc": "Вокальный артист с выразительным стилем и уникальным тембром."
+    "eya": {
+      "name": "Eya",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     },
-
-    "alexey": {
-      "name": "Alexey",
-      "desc": "Универсальный артист живых и вокальных выступлений с сильной сценической энергетикой."
+    "mone": {
+      "name": "Mone",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     },
-
     "qaraqoom": {
       "name": "Qaraqoom",
-      "desc": "Проект живых выступлений, вдохновлённый глубокими звуковыми ландшафтами и современными ритмами."
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     },
-
-    "mitch": {
-      "name": "Mitch",
-      "desc": "Вокальный исполнитель с мягким и современным звучанием."
+    "itni": {
+      "name": "Itni",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     },
-
     "kmrn": {
       "name": "KMRN",
-      "desc": "Диджей, ориентированный на электронную и клубную музыку."
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "pogosyan": {
+      "name": "Сергей Погосян",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "proof": {
+      "name": "Proof",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "djcami": {
+      "name": "DJ Cami",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "roxy": {
+      "name": "Roxy",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "silkband": {
+      "name": "Silk band",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "ben": {
+      "name": "Ben Zaplavski",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "elizaveta": {
+      "name": "Elizaveta Shus",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     }
   },
-
   "footer": {
-    "aboutText": "BMD Talent Agency — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
+    "aboutText": "The Show Time — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
     "rights": "Все права защищены",
     "privacyText": "Privacy Policy ru",
     "termsText": "Terms and Conditions ru"
   },
-
   "contact": {
     "adress": "Адрес",
-    "adressText": "C/ de Bailèn, 129, L’Eixample, 08037 Barcelona",
+    "adressText": "COMMUNITY <br>TARAS SHEVCHENKO, 24 <br>Tashkent, uzbekistan",
     "contactUs": "Связаться с нами",
     "contactName1": "Марат Бикинеев",
     "contactName2": "Дима Митч"
   },
-
   "bookModal": {
     "title": "Book artist",
     "description": "Please fill in the form below. Provide as much information as possible about your upcoming event.",
@@ -125,10 +307,10 @@
     "telNumInput": "Contact number",
     "messageInput": "Your message",
     "thankyouTitle": "Thank you!",
-    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly."
+    "errorTitle": "Sorry",
+    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly.",
+    "errorDesc": "There was some issue. please try after sometime"
   },
-
-
   "PrivacyPolicy": {
     "title": "Privacy Policy",
     "content": [
@@ -139,19 +321,19 @@
           "When you make a purchase or otherwise utilize the Site, we may need to provide your information, including the information indicated above, to certain third-party service providers. The categories of third-party service providers we may share with include payment processors, email and SMS marketing providers, social networks, analytics providers, product manufacturers, shipping companies, parties used in the sending of postal mail or emails, accounting and record-keeping parties, security and fraud prevention providers, advertisers, and other web-based services. Your information is disclosed to such third-party service providers only as necessary to complete the transaction for which they have been engaged by us"
         ]
       },
-      { 
+      {
         "title": "OPT-OUT POLICY",
         "text": [
           "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information."
         ]
       },
-      { 
+      {
         "title": "OTHER INFORMATION COLLECTED BY THE SITE",
         "text": [
           "The Site automatically collects information as you navigate through the Site. Information collected automatically may include Internet Protocol addresses, details relating to your use of the Site and information collected through cookies and other tracking technologies. This information collected is generally statistical data and does not identify you specifically. We will not re-identify such statistical or de-identified data. This information is used by us to improve the Site and to deliver better service to the Site's users."
         ]
       },
-      { 
+      {
         "title": "QUESTIONS AND CONTACT INFORMATION",
         "text": [
           "If you would like to: access, correct, amend or delete any personal information we have about you, make changes to your account, register a complaint, or simply want more information, please contact our Privacy Compliance Officer at the following:",

@@ -40,3 +40,14 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Images
+
+Image files are not stored in this repository. Put them into `public/` before building:
+
+- `public/favicon.png`
+- `public/images/<Artist>/<name>_main.webp` and gallery images — paths are listed in `src/data/singers.json`
+- `public/images/events/main.jpg` — event photo (`src/data/events.json`)
+- `public/images/partners/*.svg` — partner logos (`src/components/about/AboutPartners.vue`)
+
+Founder photos live in `src/assets/images/` and are bundled by Vite.
