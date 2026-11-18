@@ -27,7 +27,6 @@ watch(
   () => route.fullPath,
   () => {
     emit('update:close', false)
-    document.body.style.overflow = "none"
   }
 )
 
