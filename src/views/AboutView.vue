@@ -29,7 +29,7 @@
 <template>
   <main class="bg-[#f8f8f5]">
     <!-- Hero: full-screen background video (runs under the floating header) -->
-    <section class="relative -mt-19 h-svh min-h-160 overflow-hidden bg-[#111] text-white md:-mt-21 md:min-h-180 lg:-mt-23 lg:min-h-170">
+    <section class="relative -mt-19 h-svh min-h-180 overflow-hidden bg-[#111] text-white md:-mt-21 md:min-h-180 lg:-mt-23 lg:min-h-170">
       <video
         ref="heroVideo"
         class="absolute inset-0 w-full h-full object-cover"
@@ -48,18 +48,18 @@
         <div class="container">
           <div class="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:items-end lg:gap-5">
             <div class="lg:col-span-8">
-              <span class="block mb-5 text-[12px]/[100%] uppercase tracking-[2px] text-white/75 md:mb-7 md:text-[13px]/[100%]">{{ t('about.heroEyebrow') }}</span>
+              <span class="hidden lg:block mb-7 text-[13px]/[100%] uppercase tracking-[2px] text-white/75">{{ t('about.heroEyebrow') }}</span>
               <h1
                 v-html="t('about.heroTitle')"
-                class="font-heading font-normal text-[40px]/[1.02] tracking-[-1.4px] md:text-[60px]/[1] md:tracking-[-2.4px] lg:text-[min(66px,9vh)]/[0.98] lg:tracking-[-0.042em] xl:text-[min(80px,10vh)]/[0.98] xl:tracking-[-0.042em]"
+                class="font-heading font-normal text-[calc((100vw-70px)*0.159)]/[1.02] tracking-[-0.035em] md:text-[calc((100vw-120px)*0.0864)]/[1] lg:text-[min(66px,9vh)]/[0.98] lg:tracking-[-0.042em] xl:text-[min(80px,10vh)]/[0.98] xl:tracking-[-0.042em]"
               />
             </div>
-            <div class="flex flex-col gap-6 md:max-w-110 lg:col-start-10 lg:col-span-3 lg:max-w-none lg:gap-7">
+            <div class="flex flex-col gap-6 lg:col-start-10 lg:col-span-3 lg:max-w-none lg:gap-7">
               <p class="font-normal text-[15px]/[1.5] text-white/80">{{ t('about.heroText') }}</p>
               <button
                 type="button"
                 @click="isBookOpen = true"
-                class="self-start bg-white text-[#181818] px-7.5 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-colors hover:bg-white/85 lg:self-stretch"
+                class="w-full bg-white text-[#181818] px-7.5 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-colors hover:bg-white/85"
               >
                 {{ t('nav.book') }}
               </button>
@@ -72,7 +72,7 @@
         type="button"
         @click="scrollPastHero"
         :aria-label="t('about.heroScroll')"
-        class="hero-cue absolute left-1/2 bottom-5 -translate-x-1/2 p-2 text-white/60 cursor-pointer transition-colors hover:text-white"
+        class="hero-cue hidden lg:block absolute left-1/2 bottom-5 -translate-x-1/2 p-2 text-white/60 cursor-pointer transition-colors hover:text-white"
       >
         <svg width="14" height="22" viewBox="0 0 14 22" fill="none" aria-hidden="true"><path d="M7 0v20M1 14l6 6 6-6" stroke="currentColor" stroke-width="1.2"/></svg>
       </button>
