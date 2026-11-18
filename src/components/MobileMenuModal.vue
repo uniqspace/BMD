@@ -6,6 +6,7 @@ import { useI18n } from 'vue-i18n';
 import ContactUsInfo from './ContactUsInfo.vue';
 import SocialIcons from './SocialIcons.vue';
 import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
+import { scrollToContacts } from '@/lib/scrollToContacts';
 
 
 const { t } = useI18n()
@@ -29,6 +30,12 @@ watch(
     document.body.style.overflow = "none"
   }
 )
+
+// Close the menu first (releases the scroll lock), then scroll to the footer contacts
+function goToContacts() {
+  emit('update:close', false)
+  setTimeout(scrollToContacts, 50)
+}
 </script>
 
 <template>
@@ -47,6 +54,9 @@ watch(
                     </li>
                     <li class="text-[22px]/[100%] uppercase">
                         <a href="https://www.instagram.com/sht.product" target="_blank" rel="noopener">{{ t('nav.instagram') }}</a>
+                    </li>
+                    <li class="text-[22px]/[100%] uppercase">
+                        <button type="button" class="uppercase cursor-pointer" @click="goToContacts">{{ t('nav.feedback') }}</button>
                     </li>
                     <li @click="emit('update:open', true)" class="text-[22px]/[100%] uppercase">
                         {{ t('nav.book') }}

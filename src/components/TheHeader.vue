@@ -11,6 +11,7 @@
     import { RouterLink } from 'vue-router';
     import { useRoute } from 'vue-router'
     import { cn } from '@/lib/cn.ts';
+    import { scrollToContacts } from '@/lib/scrollToContacts';
 
     const route = useRoute()
 
@@ -42,6 +43,7 @@
         { to: '/', label: t('nav.artists'), active: route.path === '/' || route.path.startsWith('/singers') },
         { to: '/about#events', label: t('nav.events'), active: route.path === '/about' && route.hash === '#events' },
         { to: 'https://www.instagram.com/sht.product', label: t('nav.instagram'), active: false, external: true },
+        { to: '#contacts', label: t('nav.feedback'), active: false, scroll: true },
     ])
 </script>
 
@@ -59,7 +61,7 @@
         <div
             :class="cn(
                 'mx-auto max-w-[1400px] bg-[#181818] text-white flex items-center justify-between h-16 pl-5 pr-2 md:h-17 md:pl-7 lg:h-18 lg:pl-8 lg:pr-2.5 transition-all duration-300',
-                isScrolled && 'shadow-[0_12px_32px_rgba(24,24,24,0.25)] lg:max-w-250 lg:h-15 lg:pl-6.5 lg:pr-2',
+                isScrolled && 'shadow-[0_12px_32px_rgba(24,24,24,0.25)] lg:max-w-300 lg:h-15 lg:pl-6.5 lg:pr-2',
             )"
         >
             <Logo
@@ -67,16 +69,25 @@
                 :class="cn('text-[18px]/[100%] md:text-[20px]/[100%] transition-[font-size] duration-300', isScrolled && 'lg:text-[17px]/[100%]')"
             />
 
-            <nav class="hidden lg:block" :aria-label="t('nav.nav')">
-                <ul :class="cn('flex items-center gap-11 transition-[gap] duration-300', isScrolled && 'gap-8.5')">
+            <nav class="hidden xl:block" :aria-label="t('nav.nav')">
+                <ul :class="cn('flex items-center gap-9 transition-[gap] duration-300', isScrolled && 'gap-7')">
                     <li v-for="item in navItems" :key="item.to">
+                        <button
+                            v-if="item.scroll"
+                            type="button"
+                            @click="scrollToContacts"
+                            :class="cn(
+                                'block whitespace-nowrap cursor-pointer uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
+                                isScrolled && 'text-[12px]/[100%]',
+                            )"
+                        >{{ item.label }}</button>
                         <a
-                            v-if="item.external"
+                            v-else-if="item.external"
                             :href="item.to"
                             target="_blank"
                             rel="noopener"
                             :class="cn(
-                                'block uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
+                                'block whitespace-nowrap uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
                                 isScrolled && 'text-[12px]/[100%]',
                                 item.active && !isScrolled && 'border-white',
                                 item.active && isScrolled && 'text-white/60',
@@ -86,7 +97,7 @@
                             v-else
                             :to="item.to"
                             :class="cn(
-                                'block uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
+                                'block whitespace-nowrap uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
                                 isScrolled && 'text-[12px]/[100%]',
                                 item.active && !isScrolled && 'border-white',
                                 item.active && isScrolled && 'text-white/60',
@@ -117,7 +128,7 @@
                     type="button"
                     @click="isOpenBookModal = true"
                     :class="cn(
-                        'hidden lg:block cursor-pointer bg-white text-[#181818] uppercase font-semibold text-[13px]/[100%] px-6.5 py-4.75 transition-all duration-300 hover:bg-white/85',
+                        'hidden xl:block whitespace-nowrap cursor-pointer bg-white text-[#181818] uppercase font-semibold text-[13px]/[100%] px-6.5 py-4.75 transition-all duration-300 hover:bg-white/85',
                         isScrolled && 'text-[12px]/[100%] px-5 py-3.5',
                     )"
                 >{{ isScrolled ? t('nav.book') : t('artist.bookShort') }}</button>
@@ -127,7 +138,7 @@
                     @click="isOpenMobileModal = !isOpenMobileModal"
                     :aria-label="isOpenMobileModal ? 'Close menu' : 'Open menu'"
                     :aria-expanded="isOpenMobileModal"
-                    class="size-12 md:size-13 flex justify-center items-center bg-white cursor-pointer lg:hidden"
+                    class="size-12 md:size-13 flex justify-center items-center bg-white cursor-pointer xl:hidden"
                 >
                     <BurgerMenu v-if="isOpenMobileModal == false" class="[&_path]:stroke-[#181818]" />
                     <CloseIcon class="[&_path]:fill-[#181818]" v-else />

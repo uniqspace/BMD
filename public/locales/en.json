@@ -4,12 +4,13 @@
   },
   "nav": {
     "artists": "Artists",
-    "about": "Main",
+    "about": "About",
     "book": "Discuss your event",
     "booking": "Discuss your event",
     "nav": "navigation",
     "events": "Events",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "feedback": "Contact"
   },
   "btns": {
     "loadMore": "Load All Artists",
@@ -288,7 +289,8 @@
     "privacyText": "Privacy Policy",
     "termsText": "Terms and Conditions",
     "contacts": "Contacts",
-    "ctaTitle": "The best artists<br>for your event",
+    "ctaTitle": "Designing immersive events<br>& powerful visual experiences",
+    "ctaSubtitle": "From concept to execution.",
     "ctaButton": "Discuss your event"
   },
   "contact": {
@@ -374,7 +376,7 @@
       {
         "title": "9. Contact",
         "text": [
-          "The Show Time<br>24 Taras Shevchenko St<br>Tashkent 100000, Uzbekistan<br>Phone: <a href=\"tel:+998992226632\" class=\"underline\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"underline\" target=\"_blank\" rel=\"noopener\">{'@'}sht.product</a>"
+          "The Show Time<br>24 Taras Shevchenko St<br>Tashkent 100000, Uzbekistan<br>Phone: <a href=\"tel:+998992226632\" class=\"transition-opacity hover:opacity-60\">+998 99 222 66 32</a><br>Instagram: <a href=\"https://www.instagram.com/sht.product\" class=\"transition-opacity hover:opacity-60\" target=\"_blank\" rel=\"noopener\">{'@'}sht.product</a>"
         ]
       }
     ],
