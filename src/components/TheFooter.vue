@@ -13,16 +13,17 @@ const currentYear = new Date().getFullYear();
 const { t } = useI18n()
 
 const linkClass = 'text-[14px]/[100%] uppercase transition-opacity hover:opacity-60'
-const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.5px] text-[#6b6b6b]'
+// Dark footer on mobile/tablet, light on desktop (lg+)
+const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.5px] text-white/50 lg:text-[#6b6b6b]'
 </script>
 
 <template>
-    <footer id="contacts" class="bg-white text-[#181818] border-t border-[#18181814] pt-15 pb-8 md:pt-18 md:pb-10 lg:pt-20">
+    <footer id="contacts" class="bg-[#181818] text-white lg:bg-white lg:text-[#181818] lg:border-t lg:border-[#18181814] pt-15 pb-8 md:pt-18 md:pb-10 lg:pt-20">
         <div class="container">
             <!-- Booking call -->
             <div class="flex flex-col gap-7 md:flex-row md:items-end md:justify-between md:gap-10">
                 <h2
-                    class="font-heading font-normal max-w-225 text-[32px]/[1.08] tracking-[-1px] md:text-[42px]/[1.05] md:tracking-[-1.6px] lg:text-[52px]/[1.02] lg:tracking-[-2.2px] [&_span]:text-[#18181873]"
+                    class="font-heading font-normal max-w-225 text-[32px]/[1.08] tracking-[-1px] md:text-[42px]/[1.05] md:tracking-[-1.6px] lg:text-[52px]/[1.02] lg:tracking-[-2.2px] [&_span]:text-white/45 lg:[&_span]:text-[#18181873]"
                     v-html="t('footer.ctaTitle')"
                 />
                 <button
@@ -35,10 +36,10 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
             </div>
 
             <!-- Info columns -->
-            <div class="flex flex-col gap-10 mt-12 pt-10 border-t border-[#18181814] md:grid md:grid-cols-12 md:gap-5 md:mt-16">
+            <div class="flex flex-col gap-10 mt-12 pt-10 border-t border-white/12 lg:border-[#18181814] md:grid md:grid-cols-12 md:gap-5 md:mt-16">
                 <div class="flex flex-col gap-4 md:col-span-12 lg:col-span-5">
                     <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
-                    <p class="font-normal text-[14px]/[1.45] text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
+                    <p class="font-normal text-[14px]/[1.45] text-white/65 lg:text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6">
@@ -67,7 +68,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 </div>
             </div>
 
-            <div class="font-normal flex flex-col gap-3 mt-12 text-[13px]/[100%] text-[#6b6b6b] md:flex-row md:justify-between md:mt-14 md:text-[14px]/[100%]">
+            <div class="font-normal flex flex-col gap-3 mt-12 text-[13px]/[100%] text-white/55 lg:text-[#6b6b6b] md:flex-row md:justify-between md:mt-14 md:text-[14px]/[100%]">
                 <span>{{ currentYear }}, The Show Time. {{ t("footer.rights") }}.</span>
                 <RouterLink to="/privacy-policy" class="underline underline-offset-4 hover:no-underline">
                     {{ t("footer.privacyText") }}
