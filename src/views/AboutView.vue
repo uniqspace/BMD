@@ -51,7 +51,7 @@
               <span class="hidden lg:block mb-7 text-[13px]/[100%] uppercase tracking-[2px] text-white/75">{{ t('about.heroEyebrow') }}</span>
               <h1
                 v-html="t('about.heroTitle')"
-                class="font-heading font-normal text-[calc((100vw-70px)*0.159)]/[1.02] tracking-[-0.035em] md:text-[calc((100vw-120px)*0.0864)]/[1] lg:text-[min(66px,9vh)]/[0.98] lg:tracking-[-0.042em] xl:text-[min(80px,10vh)]/[0.98] xl:tracking-[-0.042em]"
+                class="font-heading font-normal text-[calc((100vw-70px)*0.1125)]/[1.05] tracking-[-0.03em] md:text-[calc((100vw-120px)*0.0648)]/[1.03] lg:text-[min(66px,9vh)]/[0.98] lg:tracking-[-0.042em] xl:text-[min(80px,10vh)]/[0.98] xl:tracking-[-0.042em]"
               />
             </div>
             <div class="flex flex-col gap-6 lg:col-start-10 lg:col-span-3 lg:max-w-none lg:gap-7">
