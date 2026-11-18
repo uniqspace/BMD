@@ -103,7 +103,7 @@ function onKeydown(e: KeyboardEvent) {
 onMounted(() => window.addEventListener('keydown', onKeydown))
 onUnmounted(() => window.removeEventListener('keydown', onKeydown))
 
-const fieldClass = 'w-full bg-[#F3F3F3] border-0 outline-none text-[#181818] placeholder:text-[#8f8f8f] font-normal text-[14px]/[130%] md:text-[15px]/[130%] px-5 py-4.5 md:px-5.5 md:py-5 transition-shadow duration-200'
+const fieldClass = 'w-full bg-[#F3F3F3] border-0 outline-none text-[#181818] placeholder:text-[#8f8f8f] font-normal text-[16px]/[130%] px-5 py-4.5 md:px-5.5 md:py-5 transition-shadow duration-200'
 const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
 </script>
 
