@@ -5,6 +5,7 @@ import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
 import { cn } from '@/lib/cn';
 import Spinner from './icons/Spinner.vue';
 import TIckIcon from './icons/TIckIcon.vue';
+import CloseIcon from './icons/CloseIcon.vue';
 
 const API_URL = "https://the-show-time.agency/api"
 const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
@@ -133,9 +134,23 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                     :aria-label="t('bookModal.title')"
                     class="drawer-panel absolute top-0 right-0 h-full w-full bg-white flex flex-col overflow-y-auto px-3 pt-3 pb-6 md:px-4 md:pt-4 md:pb-10 lg:w-140 lg:px-14 lg:pt-10"
                 >
-                    <!-- Mobile/tablet: same geometry as the header bar, so the logo doesn't jump on open -->
-                    <div class="flex items-center justify-between h-16 pl-5 pr-2 md:h-17 md:pl-7 lg:h-auto lg:p-0">
+                    <!-- Mobile/tablet: a copy of the header bar (dark plate, white logo, white close square),
+                         so the header looks unchanged when the popup opens -->
+                    <div class="flex items-center justify-between h-16 pl-5 pr-2 bg-[#181818] text-white md:h-17 md:pl-7 lg:hidden">
                         <span class="min-w-max font-bold text-[20px]/[100%] md:text-[22px]/[100%]">The Show Time</span>
+                        <button
+                            type="button"
+                            @click="close"
+                            :aria-label="t('bookModal.close')"
+                            class="size-12 md:size-13 flex justify-center items-center bg-white cursor-pointer"
+                        >
+                            <CloseIcon class="[&_path]:fill-[#181818]" />
+                        </button>
+                    </div>
+
+                    <!-- Desktop -->
+                    <div class="hidden lg:flex items-center justify-between">
+                        <span class="min-w-max font-bold text-[18px]/[100%]">The Show Time</span>
                         <button
                             type="button"
                             @click="close"
