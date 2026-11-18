@@ -9,7 +9,6 @@ export function useHeaderHeight(headerRef: Ref<HTMLElement | null>) {
       '--header-height',
       `${headerRef.value.offsetHeight}px`
     )
-    console.log(document.documentElement.style.getPropertyValue('--header-height'))
   }
 
   onMounted(async () => {
