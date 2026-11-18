@@ -37,15 +37,15 @@
 
       <div class="absolute inset-x-0 bottom-0 pb-16 md:pb-18 lg:pb-14">
         <div class="container">
-          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:items-end lg:gap-5">
-            <div class="lg:col-span-8">
+          <div class="flex flex-col gap-8 lg:gap-9">
+            <div>
               <span class="hidden lg:block mb-7 text-[13px]/[100%] uppercase tracking-[2px] text-white/75">{{ t('about.heroEyebrow') }}</span>
               <h1
                 v-html="t('about.heroTitle')"
                 class="font-heading font-normal text-[calc((100vw-70px)*0.1125)]/[1.05] tracking-[-0.03em] md:text-[calc((100vw-120px)*0.0648)]/[1.03] lg:text-[min(66px,9vh)]/[0.98] lg:tracking-[-0.042em] xl:text-[min(80px,10vh)]/[0.98] xl:tracking-[-0.042em]"
               />
             </div>
-            <div class="flex flex-col gap-6 lg:col-start-10 lg:col-span-3 lg:max-w-none lg:gap-7">
+            <div class="flex flex-col gap-6 lg:max-w-105 lg:gap-7">
               <p class="font-normal text-[15px]/[1.5] text-white/80">{{ t('about.heroText') }}</p>
             </div>
           </div>
