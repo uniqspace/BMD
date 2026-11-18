@@ -132,7 +132,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                 >
                     <!-- Mobile/tablet: same geometry as the header bar, so the logo doesn't jump on open -->
                     <div class="flex items-center justify-between h-16 pl-5 pr-2 md:h-17 md:pl-7 lg:h-auto lg:p-0">
-                        <span class="min-w-max font-bold text-[18px]/[100%] md:text-[20px]/[100%]">The Show Time</span>
+                        <span class="min-w-max font-bold text-[20px]/[100%] md:text-[22px]/[100%]">The Show Time</span>
                         <button
                             type="button"
                             @click="close"
