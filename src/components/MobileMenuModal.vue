@@ -31,7 +31,6 @@ watch(
   }
 )
 
-const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
 const rowClass = 'flex justify-between items-center py-5 border-b border-white/12 text-[17px]/[100%] uppercase'
 
 // Links to the current page don't change the route, so close the menu explicitly
@@ -64,7 +63,6 @@ function goToContacts() {
             </nav>
 
             <ContactIcons class="mt-7" />
-            <a :href="PHONE.href" class="self-start mt-4 text-[15px]/[100%]">{{ PHONE.label }}</a>
 
             <button
                 type="button"
