@@ -100,8 +100,19 @@ function onKeydown(e: KeyboardEvent) {
     if (props.open && e.key === 'Escape') close()
 }
 
-onMounted(() => window.addEventListener('keydown', onKeydown))
-onUnmounted(() => window.removeEventListener('keydown', onKeydown))
+// Slide-in drawer only on desktop (lg+); on mobile/tablet the popup just appears
+const desktopMq = typeof window !== 'undefined' ? window.matchMedia('(min-width: 1024px)') : null
+const isDesktop = ref(desktopMq?.matches ?? true)
+function onMqChange(e: MediaQueryListEvent) { isDesktop.value = e.matches }
+
+onMounted(() => {
+    window.addEventListener('keydown', onKeydown)
+    desktopMq?.addEventListener('change', onMqChange)
+})
+onUnmounted(() => {
+    window.removeEventListener('keydown', onKeydown)
+    desktopMq?.removeEventListener('change', onMqChange)
+})
 
 const fieldClass = 'w-full bg-[#F3F3F3] border-0 outline-none text-[#181818] placeholder:text-[#8f8f8f] font-normal text-[16px]/[130%] px-5 py-4.5 md:px-5.5 md:py-5 transition-shadow duration-200'
 const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
@@ -109,7 +120,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
 
 <template>
     <Teleport to="body">
-        <Transition name="drawer" :duration="{ enter: 450, leave: 300 }">
+        <Transition name="drawer" :duration="isDesktop ? { enter: 450, leave: 300 } : 0">
             <div v-if="open" class="fixed inset-0 z-30">
                 <div class="drawer-backdrop absolute inset-0 bg-[#18181880]" @click="close" aria-hidden="true"></div>
 
@@ -117,10 +128,11 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                     role="dialog"
                     aria-modal="true"
                     :aria-label="t('bookModal.title')"
-                    class="drawer-panel absolute top-0 right-0 h-full w-full bg-white flex flex-col overflow-y-auto px-6 pt-5 pb-6 md:w-140 md:px-14 md:pt-10 md:pb-10"
+                    class="drawer-panel absolute top-0 right-0 h-full w-full bg-white flex flex-col overflow-y-auto px-3 pt-3 pb-6 md:px-4 md:pt-4 md:pb-10 lg:w-140 lg:px-14 lg:pt-10"
                 >
-                    <div class="flex items-center justify-between">
-                        <span class="font-bold text-[18px]/[100%]">The Show Time</span>
+                    <!-- Mobile/tablet: same geometry as the header bar, so the logo doesn't jump on open -->
+                    <div class="flex items-center justify-between h-16 pl-5 pr-2 md:h-17 md:pl-7 lg:h-auto lg:p-0">
+                        <span class="min-w-max font-bold text-[18px]/[100%] md:text-[20px]/[100%]">The Show Time</span>
                         <button
                             type="button"
                             @click="close"
@@ -131,7 +143,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                         </button>
                     </div>
 
-                    <div class="flex-1 flex flex-col justify-center py-10 md:py-12">
+                    <div class="flex-1 flex flex-col justify-center py-10 px-3 md:py-12 md:px-10 lg:px-0">
                         <form v-if="isSuccess === null" @submit="onSubmit" novalidate class="flex flex-col gap-8 md:gap-9">
                             <div class="flex flex-col gap-4 md:gap-4.5">
                                 <h2 class="text-[40px]/[0.95] tracking-[-1.5px] md:text-[56px]/[0.95] md:tracking-[-2.5px]">{{ t('bookModal.title') }}</h2>
@@ -210,7 +222,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                         </div>
                     </div>
 
-                    <div class="flex justify-between items-center gap-4 border-t border-[#18181814] pt-5.5 text-[13px] md:text-[14px]">
+                    <div class="flex justify-between items-center gap-4 border-t border-[#18181814] pt-5.5 mx-3 text-[13px] md:mx-10 md:text-[14px] lg:mx-0">
                         <span class="text-[#6b6b6b]">{{ t('bookModal.orCall') }}</span>
                         <a :href="PHONE.href" class="text-[#181818] transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
                     </div>
@@ -226,22 +238,32 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
     transition: opacity 0.3s ease;
 }
 
-.drawer-enter-active .drawer-panel {
-    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.drawer-leave-active .drawer-panel {
-    transition: transform 0.3s ease-in;
-}
-
 .drawer-enter-from .drawer-backdrop,
 .drawer-leave-to .drawer-backdrop {
     opacity: 0;
 }
 
-.drawer-enter-from .drawer-panel,
-.drawer-leave-to .drawer-panel {
-    transform: translateX(100%);
+/* Slide-in from the right: desktop only */
+@media (min-width: 1024px) {
+    .drawer-enter-active .drawer-panel {
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .drawer-leave-active .drawer-panel {
+        transition: transform 0.3s ease-in;
+    }
+
+    .drawer-enter-from .drawer-panel,
+    .drawer-leave-to .drawer-panel {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 1023px) {
+    .drawer-enter-active .drawer-backdrop,
+    .drawer-leave-active .drawer-backdrop {
+        transition: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
