@@ -8,6 +8,7 @@ import { scrollToContacts } from '@/lib/scrollToContacts';
 
 const INSTAGRAM = { href: 'https://www.instagram.com/sht.product', label: '@sht.product' }
 const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
+const WHATSAPP = { href: 'https://wa.me/998992226632', label: 'WhatsApp' }
 
 const isOpenBookModal = ref(false)
 const currentYear = new Date().getFullYear();
@@ -58,6 +59,9 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <a :href="PHONE.href" :aria-label="PHONE.label" class="size-14 rounded-full border border-white/25 flex items-center justify-center">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>
                     </a>
+                    <a :href="WHATSAPP.href" target="_blank" rel="noopener" aria-label="WhatsApp" class="size-14 rounded-full border border-white/25 flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.6c.2-.5.5-.6.8-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.7l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.5-.2.7-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.6.8-.6.3-1.6.4-2.9-.2a9.5 9.5 0 0 1-4.3-4.3c-.6-1.3-.5-2.3-.2-2.9z" stroke-width="1.2"/></svg>
+                    </a>
                     <a :href="INSTAGRAM.href" target="_blank" rel="noopener" aria-label="Instagram" class="size-14 rounded-full border border-white/25 flex items-center justify-center">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
                     </a>
@@ -92,6 +96,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                         <div class="flex flex-col gap-3 text-[14px]/[100%]">
                             <a :href="PHONE.href" class="transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
                             <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ INSTAGRAM.label }}</a>
+                            <a :href="WHATSAPP.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ WHATSAPP.label }}</a>
                         </div>
                     </div>
 
