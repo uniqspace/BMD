@@ -162,7 +162,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                         </button>
                     </div>
 
-                    <div class="flex-1 flex flex-col justify-center py-10 px-3 md:py-12 md:px-10 lg:px-0">
+                    <div class="flex-1 flex flex-col justify-center py-10 px-[23px] md:py-12 md:px-11 lg:px-0">
                         <form v-if="isSuccess === null" @submit="onSubmit" novalidate class="flex flex-col gap-8 md:gap-9">
                             <div class="flex flex-col gap-4 md:gap-4.5">
                                 <h2 class="text-[40px]/[0.95] tracking-[-1.5px] md:text-[56px]/[0.95] md:tracking-[-2.5px]">{{ t('bookModal.title') }}</h2>
@@ -205,11 +205,11 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                                         name="message"
                                         :placeholder="t('bookModal.messageInput')"
                                         :aria-invalid="errors.message"
-                                        :class="cn(fieldClass, 'h-32 md:h-35 resize-none', errors.message && errorClass)"
+                                        :class="cn(fieldClass, 'h-37 md:h-40 resize-none', errors.message && errorClass)"
                                     ></textarea>
                                 </label>
-                            </div>
 
+                            <!-- Inside the fields group: same 12px gap after the textarea as between inputs -->
                             <button
                                 type="submit"
                                 :disabled="isLoading"
@@ -222,6 +222,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                                 <Spinner v-if="isLoading" />
                                 <span v-else>{{ t('btns.submitBtn') }}</span>
                             </button>
+                            </div>
                         </form>
 
                         <div v-else class="flex flex-col items-start gap-5">
@@ -241,7 +242,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                         </div>
                     </div>
 
-                    <div class="shrink-0 flex justify-between items-center gap-4 border-t border-[#18181814] pt-5.5 mx-3 text-[13px] md:mx-10 md:text-[14px] lg:mx-0">
+                    <div class="shrink-0 flex justify-between items-center gap-4 border-t border-[#18181814] pt-5.5 mx-[23px] text-[13px] md:mx-11 md:text-[14px] lg:mx-0">
                         <span class="text-[#6b6b6b]">{{ t('bookModal.orCall') }}</span>
                         <a :href="PHONE.href" class="text-[#181818] transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
                     </div>
