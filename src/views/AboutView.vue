@@ -56,6 +56,13 @@
             </div>
             <div class="flex flex-col gap-6 lg:col-start-10 lg:col-span-3 lg:max-w-none lg:gap-7">
               <p class="font-normal text-[15px]/[1.5] text-white/80">{{ t('about.heroText') }}</p>
+              <button
+                type="button"
+                @click="isBookOpen = true"
+                class="hidden lg:block w-full bg-white text-[#181818] px-7.5 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-colors hover:bg-white/85"
+              >
+                {{ t('nav.book') }}
+              </button>
             </div>
           </div>
         </div>
