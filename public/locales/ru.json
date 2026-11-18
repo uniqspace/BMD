@@ -287,7 +287,9 @@
     "rights": "Все права защищены",
     "privacyText": "Политика конфиденциальности",
     "termsText": "Terms and Conditions ru",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "ctaTitle": "Лучшие артисты<br>для вашего события",
+    "ctaButton": "Забронировать артиста"
   },
   "contact": {
     "adress": "Адрес",

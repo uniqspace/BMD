@@ -17,12 +17,29 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
 </script>
 
 <template>
-    <footer class="bg-[#f8f8f5] text-[#181818] border-t border-[#18181814] pt-15 pb-8 md:pt-18 md:pb-10">
+    <footer class="bg-white text-[#181818] border-t border-[#18181814] pt-15 pb-8 md:pt-18 md:pb-10 lg:pt-20">
         <div class="container">
-            <div class="flex flex-col gap-12 md:grid md:grid-cols-12 md:gap-5">
-                <p class="font-heading text-[24px]/[1.25] tracking-[-0.5px] md:col-span-12 md:text-[28px]/[1.25] lg:col-span-5 lg:text-[30px]/[1.25]">
-                    {{ t("footer.aboutText") }}
-                </p>
+            <!-- Booking call -->
+            <div class="flex flex-col gap-7 md:flex-row md:items-end md:justify-between md:gap-10">
+                <h2
+                    class="font-heading font-normal text-[36px]/[1.05] tracking-[-1.2px] md:text-[48px]/[1] md:tracking-[-2px] lg:text-[56px]/[1] lg:tracking-[-2.5px]"
+                    v-html="t('footer.ctaTitle')"
+                />
+                <button
+                    type="button"
+                    @click="isOpenBookModal = true"
+                    class="self-start shrink-0 bg-[#181818] text-white px-8 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-opacity hover:opacity-80 md:self-auto"
+                >
+                    {{ t("footer.ctaButton") }}
+                </button>
+            </div>
+
+            <!-- Info columns -->
+            <div class="flex flex-col gap-10 mt-12 pt-10 border-t border-[#18181814] md:grid md:grid-cols-12 md:gap-5 md:mt-16">
+                <div class="flex flex-col gap-4 md:col-span-12 lg:col-span-5">
+                    <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
+                    <p class="text-[14px]/[1.45] text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
+                </div>
 
                 <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6">
                     <div>
@@ -41,7 +58,6 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                         <div class="flex flex-col gap-3 text-[14px]/[100%]">
                             <a :href="PHONE.href" class="transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
                             <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ INSTAGRAM.label }}</a>
-                            <button type="button" @click="isOpenBookModal = true" class="text-left uppercase cursor-pointer transition-opacity hover:opacity-60">{{ t("nav.book") }} →</button>
                         </div>
                     </div>
 
@@ -52,11 +68,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 </div>
             </div>
 
-            <RouterLink to="/" class="footer-wordmark block font-heading whitespace-nowrap mt-14 mb-7 md:mt-18 md:mb-9" aria-label="The Show Time">
-                The Show Time
-            </RouterLink>
-
-            <div class="flex flex-col gap-3 text-[13px]/[100%] text-[#6b6b6b] md:flex-row md:justify-between md:text-[14px]/[100%]">
+            <div class="flex flex-col gap-3 mt-12 text-[13px]/[100%] text-[#6b6b6b] md:flex-row md:justify-between md:mt-14 md:text-[14px]/[100%]">
                 <span>{{ currentYear }}, The Show Time. {{ t("footer.rights") }}.</span>
                 <RouterLink to="/privacy-policy" class="underline underline-offset-4 hover:no-underline">
                     {{ t("footer.privacyText") }}
@@ -67,24 +79,3 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
 
     <BookArtistModal v-model:open="isOpenBookModal" />
 </template>
-
-<style scoped>
-/*
-  The wordmark always spans the full content width.
-  Playfair Display "The Show Time" is ~6.29em wide with -0.0524em letter spacing,
-  so font-size = content width / 6.29 ≈ 0.159 × content width.
-  Content width = min(viewport, 1382px container) − side paddings.
-*/
-.footer-wordmark {
-    --content-width: calc(min(100vw, 1382px) - 120px);
-    font-size: calc(var(--content-width) * 0.159);
-    line-height: 0.85;
-    letter-spacing: -0.0524em;
-}
-
-@media (max-width: 767px) {
-    .footer-wordmark {
-        --content-width: calc(100vw - 70px);
-    }
-}
-</style>

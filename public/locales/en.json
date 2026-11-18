@@ -283,11 +283,13 @@
     }
   },
   "footer": {
-    "aboutText": "The Show Time — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
+    "aboutText": "The Show Time is a curated artist agency bringing together the best musicians and DJs of Uzbekistan.",
     "rights": "All Rights Reserved",
     "privacyText": "Privacy Policy",
     "termsText": "Terms and Conditions",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "ctaTitle": "The best artists<br>for your event",
+    "ctaButton": "Book an artist"
   },
   "contact": {
     "adress": "Address",
