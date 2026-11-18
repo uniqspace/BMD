@@ -1,0 +1,269 @@
+<script setup lang="ts">
+  import { ref, reactive, computed, onMounted, onUnmounted } from 'vue'
+  import { useI18n } from 'vue-i18n'
+  import eventsData from '@/data/events.json'
+  import Spinner from './icons/Spinner.vue'
+
+  const { t } = useI18n()
+
+  const INITIAL_COUNT = 5
+  // Set of currently open rows. On desktop only one stays open at a time; on
+  // tablet / mobile several can be open independently (see toggle()).
+  const openIds = reactive(new Set<string>())
+  const isOpen = (id: string) => openIds.has(id)
+  const showAll = ref(false)
+  const isLoading = ref(false)
+
+  // Desktop keeps the single-open (accordion) behaviour; below lg rows toggle
+  // independently.
+  const isDesktop = ref(true)
+  const updateIsDesktop = () => { isDesktop.value = window.innerWidth >= 1024 }
+
+  const visibleEvents = computed(() =>
+    showAll.value ? eventsData : eventsData.slice(0, INITIAL_COUNT),
+  )
+
+  // While a row's panel collapses we keep it visually "dark" so it doesn't
+  // flash white (white text on white bg) mid-close. closingId holds the row
+  // that is currently animating closed.
+  const closingId = ref<string | null>(null)
+  let closeTimer: ReturnType<typeof setTimeout> | null = null
+  const PANEL_MS = 600 // how long the closing colour-fade lasts (see <style>)
+
+  // Only genuinely open rows are dark. A closing row switches to the light
+  // state immediately, but the `closing` class slows its colour transition so
+  // it fades to white smoothly while its panel collapses (see <style>).
+  const isDark = (id: string) => openIds.has(id)
+
+  // Flag a row as "closing" so its colours fade out over the collapse instead
+  // of snapping (see <style>).
+  const startClosing = (id: string) => {
+    closingId.value = id
+    if (closeTimer) clearTimeout(closeTimer)
+    closeTimer = setTimeout(() => {
+      closingId.value = null
+      closeTimer = null
+    }, PANEL_MS)
+  }
+
+  const toggle = (id: string) => {
+    if (openIds.has(id)) {
+      // Clicking an open row always closes it.
+      openIds.delete(id)
+      startClosing(id)
+      return
+    }
+    // On desktop, opening a row closes any other open row (accordion). On
+    // tablet / mobile, leave other open rows as they are.
+    if (isDesktop.value) {
+      openIds.forEach((other) => {
+        openIds.delete(other)
+        startClosing(other)
+      })
+    }
+    openIds.add(id)
+  }
+
+  // Show all events with a brief loading spinner, then hide the button.
+  function loadAll() {
+    if (isLoading.value) return
+    isLoading.value = true
+    setTimeout(() => {
+      showAll.value = true
+      isLoading.value = false
+    }, 1000)
+  }
+
+  onMounted(() => {
+    updateIsDesktop()
+    window.addEventListener('resize', updateIsDesktop)
+  })
+  onUnmounted(() => window.removeEventListener('resize', updateIsDesktop))
+
+  const paragraphs = (id: string) =>
+    t(`about.events.${id}.description`).split('\n\n')
+  // Reveal-on-scroll: track which rows are visible (reactive so it survives re-renders)
+  const revealed = reactive<Record<string, boolean>>({})
+  const vReveal = {
+    mounted(el: HTMLElement, binding: { value: string }) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              revealed[binding.value] = true
+              io.unobserve(el)
+            }
+          })
+        },
+        // Trigger only once the row has scrolled into the upper 60% of the
+        // viewport (bottom 40% is ignored), so the animation is visible to
+        // the user instead of finishing before they reach the section.
+        { threshold: 0, rootMargin: '0px 0px -20% 0px' },
+      )
+      io.observe(el)
+    },
+  }
+</script>
+
+<template>
+  <section id="events" class="scroll-mt-[var(--header-height)] overflow-x-clip py-20 lg:scroll-mt-0 lg:py-22.5">
+    <div class="container">
+      <div class="mx-auto flex max-w-261 flex-col items-center gap-12 lg:gap-15">
+        <h2 class="w-full text-left text-[34px]/[100%] tracking-tight md:text-center md:text-[45px]/[100%] lg:text-[50px]/[100%] lg:tracking-[-3px]">
+          {{ t('about.eventsTitle') }}
+        </h2>
+
+        <div class="w-[calc(100%+70px)] md:w-full">
+          <div
+            v-for="(ev, index) in visibleEvents"
+            :key="ev.id"
+            v-reveal="ev.id"
+            :style="{ '--reveal-delay': (index % INITIAL_COUNT) * 0.10 + 's' }"
+            class="event-row group transition-colors duration-300  px-8.75 md:px-0 first:[&_button]:border-t"
+            :class="[isDark(ev.id) ? 'bg-[#181818] border-y border-[#a1a1a126]' : 'hover:bg-[#181818]', { 'is-visible': revealed[ev.id], closing: closingId === ev.id }]"
+          >
+            <!-- Row header -->
+            <button
+              type="button"
+              @click="toggle(ev.id)"
+              :aria-expanded="isOpen(ev.id)"
+              class="flex w-full cursor-pointer items-center gap-5 px-5 py-8 text-left border-b border-[#18181826] md:px-10 lg:gap-25 lg:px-20"
+            >
+              <div class="flex flex-1 flex-col gap-2 md:flex-row md:items-center md:gap-0">
+                <span
+                  class="text-[16px]/[100%] font-medium tracking-[-0.48px] transition-colors md:w-20 md:shrink-0"
+                  :class="isDark(ev.id) ? 'text-white' : 'text-[#181818] group-hover:text-white'"
+                >
+                  {{ ev.date }}
+                </span>
+                <span
+                  class="font-heading text-[22px]/[100%] tracking-[-1.56px] transition-colors md:ms-10 lg:ms-20 lg:text-[26px]/[100%]"
+                  :class="isDark(ev.id) ? 'text-white' : 'text-[#181818] group-hover:text-white'"
+                >
+                  {{ t(`about.events.${ev.id}.title`) }}
+                </span>
+                <span
+                  class="hidden text-[16px]/[1.3] font-medium uppercase tracking-[-0.48px] transition-colors lg:block lg:ms-auto"
+                  :class="isDark(ev.id) ? 'text-white/50' : 'text-[#18181880] group-hover:text-white/50'"
+                >
+                  {{ t(`about.events.${ev.id}.location`) }}
+                </span>
+              </div>
+              <span
+                class="shrink-0 self-center transition-all duration-300"
+                :class="[isOpen(ev.id) ? 'rotate-180' : '', isDark(ev.id) ? 'text-white' : 'text-[#181818] group-hover:text-white']"
+              >
+                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 1V16M1 10L7 16L13 10" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </span>
+            </button>
+
+            <!-- Expandable panel -->
+            <div
+              class="grid transition-all duration-500 ease-out"
+              :class="isOpen(ev.id) ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
+            >
+              <div class="overflow-hidden">
+                <div class="px-5 pb-10 md:px-10 lg:px-20">
+                  <div class="flex flex-col gap-10 border-t border-white/15 pt-10 lg:flex-row lg:justify-between lg:gap-5">
+                    <!-- Description + tags -->
+                    <div class="flex flex-col gap-10 lg:w-106">
+                      <div class="flex flex-col gap-4">
+                        <p
+                          v-for="(para, pi) in paragraphs(ev.id)"
+                          :key="pi"
+                          class="text-[14px]/[1.3] font-normal tracking-[-0.42px] text-white/90"
+                        >
+                          {{ para }}
+                        </p>
+                      </div>
+                      <div v-if="ev.tags?.length" class="flex flex-wrap items-center gap-2.5">
+                        <span
+                          v-for="tag in ev.tags"
+                          :key="tag"
+                          class="bg-white/10 px-4 py-2.5 text-[14px]/[100%] font-medium tracking-[-0.42px] text-white"
+                        >
+                          {{ t(`about.eventTags.${tag}`) }}
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Single image -->
+                    <div class="shrink-0">
+                      <img
+                        :src="ev.image"
+                        :alt="t(`about.events.${ev.id}.title`)"
+                        class="h-[338px] w-full object-cover lg:w-97.5"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          v-if="!showAll && eventsData.length > INITIAL_COUNT"
+          type="button"
+          @click="loadAll"
+          :disabled="isLoading"
+          class="relative flex h-14.5 cursor-pointer items-center justify-center bg-[#181818] px-8 text-[14px]/[100%] font-semibold uppercase tracking-[-0.42px] text-white"
+        >
+          <span
+            v-if="isLoading"
+            class="absolute inset-0 flex items-center justify-center bg-[#181818]"
+          >
+            <Spinner class="size-4" />
+          </span>
+          {{ t('about.eventsBtn') }}
+        </button>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.event-row {
+  opacity: 0;
+  transform: translateX(-30px);
+  /* The reveal stagger delay applies ONLY to opacity/transform (via
+     --reveal-delay). Colours have no delay, so hover goes straight to black
+     instead of flashing white-then-black. */
+  transition:
+    opacity 0.5s ease-out var(--reveal-delay, 0s),
+    transform 0.5s ease-out var(--reveal-delay, 0s),
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.event-row.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* While a row is closing, fade its colours slowly (0.6s) so the dark -> white
+   change is smooth and spans the collapse instead of snapping. */
+.event-row.closing {
+  transition:
+    opacity 0.5s ease-out var(--reveal-delay, 0s),
+    transform 0.5s ease-out var(--reveal-delay, 0s),
+    background-color 0.6s ease,
+    border-color 0.6s ease,
+    color 0.6s ease;
+}
+
+.event-row.closing span {
+  transition-duration: 0.6s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-row {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+</style>

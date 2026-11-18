@@ -1,0 +1,188 @@
+ [{
+    "id": "mitch",
+    "nameKey": "singers.mitch.name",
+    "categoryIds": ["vocal"],
+    "descKey": "singers.mitch.desc",
+    "image": "/images/Mitch/mitch_main.webp",
+    "spotifyLink": "singers.mitchhttps/spot",
+    "yandexLink": "singers.mitchhttps/yand",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"link",
+        "link": "https/link"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Mitch/mitch1.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Mitch/mitch2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Mitch/mitch3.webp"
+        },
+        "video": null
+      }
+    ]
+  },
+    {
+    "id": "ray",
+    "nameKey": "singers.ray.name",
+    "categoryIds": ["dj"],
+    "descKey": "singers.ray.desc",
+    "image": "/images/Ray/ray_main.webp",
+    "spotifyLink": "singers.kmrnhttps/spot",
+    "yandexLink": "singers.kmrnhttps/yand",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"link",
+        "link": "https/link"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Ray/ray1.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Ray/ray2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Ray/ray3.webp"
+        },
+        "video": null
+      }
+    ]
+  },
+    {
+    "id": "djkarry",
+    "nameKey": "singers.djkarry.name",
+    "categoryIds": ["dj"],
+    "descKey": "singers.djkarry.desc",
+    "image": "/images/DJ Karry/kerry_main.webp",
+    "spotifyLink": "https/spot",
+    "yandexLink": "https/yand",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"link",
+        "link": "https/link"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/DJ Karry/kerry1.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/DJ Karry/kerry2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/DJ Karry/kerry3.webp"
+        },
+        "video": null
+      }
+    ]
+  }
+
+]

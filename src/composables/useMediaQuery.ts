@@ -1,21 +1,27 @@
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+/**
+ * Reactive CSS media-query match. SSR-safe; initializes synchronously on the
+ * client so there is no layout flash on first render.
+ */
 export function useMediaQuery(query: string) {
-  const matches = ref(typeof window !== 'undefined' && window.matchMedia(query).matches)
-  let mediaQuery: MediaQueryList | null = null
+  const matches = ref(
+    typeof window !== 'undefined' && window.matchMedia(query).matches,
+  )
 
-  const onChange = (e: MediaQueryListEvent) => {
+  let mql: MediaQueryList | null = null
+  const update = (e: MediaQueryListEvent) => {
     matches.value = e.matches
   }
 
   onMounted(() => {
-    mediaQuery = window.matchMedia(query)
-    matches.value = mediaQuery.matches
-    mediaQuery.addEventListener('change', onChange)
+    mql = window.matchMedia(query)
+    matches.value = mql.matches
+    mql.addEventListener('change', update)
   })
 
-  onUnmounted(() => {
-    mediaQuery?.removeEventListener('change', onChange)
+  onBeforeUnmount(() => {
+    mql?.removeEventListener('change', update)
   })
 
   return matches

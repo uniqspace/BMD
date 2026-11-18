@@ -5,21 +5,27 @@ type Locale = typeof SUPPORT_LOCALES[number]
 
 const STORAGE_KEY = 'locale'
 
-function isSupported(locale: string | null | undefined): locale is Locale {
-  return SUPPORT_LOCALES.includes(locale as Locale)
+function isSupported(locale: string): locale is Locale {
+  return (SUPPORT_LOCALES as readonly string[]).includes(locale)
 }
 
-function detectLocale(): Locale {
+// Decide which locale to start with:
+// 1. the one the user previously chose (saved in localStorage)
+// 2. otherwise the browser's language, if we support it
+// 3. otherwise fall back to English
+function resolveInitialLocale(): Locale {
   try {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved && isSupported(saved)) return saved
-  } catch {}
+  } catch {
+    // localStorage unavailable — ignore and fall through
+  }
 
-  return (
-    (navigator.languages ?? [navigator.language])
-      .map((lang) => lang.slice(0, 2).toLowerCase())
-      .find(isSupported) ?? 'en'
-  )
+  const browser = (navigator.languages ?? [navigator.language])
+    .map((l) => l.slice(0, 2).toLowerCase())
+    .find(isSupported)
+
+  return browser ?? 'en'
 }
 
 export const i18n = createI18n({
@@ -29,7 +35,7 @@ export const i18n = createI18n({
   messages: {},
 })
 
-export async function loadLocale(locale: string, persist = true) {
+export async function loadLocale(locale: Locale, persist = true) {
   if (!isSupported(locale)) return
 
   if (!i18n.global.availableLocales.includes(locale)) {
@@ -45,7 +51,9 @@ export async function loadLocale(locale: string, persist = true) {
   if (persist) {
     try {
       localStorage.setItem(STORAGE_KEY, locale)
-    } catch {}
+    } catch {
+      // localStorage unavailable — ignore
+    }
   }
 
   if (i18n.global.te('meta.homeTitle')) {
@@ -54,5 +62,7 @@ export async function loadLocale(locale: string, persist = true) {
 }
 
 export async function bootstrap() {
-  await loadLocale(detectLocale(), false)
+  // Don't persist here — we're only restoring the existing choice / default,
+  // not recording a new user selection.
+  await loadLocale(resolveInitialLocale(), false)
 }

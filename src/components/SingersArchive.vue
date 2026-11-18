@@ -4,16 +4,9 @@ import { useCategoryStore } from '@/store/category'
 import singers from '@/data/singers.json'
 import { useI18n } from 'vue-i18n'
 import ArrowRightIcon from './icons/ArrowRightIcon.vue'
-import LoadingIcon from './icons/LoadingIcon.vue'
 import { RouterLink } from 'vue-router'
-
-interface Singer {
-  id: string
-  nameKey: string
-  descKey: string
-  image: string
-  categoryIds: string[]
-}
+import type { Singer } from '../types'
+import Spinner from './icons/Spinner.vue'
 
 const { t } = useI18n()
 const categoryStore = useCategoryStore()
@@ -30,7 +23,7 @@ watch(
   }
 )
 
-// Filter singers by selected category
+//Filter singers by selected category
 const filteredSingers = computed<Singer[]>(() => {
   if (categoryStore.currentCategory === 'viewAll') {
     return singers as Singer[]
@@ -40,6 +33,7 @@ const filteredSingers = computed<Singer[]>(() => {
     singer.categoryIds.includes(categoryStore.currentCategory)
   )
 })
+
 
 // Limit visible singers (pagination)
 const visibleSingers = computed(() => {
@@ -51,11 +45,12 @@ const canLoadMore = computed(() => {
   return visibleCount.value < filteredSingers.value.length
 })
 
-// Load more action
+//Load more action
 function loadMore() {
   if (isLoading.value) return
 
   isLoading.value = true
+
   setTimeout(() => {
     visibleCount.value += ITEMS_PER_PAGE
     isLoading.value = false
@@ -66,12 +61,12 @@ function loadMore() {
 <template>
     <div class="mb-16.25 md:mb-17.5 lg:mb-22.5">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-7.5 md:gap-y-10 lg:gap-y-15">
-            <div
+            <div  
                 v-for="(singer, index) in visibleSingers"
                 :key="categoryStore.currentCategory + '-' + singer.id"
                 :style="{ animationDelay: (index % ITEMS_PER_PAGE) * 0.15 + 's' }"
-                class="card-in w-full flex flex-col gap-3 relative hover:[&_svg]:ml-2"
-            >
+                class="card-in w-full flex flex-col gap-3 relative  hover:[&_svg]:ml-2"
+            >   
                 <div class="flex gap-2 absolute z-10 top-6.5 left-6.5">
                     <span
                         v-for="catId in singer.categoryIds"
@@ -80,48 +75,50 @@ function loadMore() {
                         {{ t(`categories.${catId}`) }}
                     </span>
                 </div>
-
-                <RouterLink :to="'/singers/' + singer.id" class="w-full h-92.5 transition-all duration-300 hover:opacity-80 md:h-101.5 lg:h-124.25">
+    
+                <RouterLink :to="'/singers/' + singer.id" class="w-full h-92.5 transition-all duration-300  hover:opacity-80 md:h-101.5 lg:h-124.25">
                     <img class="w-full h-full object-cover" :src="singer.image" :alt="t(singer.nameKey)">
                 </RouterLink>
-
-                <RouterLink :to="'/singers/' + singer.id" class="flex gap-3 items-center">
+                
+                <RouterLink :to="'/singers/' + singer.id" class="flex gap-3 items-center ">
                     <h4 class="text-[18px] md:text-[22px] uppercase">{{ t(singer.nameKey) }}</h4>
                     <ArrowRightIcon class="transition-all duration-300" />
                 </RouterLink>
             </div>
         </div>
-
-        <button
+    
+        <button 
             v-if="canLoadMore"
             @click="loadMore"
-            class="mx-auto px-7.25 py-5.5 relative bg-[#181818] block cursor-pointer text-white uppercase text-sm/[100%] mt-11.25 sm:mt-12.5 lg:mt-15"
-        >
-            <div v-if="isLoading" class="absolute left-0 top-0 w-full h-full bg-[#181818] flex justify-center items-center">
-                <LoadingIcon class="size-4" />
-            </div>
-            {{ t("btns.loadMore") }}
+            class="mx-auto px-7.25 py-5.5 relative bg-[#181818] block cursor-pointer  text-white uppercase text-sm/[100%] mt-11.25 sm:mt-12.5 lg:mt-15"
+        >   
+          <div v-if="isLoading" class="absolute left-0 top-0 w-full h-full bg-[#181818] flex justify-center items-center">
+            <Spinner class="size-4" />
+          </div>
+          {{ t("btns.loadMore") }}
         </button>
     </div>
 </template>
 
 <style scoped>
 @keyframes card-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+    /* transform: translateY(-15px); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
 }
 
 .card-in {
-    animation: card-in 0.5s ease-out both;
+  animation: card-in 0.5s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .card-in {
-        animation: none;
-    }
+  .card-in {
+    animation: none;
+  }
 }
 </style>

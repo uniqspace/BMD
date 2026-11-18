@@ -2,41 +2,38 @@
   {
     "id": "emily",
     "nameKey": "singers.emily.name",
-    "categoryIds": [
-      "vocal",
-      "live"
-    ],
+    "categoryIds": ["vocal", "live"],
     "descKey": "singers.emily.desc",
     "image": "/images/Emily/emily_main.webp",
     "spotifyLink": "https://cln.sh/YzC0DGJs",
     "yandexLink": "https/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }            ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -55,7 +52,7 @@
         },
         "video": null
       },
-      {
+            {
         "coverPhoto": {
           "alt": "image of project",
           "src": "/images/Emily/emily3.webp"
@@ -67,40 +64,38 @@
   {
     "id": "kmrn",
     "nameKey": "singers.kmrn.name",
-    "categoryIds": [
-      "dj"
-    ],
+    "categoryIds": ["dj"],
     "descKey": "singers.kmrn.desc",
     "image": "/images/KMRN/kmrn_main.webp",
     "spotifyLink": "singers.kmrnhttps/spot",
     "yandexLink": "singers.kmrnhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -138,40 +133,38 @@
   {
     "id": "mosaiq8e",
     "nameKey": "singers.mosaiq8e.name",
-    "categoryIds": [
-      "visual"
-    ],
+    "categoryIds": ["visual"],
     "descKey": "singers.mosaiq8e.desc",
     "image": "/images/Mosaiq8e/mosaiq8e_main.webp",
     "spotifyLink": "https/spot",
     "yandexLink": "https/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -206,43 +199,41 @@
       }
     ]
   },
-  {
+    {
     "id": "madlen",
     "nameKey": "singers.madlen.name",
-    "categoryIds": [
-      "live"
-    ],
+    "categoryIds": ["live"],
     "descKey": "singers.madlen.desc",
     "image": "/images/Madlen/madlen_main.webp",
     "spotifyLink": "https/spot",
     "yandexLink": "singers.madlenhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -273,40 +264,38 @@
   {
     "id": "eya",
     "nameKey": "singers.eya.name",
-    "categoryIds": [
-      "vocal"
-    ],
+    "categoryIds": ["vocal"],
     "descKey": "singers.eya.desc",
     "image": "/images/Eya/eya_main.webp",
     "spotifyLink": "singers.hansleyhttps/spot",
     "yandexLink": "https/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -323,41 +312,38 @@
   {
     "id": "mone",
     "nameKey": "singers.mone.name",
-    "categoryIds": [
-      "vocal",
-      "live"
-    ],
+    "categoryIds": ["vocal", "live"],
     "descKey": "singers.mone.desc",
     "image": "/images/Mone/mone_main.webp",
     "spotifyLink": "singers.alexeyhttps/spot",
     "yandexLink": "singers.alexeyhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -388,40 +374,38 @@
   {
     "id": "proof",
     "nameKey": "singers.proof.name",
-    "categoryIds": [
-      "dj"
-    ],
+    "categoryIds": ["dj"],
     "descKey": "singers.proof.desc",
     "image": "/images/Proof/proof_main.webp",
     "spotifyLink": "singers.kmrnhttps/spot",
     "yandexLink": "singers.kmrnhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -452,40 +436,38 @@
   {
     "id": "itni",
     "nameKey": "singers.itni.name",
-    "categoryIds": [
-      "dj"
-    ],
+    "categoryIds": ["dj"],
     "descKey": "singers.itni.desc",
     "image": "/images/Itni/itni_main.webp",
     "spotifyLink": "https/spot",
     "yandexLink": "https/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -516,40 +498,38 @@
   {
     "id": "pogosyan",
     "nameKey": "singers.pogosyan.name",
-    "categoryIds": [
-      "visual"
-    ],
+    "categoryIds": ["visual"],
     "descKey": "singers.pogosyan.desc",
     "image": "/images/Pogosyan/pogosyan_main.webp",
     "spotifyLink": "singers.kmrnhttps/spot",
     "yandexLink": "singers.kmrnhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -580,40 +560,38 @@
   {
     "id": "roxy",
     "nameKey": "singers.roxy.name",
-    "categoryIds": [
-      "dj"
-    ],
+    "categoryIds": ["dj"],
     "descKey": "singers.roxy.desc",
     "image": "/images/Roxy/roxy_main.webp",
     "spotifyLink": "singers.kmrnhttps/spot",
     "yandexLink": "singers.kmrnhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -644,40 +622,38 @@
   {
     "id": "silkband",
     "nameKey": "singers.silkband.name",
-    "categoryIds": [
-      "dj"
-    ],
+    "categoryIds": ["dj"],
     "descKey": "singers.silkband.desc",
     "image": "/images/Silk band/silkband_main.webp",
     "spotifyLink": "singers.kmrnhttps/spot",
     "yandexLink": "singers.kmrnhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -705,43 +681,41 @@
       }
     ]
   },
-  {
+    {
     "id": "qaraqoom",
     "nameKey": "singers.qaraqoom.name",
-    "categoryIds": [
-      "live"
-    ],
+    "categoryIds": ["live"],
     "descKey": "singers.qaraqoom.desc",
     "image": "/images/Qaraqoom/qaraqoom_main.webp",
     "spotifyLink": "singers.qaraqoomhttps/spot",
     "yandexLink": "singers.qaraqoomhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -769,43 +743,41 @@
       }
     ]
   },
-  {
+    {
     "id": "Ben",
     "nameKey": "singers.ben.name",
-    "categoryIds": [
-      "live"
-    ],
+    "categoryIds": ["live"],
     "descKey": "singers.ben.desc",
     "image": "/images/Ben Zaplavski/ben_main.webp",
     "spotifyLink": "singers.qaraqoomhttps/spot",
     "yandexLink": "singers.qaraqoomhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -833,43 +805,41 @@
       }
     ]
   },
-  {
+    {
     "id": "elizaveta",
     "nameKey": "singers.elizaveta.name",
-    "categoryIds": [
-      "live"
-    ],
+    "categoryIds": ["live"],
     "descKey": "singers.elizaveta.desc",
     "image": "/images/Elizaveta Shus/elizaveta_main.webp",
     "spotifyLink": "singers.qaraqoomhttps/spot",
     "yandexLink": "singers.qaraqoomhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -911,43 +881,41 @@
       }
     ]
   },
-  {
+    {
     "id": "djcami",
     "nameKey": "singers.djcami.name",
-    "categoryIds": [
-      "live"
-    ],
+    "categoryIds": ["live"],
     "descKey": "singers.djcami.desc",
     "image": "/images/DJ Cami/djcami_main.webp",
     "spotifyLink": "singers.qaraqoomhttps/spot",
     "yandexLink": "singers.qaraqoomhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
@@ -975,43 +943,41 @@
       }
     ]
   },
-  {
+    {
     "id": "ronan",
     "nameKey": "singers.ronan.name",
-    "categoryIds": [
-      "live"
-    ],
+    "categoryIds": ["live"],
     "descKey": "singers.ronan.desc",
     "image": "/images/Ronan Gaidi/ronan_main.webp",
     "spotifyLink": "singers.qaraqoomhttps/spot",
     "yandexLink": "singers.qaraqoomhttps/yand",
     "socials": [
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       },
       {
-        "id": "facebook",
+        "id":"facebook",
         "link": "https/t.me"
       },
       {
-        "id": "instagram",
+        "id":"instagram",
         "link": "https/t.me"
       },
       {
-        "id": "tiktok",
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
         "link": "https/t.me"
       },
       {
-        "id": "youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id": "link",
+        "id":"link",
         "link": "https/link"
       },
       {
-        "id": "telegram",
+        "id":"telegram",
         "link": "https/t.me"
       }
     ],
