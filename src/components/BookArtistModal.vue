@@ -5,6 +5,7 @@ import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
 import { cn } from '@/lib/cn';
 import Spinner from './icons/Spinner.vue';
 import TIckIcon from './icons/TIckIcon.vue';
+import CloseIcon from './icons/CloseIcon.vue';
 
 const API_URL = "https://the-show-time.agency/api"
 const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
@@ -137,13 +138,14 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                          shrink-0 matters: in this flex column a tall form would otherwise squash the row. -->
                     <div class="shrink-0 flex items-center justify-between h-16 pl-5 pr-2 md:h-17 md:pl-7 lg:hidden">
                         <span class="min-w-max font-bold text-[20px]/[100%] md:text-[22px]/[100%]">The Show Time</span>
+                        <!-- Same size and spot as the header burger; dark plate since the popup is white -->
                         <button
                             type="button"
                             @click="close"
-                            class="h-11 flex items-center gap-3 text-[13px] uppercase cursor-pointer transition-opacity hover:opacity-60"
+                            :aria-label="t('bookModal.close')"
+                            class="size-12 md:size-13 flex justify-center items-center bg-[#181818] cursor-pointer"
                         >
-                            {{ t('bookModal.close') }}
-                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.6"/></svg>
+                            <CloseIcon class="[&_path]:fill-white" />
                         </button>
                     </div>
 
