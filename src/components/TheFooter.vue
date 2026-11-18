@@ -28,7 +28,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 <button
                     type="button"
                     @click="isOpenBookModal = true"
-                    class="self-start shrink-0 bg-[#181818] text-white px-8 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-opacity hover:opacity-80 md:self-auto"
+                    class="hidden lg:block shrink-0 bg-[#181818] text-white px-8 py-5 text-[13px]/[100%] font-semibold uppercase cursor-pointer transition-opacity hover:opacity-80"
                 >
                     {{ t("footer.ctaButton") }}
                 </button>
