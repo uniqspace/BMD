@@ -79,7 +79,7 @@
                             type="button"
                             @click="scrollToContacts"
                             :class="cn(
-                                'block whitespace-nowrap cursor-pointer uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
+                                'block whitespace-nowrap cursor-pointer uppercase pt-[5px] pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
                                 isScrolled && 'text-[12px]/[100%]',
                             )"
                         >{{ item.label }}</button>
@@ -89,7 +89,7 @@
                             target="_blank"
                             rel="noopener"
                             :class="cn(
-                                'block whitespace-nowrap uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
+                                'block whitespace-nowrap uppercase pt-[5px] pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
                                 isScrolled && 'text-[12px]/[100%]',
                                 item.active && !isScrolled && 'border-white',
                                 item.active && isScrolled && 'text-white/60',
@@ -99,7 +99,7 @@
                             v-else
                             :to="item.to"
                             :class="cn(
-                                'block whitespace-nowrap uppercase pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
+                                'block whitespace-nowrap uppercase pt-[5px] pb-1 border-b border-transparent text-[13px]/[100%] transition-colors hover:text-white/70',
                                 isScrolled && 'text-[12px]/[100%]',
                                 item.active && !isScrolled && 'border-white',
                                 item.active && isScrolled && 'text-white/60',
