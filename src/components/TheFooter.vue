@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ContactIcons from './ContactIcons.vue'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
@@ -56,20 +57,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <button type="button" :class="[mobileRowClass, 'w-full cursor-pointer']" @click="scrollToContacts">{{ t("nav.feedback") }}<ArrowIcon /></button>
                 </nav>
 
-                <div class="flex gap-3 mt-9">
-                    <a :href="PHONE.href" :aria-label="PHONE.label" class="size-14 rounded-full bg-white text-[#181818] flex items-center justify-center transition-colors hover:bg-white/85">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384z"/></svg>
-                    </a>
-                    <a :href="WHATSAPP.href" target="_blank" rel="noopener" aria-label="WhatsApp" class="size-14 rounded-full bg-white text-[#181818] flex items-center justify-center transition-colors hover:bg-white/85">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z M 12.824,14.055 a 0.45,0.45 0 0,0 0.545,-0.136 l 0.159,-0.209 A 0.9,0.9 0 0,1 14.25,13.35 l 1.35,0 a 0.9,0.9 0 0,1 0.9,0.9 l 0,1.35 a 0.9,0.9 0 0,1 -0.9,0.9 A 8.1,8.1 0 0,1 7.5,8.4 a 0.9,0.9 0 0,1 0.9,-0.9 l 1.35,0 a 0.9,0.9 0 0,1 0.9,0.9 l 0,1.35 a 0.9,0.9 0 0,1 -0.36,0.72 l -0.210,0.157 a 0.45,0.45 0 0,0 -0.131,0.554 a 6.3,6.3 0 0,0 2.876,2.872 z"/></svg>
-                    </a>
-                    <a :href="TELEGRAM.href" target="_blank" rel="noopener" aria-label="Telegram" class="size-14 rounded-full bg-white text-[#181818] flex items-center justify-center transition-colors hover:bg-white/85">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M6.3 11.7l9.9-3.8c.5-.2.9.1.8.8l-1.7 7.9c-.1.6-.5.7-1 .4l-2.6-1.9-1.3 1.2c-.1.1-.3.2-.5.2l.2-2.7 4.9-4.4c.2-.2 0-.3-.3-.1l-6 3.8-2.6-.8c-.6-.2-.6-.6.2-.6z"/></svg>
-                    </a>
-                    <a :href="INSTAGRAM.href" target="_blank" rel="noopener" aria-label="Instagram" class="size-14 rounded-full bg-white text-[#181818] flex items-center justify-center transition-colors hover:bg-white/85">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z M12 9.2a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6z M17.5 5.3a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
-                    </a>
-                </div>
+                <ContactIcons class="mt-9" />
 
                 <div class="flex flex-col gap-2.5 mt-6 text-[15px]/[1.45]">
                     <a :href="PHONE.href">{{ PHONE.label }}</a>
