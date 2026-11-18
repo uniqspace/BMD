@@ -135,11 +135,10 @@
     }
   },
   "categories": {
-    "viewAll": "View all ru",
+    "viewAll": "Все артисты",
     "vocal": "Вокальный артист",
     "live": "Live-проект",
-    "dj": "Диджей",
-    "visual": "Фото и видео"
+    "dj": "Диджей"
   },
   "singers": {
     "emily": {

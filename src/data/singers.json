@@ -181,35 +181,6 @@
     ]
   },
   {
-    "id": "madlen",
-    "nameKey": "singers.madlen.name",
-    "categoryIds": [
-      "vocal",
-      "live"
-    ],
-    "descKey": "singers.madlen.desc",
-    "image": "/images/Madlen/madlen.webp",
-    "imagePosition": "center 52%",
-    "heroImage": "/images/Madlen/madlen.webp",
-    "heroPosition": "center",
-    "streaming": [],
-    "socials": [
-      {
-        "id": "instagram",
-        "link": "https://www.instagram.com/madlen.offi"
-      }
-    ],
-    "projects": [
-      {
-        "coverPhoto": {
-          "alt": "MADLEN — photo 1",
-          "src": "/images/Madlen/madlen.webp"
-        },
-        "video": null
-      }
-    ]
-  },
-  {
     "id": "eya",
     "nameKey": "singers.eya.name",
     "categoryIds": [
@@ -399,43 +370,6 @@
         "coverPhoto": {
           "alt": "ITNI — photo 4",
           "src": "/images/Itni/itni-gallery-3.webp"
-        },
-        "video": null
-      }
-    ]
-  },
-  {
-    "id": "pogosyan",
-    "nameKey": "singers.pogosyan.name",
-    "categoryIds": [
-      "visual"
-    ],
-    "descKey": "singers.pogosyan.desc",
-    "image": "/images/Pogosyan/pogosyan-gallery-1.webp",
-    "imagePosition": "center 12%",
-    "heroImage": "/images/Pogosyan/pogosyan-gallery-1.webp",
-    "heroPosition": "center",
-    "streaming": [],
-    "socials": [],
-    "projects": [
-      {
-        "coverPhoto": {
-          "alt": "СЕРГЕЙ ПОГОСЯН — photo 1",
-          "src": "/images/Pogosyan/pogosyan-gallery-1.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "СЕРГЕЙ ПОГОСЯН — photo 2",
-          "src": "/images/Pogosyan/pogosyan-gallery-2.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "СЕРГЕЙ ПОГОСЯН — photo 3",
-          "src": "/images/Pogosyan/pogosyan-gallery-4.webp"
         },
         "video": null
       }

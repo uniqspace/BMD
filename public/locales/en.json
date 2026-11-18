@@ -135,11 +135,10 @@
     }
   },
   "categories": {
-    "viewAll": "View all",
+    "viewAll": "All artists",
     "vocal": "Vocal Artist",
     "live": "Live Project",
-    "dj": "DJ",
-    "visual": "Photo & Video"
+    "dj": "DJ"
   },
   "singers": {
     "emily": {
