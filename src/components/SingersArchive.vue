@@ -13,13 +13,32 @@ const categoryStore = useCategoryStore()
 // Stagger only the first rows of cards so the grid doesn't fade in for too long
 const ANIMATION_STEP_COUNT = 9
 
+// Artists that always stay at the end of the list, in this order
+const PINNED_LAST = ['silkband', 'Ben']
+
+// Shuffle once per visit so the order changes on every page load
+function shuffle<T>(list: T[]): T[] {
+  const result = [...list]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[result[i], result[j]] = [result[j]!, result[i]!]
+  }
+  return result
+}
+
+const allSingers = singers as Singer[]
+const orderedSingers: Singer[] = [
+  ...shuffle(allSingers.filter(singer => !PINNED_LAST.includes(singer.id))),
+  ...PINNED_LAST.map(id => allSingers.find(singer => singer.id === id)).filter((s): s is Singer => !!s),
+]
+
 // Filter singers by selected category
 const filteredSingers = computed<Singer[]>(() => {
   if (categoryStore.currentCategory === 'viewAll') {
-    return singers as Singer[]
+    return orderedSingers
   }
 
-  return (singers as Singer[]).filter(singer =>
+  return orderedSingers.filter(singer =>
     singer.categoryIds.includes(categoryStore.currentCategory)
   )
 })
@@ -31,7 +50,7 @@ const filteredSingers = computed<Singer[]>(() => {
             <div  
                 v-for="(singer, index) in filteredSingers"
                 :key="categoryStore.currentCategory + '-' + singer.id"
-                :style="{ animationDelay: Math.min(index, ANIMATION_STEP_COUNT) * 0.15 + 's' }"
+                :style="{ animationDelay: Math.min(index, ANIMATION_STEP_COUNT) * 0.08 + 's' }"
                 class="card-in w-full flex flex-col gap-3 relative  hover:[&_svg]:ml-2"
             >   
                 <div class="flex gap-2 absolute z-10 top-6.5 left-6.5">
@@ -61,16 +80,16 @@ const filteredSingers = computed<Singer[]>(() => {
 @keyframes card-in {
   from {
     opacity: 0;
-    /* transform: translateY(-15px); */
+    transform: translateY(-12px);
   }
   to {
     opacity: 1;
-    /* transform: translateY(0); */
+    transform: translateY(0);
   }
 }
 
 .card-in {
-  animation: card-in 0.5s ease-out both;
+  animation: card-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
