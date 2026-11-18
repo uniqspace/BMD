@@ -39,6 +39,12 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 </button>
             </div>
 
+            <!-- Logo + about text under the heading (mobile and tablet; desktop shows it in the info columns) -->
+            <div class="flex flex-col gap-4 mt-9 pt-9 border-t border-white/12 md:mt-12 md:pt-10 lg:hidden">
+                <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
+                <p class="font-normal text-[14px]/[1.45] text-white/65 max-w-90">{{ t("footer.aboutText") }}</p>
+            </div>
+
             <!-- Mobile: menu as full-width rows, round contact buttons, phone and address -->
             <div class="mt-11 md:hidden">
                 <nav :aria-label="t('nav.nav')" class="border-t border-white/12">
@@ -65,7 +71,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
 
             <!-- Info columns (tablet and desktop) -->
             <div class="hidden flex-col gap-10 mt-12 pt-10 border-t border-white/12 lg:border-[#18181814] md:grid md:grid-cols-12 md:gap-5 md:mt-16">
-                <div class="flex flex-col gap-4 md:col-span-12 lg:col-span-5">
+                <div class="hidden lg:flex flex-col gap-4 lg:col-span-5">
                     <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
                     <p class="font-normal text-[14px]/[1.45] text-white/65 lg:text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
                 </div>
