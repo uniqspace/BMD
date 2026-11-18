@@ -109,7 +109,7 @@
                 </ul>
             </nav>
 
-            <div :class="cn('flex items-center gap-2 md:gap-4 lg:gap-5.5 transition-[gap] duration-300', isScrolled && 'lg:gap-4.5')">
+            <div :class="cn('flex items-center gap-5 md:gap-7 xl:gap-5.5 transition-[gap] duration-300', isScrolled && 'xl:gap-4.5')">
                 <div class="flex items-center text-[13px]/[100%]" :class="isScrolled && 'lg:text-[12px]/[100%]'">
                     <button
                         type="button"
