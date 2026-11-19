@@ -35,6 +35,7 @@
     setIndex = Math.floor(Math.random() * partnerSets.length)
   }
   const partners = partnerSets[setIndex] ?? partnerSets[0] ?? []
+  const allPartners = partnerSets.flat()
 
   const isTabletUp = useMediaQuery('(min-width: 768px)')
   const middleIndex = Math.floor(partners.length / 2)
@@ -42,19 +43,19 @@
 
 <template>
   <div class="flex flex-col items-center gap-5 md:gap-10">
-    <!-- Tablet / desktop: both sets in two staggered rows -->
-    <div v-if="rows && isTabletUp" class="w-full max-w-295 flex flex-col gap-10 lg:gap-12">
-      <div
-        v-for="(set, i) in partnerSets"
-        :key="i"
-        :class="['flex items-center justify-around', i === 1 && 'md:px-12 lg:px-22']"
-      >
+    <!-- rows: all logos in one full-width strip that slowly moves left to right (all screen sizes) -->
+    <div
+      v-if="rows"
+      class="partners-marquee relative left-1/2 w-screen -translate-x-1/2 overflow-hidden"
+    >
+      <div class="partners-track flex w-max items-center">
         <img
-          v-for="p in set"
-          :key="p.name"
+          v-for="(p, i) in [...allPartners, ...allPartners]"
+          :key="i"
           :src="p.src"
-          :alt="p.name"
-          class="h-auto max-h-14 w-auto max-w-[17%] object-contain brightness-0 opacity-70"
+          :alt="i < allPartners.length ? p.name : ''"
+          :aria-hidden="i >= allPartners.length"
+          class="mx-8 h-auto max-h-12 w-auto max-w-30 object-contain brightness-0 opacity-45 md:mx-11 md:max-h-14 md:max-w-37.5"
         />
       </div>
     </div>
@@ -75,7 +76,7 @@
 
     <!-- Mobile: centered slider starting from the middle logo -->
     <swiper
-      v-else
+      v-else-if="!rows"
       :slides-per-view="2.4"
       :centered-slides="true"
       :initial-slide="middleIndex"
@@ -87,12 +88,39 @@
         :key="p.name"
         class="flex! w-auto! items-center justify-center "
       >
-        <img :src="p.src" :alt="p.name" :class="['w-26 object-contain', rows && 'brightness-0 opacity-70']" />
+        <img :src="p.src" :alt="p.name" class="w-26 object-contain" />
       </swiper-slide>
     </swiper>
 
-    <p v-if="!rows || !isTabletUp" class="text-center font-heading text-[17px]/[1.4] italic text-[#18181866]">
+    <p v-if="!rows" class="text-center font-heading text-[17px]/[1.4] italic text-[#18181866]">
       {{ t('about.partnersCaption') }}
     </p>
   </div>
 </template>
+
+<style scoped>
+/* Soft fade at both edges of the strip */
+.partners-marquee {
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* Track holds the logos twice; shifting it by half its width loops seamlessly. Moves left → right. */
+@keyframes partners-scroll {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.partners-track {
+  animation: partners-scroll 45s linear infinite;
+}
+
+.partners-marquee:hover .partners-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation: none;
+  }
+}
+</style>

@@ -16,7 +16,7 @@ defineProps<{ tone?: 'light' | 'soft' }>()
             v-bind="item.external ? { target: '_blank', rel: 'noopener' } : {}"
             :class="[
                 'aspect-square w-full rounded-full flex items-center justify-center transition-colors',
-                tone === 'soft' ? 'bg-[#ececea] text-[#181818] hover:bg-[#e0e0dc]' : 'bg-white text-[#181818] hover:bg-white/85',
+                tone === 'soft' ? 'bg-[#ececea] text-[#6b6b6b] hover:bg-[#e0e0dc] hover:text-[#181818]' : 'bg-white text-[#181818] hover:bg-white/85',
             ]"
         >
             <svg class="size-[45%]" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path :d="item.d" /></svg>

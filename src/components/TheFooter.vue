@@ -64,7 +64,8 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 </div>
 
                 <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6 lg:flex lg:justify-between lg:gap-8">
-                    <div>
+                    <!-- Navigation column: tablet only (removed on desktop) -->
+                    <div class="lg:hidden">
                         <span :class="titleClass">{{ t("nav.nav") }}</span>
                         <ul class="flex flex-col gap-3">
                             <li><RouterLink to="/" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
