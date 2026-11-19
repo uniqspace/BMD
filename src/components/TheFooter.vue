@@ -63,7 +63,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <p class="font-normal text-[14px]/[1.45] text-white/65 lg:text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6">
+                <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6 lg:flex lg:justify-between lg:gap-8">
                     <div>
                         <span :class="titleClass">{{ t("nav.nav") }}</span>
                         <ul class="flex flex-col gap-3">
@@ -94,7 +94,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <!-- Desktop: social icons, sized to fit the column -->
                     <div class="hidden lg:block min-w-0">
                         <span :class="titleClass">{{ t("footer.socials") }}</span>
-                        <ContactIcons tone="dark" class="grid-cols-[repeat(3,minmax(0,40px))]!" />
+                        <ContactIcons tone="soft" class="grid-cols-[repeat(4,32px)]! xl:grid-cols-[repeat(4,40px)]!" />
                     </div>
                 </div>
             </div>
