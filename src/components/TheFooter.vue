@@ -61,7 +61,6 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 <div class="hidden lg:flex flex-col gap-4 lg:col-span-5">
                     <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
                     <p class="font-normal text-[14px]/[1.45] text-white/65 lg:text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
-                    <ContactIcons tone="dark" class="mt-4 max-w-[328px]" />
                 </div>
 
                 <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6">
@@ -79,15 +78,23 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                         <span :class="titleClass">{{ t("footer.contacts") }}</span>
                         <div class="flex flex-col gap-3 text-[14px]/[100%]">
                             <a :href="PHONE.href" class="transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
-                            <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ t("nav.instagram") }}</a>
-                            <a :href="WHATSAPP.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ WHATSAPP.label }}</a>
-                            <a :href="TELEGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ TELEGRAM.label }}</a>
+                            <!-- Tablet: messenger links; desktop: the address instead (socials move to the right column) -->
+                            <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60 lg:hidden">{{ t("nav.instagram") }}</a>
+                            <a :href="WHATSAPP.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60 lg:hidden">{{ WHATSAPP.label }}</a>
+                            <a :href="TELEGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60 lg:hidden">{{ TELEGRAM.label }}</a>
+                            <p class="hidden lg:block text-[14px]/[1.5]" v-html="t('contact.adressText')" />
                         </div>
                     </div>
 
-                    <div class="col-span-2 md:col-span-1">
+                    <div class="col-span-2 md:col-span-1 lg:hidden">
                         <span :class="titleClass">{{ t("contact.adress") }}</span>
                         <p class="text-[14px]/[1.5]" v-html="t('contact.adressText')" />
+                    </div>
+
+                    <!-- Desktop: social icons, sized to fit the column -->
+                    <div class="hidden lg:block min-w-0">
+                        <span :class="titleClass">{{ t("footer.socials") }}</span>
+                        <ContactIcons tone="dark" class="grid-cols-[repeat(3,minmax(0,40px))]!" />
                     </div>
                 </div>
             </div>
