@@ -35,7 +35,7 @@
       />
       <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.3)_50%,rgba(0,0,0,0.4)_100%)]" aria-hidden="true" />
 
-      <div class="absolute inset-x-0 bottom-0 pb-16 md:pb-18 lg:pb-14">
+      <div class="absolute inset-x-0 bottom-0 pb-16 md:pb-18 lg:pb-[clamp(110px,14vh,160px)]">
         <div class="container">
           <div class="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:items-end lg:gap-5">
             <div class="lg:col-span-9">
