@@ -54,30 +54,37 @@
 
     </section>
 
-    <section class="pt-10 pb-12.5 md:pt-15 md:pb-15 lg:pt-20 lg:pb-30 scroll-mt-24">
+    <!-- Intro: centered lead, two columns of text, partner logos -->
+    <section class="overflow-x-clip pt-15 pb-15 md:pt-20 md:pb-20 lg:pt-30 lg:pb-30">
       <div class="container">
         <p
           v-html="t('about.desc')"
-          class="max-w-242.5 font-heading font-normal text-[20px]/[1.4] italic text-[#18181880] [&_b]:font-semibold [&_b]:text-[#181818] md:text-[24px]/[1.4]"
+          class="mx-auto max-w-242.5 text-center font-heading font-normal text-[20px]/[1.4] italic text-[#18181880] [&_b]:font-semibold [&_b]:text-[#181818] md:text-[24px]/[1.4]"
         />
-      </div>
-    </section>
 
-    <!-- Founders (swipeable slider on tablet / mobile) -->
-    <AboutFounders />
+        <div class="mx-auto max-w-242.5 grid gap-6 mt-10 md:grid-cols-2 md:gap-10 md:mt-14 lg:gap-15 lg:mt-16">
+          <p class="font-normal text-[15px]/[1.6] text-[#181818b3] md:text-[16px]/[1.65]">{{ t('about.introCol1') }}</p>
+          <p class="font-normal text-[15px]/[1.6] text-[#181818b3] md:text-[16px]/[1.65]">{{ t('about.introCol2') }}</p>
+        </div>
 
-    <!-- Advantages + partners (white block) -->
-    <section class="bg-white py-15 overflow-hidden md:py-20 lg:py-30">
-      <div class="container">
-        <AboutAdvantages />
-        <div class="mt-7.5 md:mt-17.5 lg:mt-25">
+        <div class="mt-15 md:mt-20 lg:mt-25">
           <AboutPartners />
         </div>
       </div>
     </section>
 
+    <!-- Advantages (white block) -->
+    <section class="bg-white py-15 overflow-hidden md:py-20 lg:py-30">
+      <div class="container">
+        <AboutAdvantages />
+      </div>
+    </section>
+
     <!-- Featured Events -->
     <AboutEvents />
+
+    <!-- Founders (swipeable slider on tablet / mobile) -->
+    <AboutFounders />
   </main>
 
 </template>
