@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
+import HomeView from '../views/HomeView.vue'
+import SingerView from '../views/SingerView.vue'
 import { i18n } from '@/i18n'
 
 const router = createRouter({
@@ -33,7 +35,7 @@ const router = createRouter({
     {
       path: '/artists',
       name: 'artists',
-      component: () => import('../views/HomeView.vue'),
+      component: HomeView,
     },
     {
       path: '/privacy-policy',
@@ -43,7 +45,7 @@ const router = createRouter({
     {
       path: '/singers/:id',
       name: 'singer',
-      component: () => import('../views/SingerView.vue'),
+      component: SingerView,
       props: true
     }
   ],
@@ -57,6 +59,14 @@ router.afterEach((to) => {
 
   if (typeof window !== 'undefined' && (window as any).ym) {
     ;(window as any).ym(107036842, 'hit', to.fullPath)
+  }
+})
+
+// After a new deploy, an already open tab may ask for a page chunk that no longer exists.
+// In that case load the target page with a normal (full) navigation instead of failing silently.
+router.onError((error, to) => {
+  if (/Failed to fetch dynamically imported module|Importing a module script failed|error loading dynamically imported module/i.test(String(error?.message))) {
+    window.location.assign(to.fullPath)
   }
 })
 

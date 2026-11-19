@@ -43,7 +43,6 @@
         { to: '/', label: t('nav.about'), active: route.path === '/' && route.hash !== '#events' },
         { to: '/artists', label: t('nav.artists'), active: route.path === '/artists' || route.path.startsWith('/singers') },
         { to: '/#events', label: t('nav.events'), active: route.path === '/' && route.hash === '#events' },
-        { to: 'https://www.instagram.com/sht.product', label: t('nav.instagram'), active: false, external: true },
         { to: '#contacts', label: t('nav.feedback'), active: false, scroll: true },
     ])
 </script>
@@ -83,18 +82,6 @@
                                 isScrolled && 'text-[12px]/[100%]',
                             )"
                         >{{ item.label }}</button>
-                        <a
-                            v-else-if="item.external"
-                            :href="item.to"
-                            target="_blank"
-                            rel="noopener"
-                            :class="cn(
-                                'block whitespace-nowrap uppercase py-1 text-[13px]/[100%] transition-colors hover:text-white/70',
-                                isScrolled && 'text-[12px]/[100%]',
-                                // Active page: same colour as hover, no underline
-                                item.active && 'text-white/70',
-                            )"
-                        >{{ item.label }}</a>
                         <RouterLink
                             v-else
                             :to="item.to"
