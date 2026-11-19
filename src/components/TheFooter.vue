@@ -22,7 +22,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
 </script>
 
 <template>
-    <footer id="contacts" class="md:sticky md:bottom-0 md:z-0 bg-[#181818] text-white lg:bg-white lg:text-[#181818] lg:border-t lg:border-[#18181814] pt-15 pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pt-18 md:pb-[calc(4rem+env(safe-area-inset-bottom))] lg:pt-20 lg:pb-10">
+    <footer id="contacts" class="md:sticky md:bottom-0 md:z-0 bg-[#181818] text-white lg:bg-white lg:text-[#181818] pt-15 pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pt-18 md:pb-[calc(4rem+env(safe-area-inset-bottom))] lg:pt-20 lg:pb-10">
         <div class="container">
             <!-- Booking call -->
             <div class="flex flex-col gap-7 md:flex-row md:items-end md:justify-between md:gap-10">
@@ -36,6 +36,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
             <div class="flex flex-col gap-4 mt-9 pt-9 border-t border-white/12 md:mt-12 md:pt-10 lg:hidden">
                 <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
                 <p class="font-normal text-[14px]/[1.45] text-white/65 max-w-90">{{ t("footer.aboutText") }}</p>
+                <ContactIcons class="hidden md:grid mt-4" />
             </div>
 
             <!-- Mobile: menu as full-width rows, round contact buttons, phone and address -->
@@ -60,6 +61,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 <div class="hidden lg:flex flex-col gap-4 lg:col-span-5">
                     <RouterLink to="/" class="self-start font-bold text-[22px]/[100%]">The Show Time</RouterLink>
                     <p class="font-normal text-[14px]/[1.45] text-white/65 lg:text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
+                    <ContactIcons tone="dark" class="mt-4 max-w-[328px]" />
                 </div>
 
                 <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6">
@@ -69,7 +71,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                             <li><RouterLink to="/" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
                             <li><RouterLink to="/artists" :class="linkClass">{{ t("nav.artists") }}</RouterLink></li>
                             <li><RouterLink to="/#events" :class="linkClass">{{ t("nav.events") }}</RouterLink></li>
-                            <li><a :href="INSTAGRAM.href" target="_blank" rel="noopener" :class="linkClass">{{ t("nav.instagram") }}</a></li>
+                            <li><button type="button" :class="[linkClass, 'cursor-pointer']" @click="scrollToContacts">{{ t("nav.feedback") }}</button></li>
                         </ul>
                     </div>
 
@@ -77,7 +79,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                         <span :class="titleClass">{{ t("footer.contacts") }}</span>
                         <div class="flex flex-col gap-3 text-[14px]/[100%]">
                             <a :href="PHONE.href" class="transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
-                            <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ INSTAGRAM.label }}</a>
+                            <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ t("nav.instagram") }}</a>
                             <a :href="WHATSAPP.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ WHATSAPP.label }}</a>
                             <a :href="TELEGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60">{{ TELEGRAM.label }}</a>
                         </div>
