@@ -60,16 +60,17 @@
     </section>
 
     <!-- Intro (variant 10): quote, signature, centered text, partner logos in two rows -->
-    <section class="overflow-x-clip pt-15 pb-15 md:pt-20 md:pb-20 lg:pt-27.5 lg:pb-27.5">
+    <section class="overflow-x-clip pt-10 pb-15 md:pt-20 md:pb-20 lg:pt-27.5 lg:pb-27.5">
       <div class="container flex flex-col items-center text-center">
-        <span class="font-heading text-[120px]/[0.6] text-[#18181822] md:text-[150px]/[0.6] lg:text-[180px]/[0.6]" aria-hidden="true">“</span>
+        <span class="font-heading text-[110px]/[0.45] text-[#18181822] md:text-[150px]/[0.6] lg:text-[180px]/[0.6]" aria-hidden="true">“</span>
         <h2
           v-html="t('about.quote')"
-          class="mt-6 max-w-270 font-heading font-normal text-[28px]/[1.2] tracking-[-0.6px] md:text-[36px]/[1.2] md:tracking-[-1px] lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
+          class="mt-3 max-w-270 font-heading md:mt-6 font-normal text-[28px]/[1.2] tracking-[-0.6px] md:text-[36px]/[1.2] md:tracking-[-1px] lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
         />
         <span class="mt-7 text-[12px]/[1.4] uppercase tracking-[2px] text-[#18181899] md:mt-8.5 md:text-[13px]/[1.4]">{{ t('about.quoteBy') }}</span>
 
-        <div class="mt-12 max-w-190 flex flex-col gap-5 md:mt-16 lg:mt-18">
+        <!-- Body text: left-aligned on mobile (easier to read), centered from tablet up -->
+        <div class="mt-12 max-w-190 flex flex-col gap-5 text-left md:mt-16 md:text-center lg:mt-18">
           <p
             v-for="(paragraph, i) in introParagraphs"
             :key="i"
