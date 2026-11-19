@@ -1,12 +1,13 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
+  import { yearsInBusiness } from '@/lib/agency'
   import AboutFounders from '@/components/AboutFounders.vue'
   import AboutAdvantages from '@/components/AboutAdvantages.vue'
   import AboutPartners from '@/components/AboutPartners.vue'
   import AboutEvents from '@/components/AboutEvents.vue'
   import { computed, onMounted, ref } from 'vue'
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
 
   // Intro text: paragraphs of both columns, interleaved (col1 p1, col2 p1, col1 p2, col2 p2)
   const introParagraphs = computed(() => {
@@ -48,7 +49,7 @@
             <div class="lg:col-span-9">
               <span class="hidden lg:block mb-7 text-[13px]/[100%] uppercase tracking-[2px] text-white/75">{{ t('about.heroEyebrow') }}</span>
               <h1
-                v-html="t('about.heroTitle')"
+                v-html="t('about.heroTitle', { years: yearsInBusiness(locale) })"
                 class="font-heading font-normal text-[calc((100vw-70px)*0.1125)]/[1.05] tracking-[-0.03em] md:text-[calc((100vw-120px)*0.0648)]/[1.03] lg:text-[min(66px,9vh,calc((100vw-120px)*0.064))]/[0.98] lg:tracking-[-0.042em] xl:text-[min(80px,10vh)]/[0.98] xl:tracking-[-0.042em]"
               />
             </div>

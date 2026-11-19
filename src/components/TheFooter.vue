@@ -2,6 +2,7 @@
 import ContactIcons from './ContactIcons.vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router';
+import { FOUNDED_YEAR } from '@/lib/agency';
 import ArrowIcon from './icons/ArrowUpRight.vue';
 import { scrollToContacts } from '@/lib/scrollToContacts';
 
@@ -10,6 +11,7 @@ const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
 const WHATSAPP = { href: 'https://wa.me/998992226632', label: 'WhatsApp' }
 const TELEGRAM = { href: 'https://t.me/+998992226632', label: 'Telegram' }
 
+// Copyright range: since the agency was founded up to the current year (updates automatically)
 const currentYear = new Date().getFullYear();
 
 const { t } = useI18n()
@@ -101,7 +103,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
             </div>
 
             <div class="font-normal flex flex-col gap-2 mt-11 pt-8 border-t border-white/12 lg:border-t-0 lg:pt-0 text-[13px]/[100%] md:gap-3 md:mt-12 md:pt-10 text-white/55 lg:text-[#9a9a9a] md:flex-row md:justify-between md:mt-14 md:text-[14px]/[100%]">
-                <span>{{ currentYear }}, The Show Time. {{ t("footer.rights") }}.</span>
+                <span>{{ FOUNDED_YEAR }}-{{ currentYear }}, The Show Time. {{ t("footer.rights") }}.</span>
                 <RouterLink to="/privacy-policy" class="underline underline-offset-4 hover:no-underline">
                     {{ t("footer.privacyText") }}
                 </RouterLink>
