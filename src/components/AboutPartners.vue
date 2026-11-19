@@ -55,7 +55,7 @@
           :src="p.src"
           :alt="i < allPartners.length ? p.name : ''"
           :aria-hidden="i >= allPartners.length"
-          class="mx-8 h-auto max-h-12 w-auto max-w-30 object-contain brightness-0 opacity-45 md:mx-11 md:max-h-14 md:max-w-37.5"
+          class="mx-8 h-auto max-h-12 w-auto max-w-30 object-contain brightness-0 opacity-30 md:mx-11 md:max-h-14 md:max-w-37.5"
         />
       </div>
     </div>
