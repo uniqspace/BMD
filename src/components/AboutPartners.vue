@@ -43,10 +43,10 @@
 
 <template>
   <div class="flex flex-col items-center gap-5 md:gap-10">
-    <!-- rows: all logos in one full-width strip that slowly moves left to right (all screen sizes) -->
+    <!-- rows: all logos in one strip, centered under the text, slowly moving right to left (all screen sizes) -->
     <div
       v-if="rows"
-      class="partners-marquee relative left-1/2 w-screen -translate-x-1/2 overflow-hidden"
+      class="partners-marquee mx-auto w-full max-w-270 overflow-hidden"
     >
       <div class="partners-track flex w-max items-center">
         <img
@@ -101,13 +101,13 @@
 <style scoped>
 /* Soft fade at both edges of the strip */
 .partners-marquee {
-  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
 }
 
-/* Track holds the logos twice; shifting it by half its width loops seamlessly. Moves left → right. */
+/* Track holds the logos twice; shifting it by half its width loops seamlessly. Moves right → left. */
 @keyframes partners-scroll {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .partners-track {
