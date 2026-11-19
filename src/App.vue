@@ -8,7 +8,10 @@ import TheFooter from './components/TheFooter.vue';
 
 <template>
   <TheHeader />
-  <RouterView />
+  <!-- Tablet/desktop: the page slides up over the footer, which stays in place underneath (see TheFooter) -->
+  <div class="relative z-10 bg-white md:shadow-[0_24px_48px_-16px_rgba(0,0,0,0.22)]">
+    <RouterView />
+  </div>
   <TheFooter />
 </template>
 
