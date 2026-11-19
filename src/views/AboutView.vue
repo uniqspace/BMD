@@ -63,8 +63,13 @@
         />
 
         <div class="mx-auto max-w-242.5 grid gap-6 mt-10 md:grid-cols-2 md:gap-10 md:mt-14 lg:gap-15 lg:mt-16">
-          <p class="font-normal text-[15px]/[1.6] text-[#181818b3] md:text-[16px]/[1.65]">{{ t('about.introCol1') }}</p>
-          <p class="font-normal text-[15px]/[1.6] text-[#181818b3] md:text-[16px]/[1.65]">{{ t('about.introCol2') }}</p>
+          <div v-for="col in ['about.introCol1', 'about.introCol2']" :key="col" class="flex flex-col gap-5">
+            <p
+              v-for="(paragraph, i) in t(col).split('\n\n')"
+              :key="i"
+              class="font-normal text-[15px]/[1.6] text-[#181818b3] md:text-[16px]/[1.65]"
+            >{{ paragraph }}</p>
+          </div>
         </div>
 
         <div class="mt-15 md:mt-20 lg:mt-25">
