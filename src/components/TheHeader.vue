@@ -104,8 +104,9 @@
                     type="button"
                     @click="isOpenBookModal = true"
                     :class="cn(
-                        'hidden xl:block whitespace-nowrap cursor-pointer bg-white text-[#181818] uppercase font-semibold text-[13px]/[100%] px-6.5 py-4.75 transition-all duration-300 hover:bg-white/85',
-                        isScrolled && 'text-[12px]/[100%] px-5 py-3.5',
+                        // Fixed width (fits the longer RU label) so switching language doesn't resize the button or shift the switcher
+                        'hidden xl:block w-45 text-center whitespace-nowrap cursor-pointer bg-white text-[#181818] uppercase font-semibold text-[13px]/[100%] py-4.75 transition-all duration-300 hover:bg-white/85',
+                        isScrolled && 'w-[158px] text-[12px]/[100%] py-3.5',
                     )"
                 >{{ isScrolled ? t('nav.book') : t('artist.bookShort') }}</button>
 
