@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { Swiper, SwiperSlide } from 'swiper/vue'
+  import { Autoplay, FreeMode } from 'swiper/modules'
   import { useI18n } from 'vue-i18n'
   import { useMediaQuery } from '@/composables/useMediaQuery'
 
@@ -38,14 +39,15 @@
   const allPartners = partnerSets.flat()
 
   const isTabletUp = useMediaQuery('(min-width: 768px)')
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
   const middleIndex = Math.floor(partners.length / 2)
 </script>
 
 <template>
   <div class="flex flex-col items-center gap-5 md:gap-10">
-    <!-- rows: all logos in one strip, centered under the text, slowly moving right to left (all screen sizes) -->
+    <!-- rows, desktop: all logos in one strip, centered under the text, slowly moving right to left -->
     <div
-      v-if="rows"
+      v-if="rows && isDesktop"
       class="partners-marquee mx-auto w-full max-w-270 overflow-hidden"
     >
       <div class="partners-track flex w-max items-center">
@@ -55,10 +57,35 @@
           :src="p.src"
           :alt="i < allPartners.length ? p.name : ''"
           :aria-hidden="i >= allPartners.length"
-          class="mx-8 h-auto max-h-12 w-auto max-w-30 object-contain brightness-0 opacity-30 md:mx-11 md:max-h-14 md:max-w-37.5"
+          class="mx-11 h-auto max-h-14 w-auto max-w-37.5 object-contain brightness-0 opacity-30"
         />
       </div>
     </div>
+
+    <!-- rows, mobile/tablet: same strip, faster, and it can be swiped left or right (auto-scroll resumes after a swipe) -->
+    <swiper
+      v-else-if="rows"
+      :modules="[Autoplay, FreeMode]"
+      slides-per-view="auto"
+      :space-between="isTabletUp ? 36 : 28"
+      :loop="true"
+      :free-mode="{ enabled: true, momentum: true }"
+      :speed="1100"
+      :autoplay="{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false }"
+      class="partners-marquee partners-swiper w-full"
+    >
+      <swiper-slide
+        v-for="(p, i) in [...allPartners, ...allPartners]"
+        :key="i"
+        class="flex! w-auto! items-center justify-center"
+      >
+        <img
+          :src="p.src"
+          :alt="p.name"
+          class="h-auto max-h-9 w-auto max-w-22 object-contain brightness-0 opacity-30 md:max-h-10 md:max-w-26"
+        />
+      </swiper-slide>
+    </swiper>
 
     <!-- Tablet / desktop: static row -->
     <div
@@ -102,6 +129,12 @@
 /* Soft fade at both edges of the strip */
 .partners-marquee {
   mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
+}
+
+/* Mobile/tablet swiper: constant linear motion between autoplay steps */
+.partners-swiper :deep(.swiper-wrapper) {
+  transition-timing-function: linear;
+  align-items: center;
 }
 
 /* Track holds the logos twice; shifting it by half its width loops seamlessly. Moves right → left. */
