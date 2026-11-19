@@ -77,12 +77,12 @@
       <swiper-slide
         v-for="(p, i) in [...allPartners, ...allPartners]"
         :key="i"
-        class="flex! w-auto! items-center justify-center"
+        class="w-auto!"
       >
         <img
           :src="p.src"
           :alt="p.name"
-          class="h-auto max-h-9 w-auto max-w-22 object-contain brightness-0 opacity-30 md:max-h-10 md:max-w-26"
+          class="block h-7 w-auto max-w-none object-contain brightness-0 opacity-30 md:h-8"
         />
       </swiper-slide>
     </swiper>
