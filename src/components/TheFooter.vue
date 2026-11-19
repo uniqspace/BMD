@@ -22,7 +22,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
 </script>
 
 <template>
-    <footer id="contacts" class="md:sticky md:bottom-0 md:z-0 bg-[#181818] text-white lg:bg-white lg:text-[#181818] pt-15 pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pt-18 md:pb-[calc(4rem+env(safe-area-inset-bottom))] lg:pt-20 lg:pb-10">
+    <footer id="contacts" class="md:sticky md:bottom-0 md:z-0 bg-[#181818] text-white lg:bg-white lg:text-[#181818] pt-15 pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pt-18 md:pb-[calc(4rem+env(safe-area-inset-bottom))] lg:pt-20 lg:pb-20">
         <div class="container">
             <!-- Booking call -->
             <div class="flex flex-col gap-7 md:flex-row md:items-end md:justify-between md:gap-10">
