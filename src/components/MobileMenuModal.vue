@@ -7,6 +7,7 @@ import { useI18n } from 'vue-i18n';
 import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
 import { scrollToContacts } from '@/lib/scrollToContacts';
 import ArrowIcon from './icons/ArrowUpRight.vue';
+import LangSwitch from './LangSwitch.vue';
 
 
 const { t } = useI18n()
@@ -50,7 +51,7 @@ function goToContacts() {
 </script>
 
 <template>
-    <div v-if="open" class="fixed inset-0 z-10 h-dvh overflow-auto bg-[#181818] text-white pt-[var(--header-height)] flex flex-col">
+    <div v-if="open" class="fixed inset-0 z-[15] h-dvh overflow-auto bg-[#181818] text-white pt-[var(--header-height)] flex flex-col">
         <!-- .container overrides padding utilities, so vertical spacing lives on this wrapper -->
         <div class="flex-1 flex flex-col pt-6 pb-8">
         <div class="container flex-1 flex flex-col w-full">
@@ -62,6 +63,8 @@ function goToContacts() {
             </nav>
 
             <ContactIcons class="mt-7" />
+
+            <LangSwitch class="self-start mt-7" />
 
             <button
                 type="button"

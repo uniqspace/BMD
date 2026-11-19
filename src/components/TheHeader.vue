@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import Logo from './Logo.vue';
     import { useI18n } from 'vue-i18n'
-    import { loadLocale } from '@/i18n'
+    import LangSwitch from './LangSwitch.vue'
     import BurgerMenu from './icons/BurgerMenu.vue';
     import BookArtistModal from './BookArtistModal.vue';
     import { ref, computed, onMounted, onUnmounted } from 'vue';
@@ -22,7 +22,7 @@
 
     const isOpenBookModal = ref(false)
     const isOpenMobileModal = ref(false)
-    const { locale, t } = useI18n()
+    const { t } = useI18n()
 
     // The floating bar compacts once the page is scrolled.
     const isScrolled = ref(false)
@@ -97,21 +97,8 @@
             </nav>
 
             <div :class="cn('flex items-center gap-5 md:gap-7 xl:gap-5.5 transition-[gap] duration-300', isScrolled && 'xl:gap-4.5')">
-                <div class="flex items-center text-[13px]/[100%]" :class="isScrolled && 'lg:text-[12px]/[100%]'">
-                    <button
-                        type="button"
-                        @click="loadLocale('ru')"
-                        :aria-pressed="locale === 'ru'"
-                        :class="cn('px-1.5 py-3 cursor-pointer bg-transparent border-0', locale === 'ru' ? 'text-white' : 'text-white/50 hover:text-white/80')"
-                    >RU</button>
-                    <span class="text-white/50" aria-hidden="true">/</span>
-                    <button
-                        type="button"
-                        @click="loadLocale('en')"
-                        :aria-pressed="locale === 'en'"
-                        :class="cn('px-1.5 py-3 cursor-pointer bg-transparent border-0', locale === 'en' ? 'text-white' : 'text-white/50 hover:text-white/80')"
-                    >EN</button>
-                </div>
+                <!-- Language switcher: desktop only; on mobile/tablet it lives in the menu -->
+                <div class="hidden xl:block xl:mr-4"><LangSwitch :compact="isScrolled" /></div>
 
                 <button
                     type="button"
