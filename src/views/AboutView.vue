@@ -4,9 +4,16 @@
   import AboutAdvantages from '@/components/AboutAdvantages.vue'
   import AboutPartners from '@/components/AboutPartners.vue'
   import AboutEvents from '@/components/AboutEvents.vue'
-  import { onMounted, ref } from 'vue'
+  import { computed, onMounted, ref } from 'vue'
 
   const { t } = useI18n()
+
+  // Intro text: paragraphs of both columns, interleaved (col1 p1, col2 p1, col1 p2, col2 p2)
+  const introParagraphs = computed(() => {
+    const a = t('about.introCol1').split('\n\n')
+    const b = t('about.introCol2').split('\n\n')
+    return Array.from({ length: Math.max(a.length, b.length) }).flatMap((_, i) => [a[i], b[i]]).filter(Boolean) as string[]
+  })
 
   // Background video of the hero: don't play it for users who prefer reduced motion
   const heroVideo = ref<HTMLVideoElement | null>(null)
@@ -54,26 +61,26 @@
 
     </section>
 
-    <!-- Intro: centered lead, two columns of text, partner logos -->
-    <section class="overflow-x-clip pt-15 pb-15 md:pt-20 md:pb-20 lg:pt-30 lg:pb-30">
-      <div class="container">
-        <p
-          v-html="t('about.desc')"
-          class="mx-auto max-w-242.5 text-center font-heading font-normal text-[20px]/[1.4] italic text-[#18181880] [&_b]:font-semibold [&_b]:text-[#181818] md:text-[24px]/[1.4]"
+    <!-- Intro (variant 10): quote, signature, centered text, partner logos in two rows -->
+    <section class="overflow-x-clip pt-15 pb-15 md:pt-20 md:pb-20 lg:pt-27.5 lg:pb-27.5">
+      <div class="container flex flex-col items-center text-center">
+        <span class="font-heading text-[120px]/[0.6] text-[#18181822] md:text-[150px]/[0.6] lg:text-[180px]/[0.6]" aria-hidden="true">“</span>
+        <h2
+          v-html="t('about.quote')"
+          class="mt-6 max-w-270 font-heading font-normal text-[28px]/[1.2] tracking-[-0.6px] md:text-[36px]/[1.2] md:tracking-[-1px] lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
         />
+        <span class="mt-7 text-[12px]/[1.4] uppercase tracking-[2px] text-[#18181899] md:mt-8.5 md:text-[13px]/[1.4]">{{ t('about.quoteBy') }}</span>
 
-        <div class="mx-auto max-w-242.5 grid gap-6 mt-10 md:grid-cols-2 md:gap-10 md:mt-14 lg:gap-15 lg:mt-16">
-          <div v-for="col in ['about.introCol1', 'about.introCol2']" :key="col" class="flex flex-col gap-5">
-            <p
-              v-for="(paragraph, i) in t(col).split('\n\n')"
-              :key="i"
-              class="font-normal text-[15px]/[1.6] text-[#181818b3] md:text-[16px]/[1.65]"
-            >{{ paragraph }}</p>
-          </div>
+        <div class="mt-12 max-w-190 flex flex-col gap-5 md:mt-16 lg:mt-18">
+          <p
+            v-for="(paragraph, i) in introParagraphs"
+            :key="i"
+            class="font-normal text-[15px]/[1.65] text-[#181818b3] md:text-[16px]/[1.7]"
+          >{{ paragraph }}</p>
         </div>
 
-        <div class="mt-15 md:mt-20 lg:mt-25">
-          <AboutPartners />
+        <div class="w-full mt-15 md:mt-20 lg:mt-24">
+          <AboutPartners rows />
         </div>
       </div>
     </section>

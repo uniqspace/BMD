@@ -5,6 +5,9 @@
 
   const { t } = useI18n()
 
+  // rows: tablet/desktop shows both sets as two staggered rows of dark logos, without the caption (home intro, variant 10)
+  defineProps<{ rows?: boolean }>()
+
   const partnerSets = [
     [
       { name: 'Courtyard', src: '/images/partners/courtyard.svg' },
@@ -39,9 +42,26 @@
 
 <template>
   <div class="flex flex-col items-center gap-5 md:gap-10">
+    <!-- Tablet / desktop: both sets in two staggered rows -->
+    <div v-if="rows && isTabletUp" class="w-full max-w-295 flex flex-col gap-10 lg:gap-12">
+      <div
+        v-for="(set, i) in partnerSets"
+        :key="i"
+        :class="['flex items-center justify-around', i === 1 && 'md:px-12 lg:px-22']"
+      >
+        <img
+          v-for="p in set"
+          :key="p.name"
+          :src="p.src"
+          :alt="p.name"
+          class="h-auto max-h-14 w-auto max-w-[17%] object-contain brightness-0 opacity-70"
+        />
+      </div>
+    </div>
+
     <!-- Tablet / desktop: static row -->
     <div
-      v-if="isTabletUp"
+      v-else-if="isTabletUp"
       class="mx-auto flex w-full max-w-261 flex-wrap items-center gap-7.5 lg:gap-0 lg:justify-between"
     >
       <img
@@ -67,11 +87,11 @@
         :key="p.name"
         class="flex! w-auto! items-center justify-center "
       >
-        <img :src="p.src" :alt="p.name" class="w-26 object-contain" />
+        <img :src="p.src" :alt="p.name" :class="['w-26 object-contain', rows && 'brightness-0 opacity-70']" />
       </swiper-slide>
     </swiper>
 
-    <p class="text-center font-heading text-[17px]/[1.4] italic text-[#18181866]">
+    <p v-if="!rows || !isTabletUp" class="text-center font-heading text-[17px]/[1.4] italic text-[#18181866]">
       {{ t('about.partnersCaption') }}
     </p>
   </div>
