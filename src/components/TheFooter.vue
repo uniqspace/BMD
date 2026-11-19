@@ -65,7 +65,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <p class="font-normal text-[14px]/[1.45] text-white/65 lg:text-[#181818a6] max-w-90">{{ t("footer.aboutText") }}</p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6 lg:flex lg:justify-between lg:gap-8">
+                <div class="grid grid-cols-2 gap-x-5 gap-y-10 md:col-span-12 md:grid-cols-3 lg:col-start-7 lg:col-span-6 lg:flex lg:justify-end lg:gap-24">
                     <!-- Navigation column: tablet only (removed on desktop) -->
                     <div class="lg:hidden">
                         <span :class="titleClass">{{ t("nav.nav") }}</span>
@@ -80,7 +80,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <div>
                         <span :class="titleClass">{{ t("footer.contacts") }}</span>
                         <div class="flex flex-col gap-3 text-[14px]/[100%]">
-                            <a :href="PHONE.href" class="transition-opacity hover:opacity-60">{{ PHONE.label }}</a>
+                            <a :href="PHONE.href">{{ PHONE.label }}</a>
                             <!-- Tablet: messenger links; desktop: the address instead (socials move to the right column) -->
                             <a :href="INSTAGRAM.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60 lg:hidden">{{ t("nav.instagram") }}</a>
                             <a :href="WHATSAPP.href" target="_blank" rel="noopener" class="transition-opacity hover:opacity-60 lg:hidden">{{ WHATSAPP.label }}</a>
