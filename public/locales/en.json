@@ -22,6 +22,8 @@
     "title": "{years} of creating events <br> that inspire, unite and deliver results"
   },
   "about": {
+    "projectsPrev": "Previous project",
+    "projectsNext": "Next project",
     "projectsMore": "Details",
     "projectsLess": "Hide",
     "projectsAbout": "About the project",
