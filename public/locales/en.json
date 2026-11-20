@@ -23,10 +23,20 @@
     "subtitle": "This is more than a list of names. We know who will fill the dance floor at a wedding, who will set the mood over dinner, who will hold the room at a corporate event and who will sell out a concert hall. Tell us about your guests, the venue and the mood of the evening — and we'll find an artist who works for your event, not just plays their set."
   },
   "anyArtist": {
-    "tag": "Any artist",
-    "title": "Name the artist — <i>we'll bring them</i>",
-    "text": "Didn't find who you want on stage? Tell us the name of any performer, local or world-class. We'll reach out, agree on the terms and organize the whole performance.",
-    "cta": "Invite your artist"
+    "cta": "Not in the catalogue?",
+    "text": "Any genre, any artist — name them and we'll bring them.",
+    "genres": [
+      "Pop",
+      "Jazz",
+      "DJ",
+      "Rock",
+      "Opera",
+      "Cover band",
+      "Hip-hop",
+      "Classical",
+      "Ethno",
+      "Show"
+    ]
   },
   "about": {
     "projectsPrev": "Previous project",
@@ -323,6 +333,13 @@
     "contactName2": "dima mitch"
   },
   "bookModal": {
+    "any": {
+      "title": "We'll bring your artist",
+      "desc": "Didn't find the performer you want in the catalogue? Tell us who you'd like to see on stage and describe the event: date, city, venue, format and approximate number of guests. We'll contact the artist, agree on the terms and organize the trip and the performance end to end.",
+      "messageInput": "Who to invite and what the event is",
+      "thankyouDesc": "Request sent. We'll look into it, contact the artist and get back to you with the terms.",
+      "telegramPrefix": "Request to bring an artist (not in the catalogue):"
+    },
     "consent": "By sending a request, you agree to the {terms} and the {privacy}.",
     "consentTerms": "terms of use",
     "consentPrivacy": "privacy policy",

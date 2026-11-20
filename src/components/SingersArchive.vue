@@ -8,9 +8,12 @@ import { RouterLink } from 'vue-router'
 import type { Singer } from '../types'
 import BookArtistModal from './BookArtistModal.vue'
 
-// The last card: "name any artist and we'll bring them". For now it opens the
-// booking form; a dedicated popup comes later.
+// The last card: "didn't find your artist? we'll bring them". Opens the booking
+// form with its own texts (variant="anyArtist").
 const isBookOpen = ref(false)
+const { tm, rt } = useI18n()
+const genres = computed(() => (tm('anyArtist.genres') as unknown[]).map(g => rt(g as string)))
+const litGenre = 5
 
 const { t } = useI18n()
 const categoryStore = useCategoryStore()
@@ -88,17 +91,16 @@ const filteredSingers = computed<Singer[]>(() => {
                     @click="isBookOpen = true"
                     class="relative w-full h-92.5 md:h-101.5 lg:h-124.25 cursor-pointer overflow-hidden bg-[#181818] text-left text-white flex flex-col justify-between p-6.5 lg:p-8"
                 >
-                    <span class="self-start px-3 py-1.5 text-sm border border-[#FFFFFF4D]">{{ t('anyArtist.tag') }}</span>
-                    <span
-                        aria-hidden="true"
-                        class="absolute right-6.5 top-6.5 size-14 rounded-full border border-white/30 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:text-[#181818] group-hover:rotate-90 lg:right-8 lg:top-8"
-                    >
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3v14M3 10h14" stroke="currentColor" stroke-width="1.5" /></svg>
+                    <!-- Wall of genres; one word is lit up -->
+                    <span class="flex flex-wrap gap-x-3.5 lg:gap-x-4">
+                        <span
+                            v-for="(genre, gi) in genres"
+                            :key="genre"
+                            class="font-heading text-[34px]/[1.08] tracking-[-1px] transition-colors duration-500 lg:text-[38px]/[1.08] xl:text-[46px]/[1.08] xl:tracking-[-1.2px]"
+                            :class="[gi === litGenre ? 'text-white' : 'text-white/16 group-hover:text-white/24', gi % 3 === 1 && 'italic']"
+                        >{{ genre }}</span>
                     </span>
-                    <span class="flex flex-col gap-4 lg:gap-5">
-                        <span v-html="t('anyArtist.title')" class="font-heading text-[34px]/[1.05] tracking-[-1px] md:text-[38px]/[1.05] lg:text-[44px]/[1.04] lg:tracking-[-1.5px]" />
-                        <span class="font-normal text-[15px]/[1.5] text-white/65 lg:text-[16px]/[1.5]">{{ t('anyArtist.text') }}</span>
-                    </span>
+                    <span class="max-w-65 font-normal text-[15px]/[1.5] text-white/70">{{ t('anyArtist.text') }}</span>
                 </button>
                 <button type="button" @click="isBookOpen = true" class="flex gap-3 items-center cursor-pointer text-left">
                     <h4 class="text-[18px] md:text-[22px] uppercase">{{ t('anyArtist.cta') }}</h4>
@@ -107,7 +109,7 @@ const filteredSingers = computed<Singer[]>(() => {
             </div>
         </div>
     
-        <BookArtistModal v-model:open="isBookOpen" />
+        <BookArtistModal v-model:open="isBookOpen" variant="anyArtist" />
     </div>
 </template>
 

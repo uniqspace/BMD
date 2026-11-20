@@ -11,11 +11,19 @@ import CloseIcon from './icons/CloseIcon.vue';
 const API_URL = "https://the-show-time.agency/api"
 const PHONE = { href: 'tel:+998992226632', label: '+998 99 222 66 32' }
 
-const { t } = useI18n()
+const { t, te } = useI18n()
 
 const props = defineProps<{
   open: boolean
+  // 'anyArtist' = request to bring an artist who isn't in the catalogue: own texts
+  variant?: 'default' | 'anyArtist'
 }>()
+
+// Text for the current variant, falling back to the default booking texts
+function tx(key: string) {
+    const own = `bookModal.any.${key}`
+    return props.variant === 'anyArtist' && te(own) ? t(own) : t(`bookModal.${key}`)
+}
 
 const emit = defineEmits<{
   (e: 'update:open', value: boolean): void
@@ -63,7 +71,11 @@ async function onSubmit(e: Event) {
         const res = await fetch(`${API_URL}/send-to-telegram`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, tel, message }),
+            body: JSON.stringify({
+                name,
+                tel,
+                message: props.variant === 'anyArtist' ? `${t('bookModal.any.telegramPrefix')}\n${message}` : message,
+            }),
         })
         isSuccess.value = res.ok
     } catch {
@@ -132,7 +144,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                 <div
                     role="dialog"
                     aria-modal="true"
-                    :aria-label="t('bookModal.title')"
+                    :aria-label="tx('title')"
                     class="drawer-panel absolute top-0 right-0 h-full w-full bg-white flex flex-col overflow-y-auto px-3 pt-3 pb-6 md:px-4 md:pt-4 md:pb-10 lg:w-140 lg:px-14 lg:pt-10"
                 >
                     <!-- Mobile/tablet: same geometry as the header bar, so the logo doesn't jump on open.
@@ -166,8 +178,8 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                     <div class="flex-1 flex flex-col justify-center py-10 px-[23px] md:py-12 md:px-11 lg:px-0">
                         <form v-if="isSuccess === null" @submit="onSubmit" novalidate class="flex flex-col gap-8 md:gap-9">
                             <div class="flex flex-col gap-4 md:gap-4.5">
-                                <h2 class="text-[40px]/[0.95] tracking-[-1.5px] md:text-[56px]/[0.95] md:tracking-[-2.5px]">{{ t('bookModal.title') }}</h2>
-                                <p class="text-[14px]/[1.45] md:text-[15px]/[1.45] font-normal text-[#181818a6] max-w-100">{{ t('bookModal.desc') }}</p>
+                                <h2 class="text-[40px]/[0.95] tracking-[-1.5px] md:text-[56px]/[0.95] md:tracking-[-2.5px]">{{ tx('title') }}</h2>
+                                <p class="text-[14px]/[1.45] md:text-[15px]/[1.45] font-normal text-[#181818a6] max-w-100">{{ tx('desc') }}</p>
                             </div>
 
                             <div class="flex flex-col gap-3">
@@ -204,7 +216,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                                         v-model="form.message"
                                         @input="onInput('message')"
                                         name="message"
-                                        :placeholder="t('bookModal.messageInput')"
+                                        :placeholder="tx('messageInput')"
                                         :aria-invalid="errors.message"
                                         :class="cn(fieldClass, 'h-37 md:h-40 resize-none', errors.message && errorClass)"
                                     ></textarea>
@@ -242,7 +254,7 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                                 {{ isSuccess ? t('bookModal.thankyouTitle') : t('bookModal.errorTitle') }}
                             </h2>
                             <p class="text-[15px]/[1.45] font-normal text-[#181818a6] max-w-90">
-                                {{ isSuccess ? t('bookModal.thankyouDesc') : t('bookModal.errorDesc') }}
+                                {{ isSuccess ? tx('thankyouDesc') : t('bookModal.errorDesc') }}
                             </p>
                             <button
                                 v-if="!isSuccess"
