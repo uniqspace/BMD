@@ -18,7 +18,7 @@
       />
     </div>
 
-    <div class="grid grid-cols-1 border-b border-white/12 md:grid-cols-2 lg:grid-cols-3 lg:border-b-0">
+    <div class="grid grid-cols-1 border-b border-white/12 md:grid-cols-2 lg:grid-cols-3">
       <div
         v-for="(i, index) in advantages"
         :key="i"
@@ -26,7 +26,6 @@
           'flex flex-col gap-8 border-t border-white/12 py-8 md:gap-12 md:px-8 md:py-10 lg:gap-14 lg:px-10 lg:pt-11 lg:pb-12',
           index % 2 === 1 && 'md:max-lg:border-l',
           index % 3 !== 0 && 'lg:border-l',
-          index < 3 && 'lg:border-t-0',
         ]"
       >
         <span class="font-heading text-[56px]/[0.9] tracking-[-2px] text-white/22 md:text-[64px]/[0.9] lg:text-[72px]/[0.9]">
