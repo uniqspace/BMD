@@ -66,7 +66,7 @@
         <span class="text-[12px]/[1.4] uppercase tracking-[2px] text-[#1818184d] md:text-[13px]/[1.4]">{{ t('about.quoteBy') }}</span>
         <h2
           v-html="t('about.quote')"
-          class="mt-5 max-w-270 font-heading font-normal text-[28px]/[1.2] tracking-[-0.6px] md:mt-6 md:text-[36px]/[1.2] md:tracking-[-1px] lg:mt-7 lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
+          class="mt-8 max-w-270 font-heading font-normal text-[28px]/[1.2] tracking-[-0.6px] md:mt-10 md:text-[36px]/[1.2] md:tracking-[-1px] lg:mt-12 lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
         />
 
         <!-- Body text: left-aligned on mobile and tablet (easier to read), centered on desktop -->
