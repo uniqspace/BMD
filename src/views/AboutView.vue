@@ -85,8 +85,8 @@
       </div>
     </section>
 
-    <!-- Advantages (white block) -->
-    <section class="bg-white py-15 overflow-hidden md:py-20 lg:py-30">
+    <!-- Advantages (dark block, variant 4) -->
+    <section class="bg-[#181818] py-15 overflow-hidden md:py-20 lg:py-30">
       <div class="container">
         <AboutAdvantages />
       </div>

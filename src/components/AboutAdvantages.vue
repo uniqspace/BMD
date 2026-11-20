@@ -1,68 +1,41 @@
 <script setup lang="ts">
-
-  import { Swiper, SwiperSlide } from 'swiper/vue'
   import { useI18n } from 'vue-i18n'
-  import { useMediaQuery } from '@/composables/useMediaQuery'
 
   const { t } = useI18n()
   const advantages = [1, 2, 3, 4, 5, 6]
 
-  // Grid from tablet up, swipeable slider on mobile.
-  const isTabletUp = useMediaQuery('(min-width: 768px)')
+  // Dark block (variant 4): 1 column on mobile, 2 on tablet, 3x2 grid on desktop.
+  // Cells are separated by thin lines; big translucent serif numbers.
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-8 md:gap-10 lg:gap-15">
-    <h2 class="w-full text-left text-[34px]/[100%] tracking-tight md:text-center md:text-[45px]/[100%] lg:text-[50px]/[100%] lg:tracking-[-3px]">
-      {{ t('about.advantagesTitle') }}
-    </h2>
+  <div class="flex flex-col gap-10 md:gap-14 lg:gap-18">
+    <div class="flex flex-col items-center gap-4 text-center md:gap-5.5">
+      <span class="text-[12px]/[100%] uppercase tracking-[3px] text-white/50">{{ t('about.advEyebrow') }}</span>
+      <h2
+        v-html="t('about.advTitle')"
+        class="font-heading font-normal text-white text-[36px]/[1.05] tracking-[-1.2px] md:text-[48px]/[1.05] md:tracking-[-1.6px] lg:text-[56px]/[1.05] lg:tracking-[-2px]"
+      />
+    </div>
 
-    <!-- Tablet / desktop grid -->
-    <div
-      v-if="isTabletUp"
-      class="mx-auto grid w-full max-w-261 grid-cols-3 gap-3"
-    >
+    <div class="grid grid-cols-1 border-b border-white/12 md:grid-cols-2 lg:grid-cols-3">
       <div
-        v-for="i in advantages"
+        v-for="(i, index) in advantages"
         :key="i"
-        class="flex flex-col gap-15 bg-[#f6f6f6] p-8"
+        :class="[
+          'flex flex-col gap-8 border-t border-white/12 py-8 md:gap-12 md:px-8 md:py-10 lg:gap-14 lg:px-10 lg:pt-11 lg:pb-12',
+          index % 2 === 1 && 'md:max-lg:border-l',
+          index % 3 !== 0 && 'lg:border-l',
+        ]"
       >
-        <span class="text-[16px]/[1.3] font-medium tracking-[-0.48px]">
+        <span class="font-heading text-[56px]/[0.9] tracking-[-2px] text-white/22 md:text-[64px]/[0.9] lg:text-[72px]/[0.9]">
           {{ String(i).padStart(2, '0') }}
         </span>
-        <div class="flex flex-col gap-2">
-          <p class="text-[18px]/[1.1] font-medium tracking-[-0.54px]">
-            {{ t(`about.slider.slide${i}.title`) }}
-          </p>
-          <p class="text-[14px]/[1.3] font-medium tracking-[-0.42px] text-[#18181866]">
-            {{ t(`about.slider.slide${i}.text`) }}
-          </p>
+        <div class="flex flex-col gap-2.5">
+          <p class="text-[18px]/[1.25] tracking-[-0.4px] text-white md:text-[20px]/[1.25]">{{ t(`about.slider.slide${i}.title`) }}</p>
+          <p class="font-normal text-[15px]/[1.5] text-white/60">{{ t(`about.slider.slide${i}.text`) }}</p>
         </div>
       </div>
     </div>
-
-    <!-- Mobile slider -->
-    <swiper
-      v-else
-      :slides-per-view="1.20"
-      :space-between="12"
-      class="w-full overflow-visible!"
-    >
-      <swiper-slide v-for="i in advantages" :key="i" class="h-auto!">
-        <div class="flex h-full min-h-55 flex-col gap-19 bg-[#f6f6f6] p-5">
-          <span class="text-[16px]/[1.3] font-medium tracking-[-0.48px]">
-            {{ String(i).padStart(2, '0') }}
-          </span>
-          <div class="flex flex-col gap-2">
-            <p class="text-[18px]/[1.1] font-medium tracking-[-0.54px]">
-              {{ t(`about.slider.slide${i}.title`) }}
-            </p>
-            <p class="text-[14px]/[1.3] font-medium tracking-[-0.42px] text-[#18181866]">
-              {{ t(`about.slider.slide${i}.text`) }}
-            </p>
-          </div>
-        </div>
-      </swiper-slide>
-    </swiper>
   </div>
 </template>

@@ -22,6 +22,8 @@
     "title": "{years} of creating events <br> that inspire, unite and deliver results"
   },
   "about": {
+    "advEyebrow": "Advantages",
+    "advTitle": "Why clients choose <i>us</i>",
     "quote": "We create events of any scale and complexity — <i>from the creative concept to the final chord.</i>",
     "quoteBy": "— The Show Time Agency —",
     "introCol1": "We work with events of every format — from intimate private evenings and weddings to corporate celebrations, concerts and city festivals. Every project starts with an idea: we get to know the task, the audience and the atmosphere to create, and only then build the solution.\n\nWe believe a great event is made of details: the right sound and light, precise timing, thoughtful staging and artists who can read the room. That is why every project has a team behind it that leads it from the first meeting to the final chord.",
@@ -118,28 +120,28 @@
     "slider": {
       "title": "Why we re",
       "slide1": {
-        "title": "Ручной отбор артистов",
-        "text": "лучшие на рынке Узбекистана"
+        "title": "Hand-picked artists",
+        "text": "The best performers in Uzbekistan"
       },
       "slide2": {
-        "title": "Полная ответственность за качество",
-        "text": "тайминг и сценическую подачу"
+        "title": "Responsibility for quality",
+        "text": "Timing and stage presence under control"
       },
       "slide3": {
-        "title": "Артисты готовы работать под формат площадки",
-        "text": "а не для себя"
+        "title": "Artists who fit the venue",
+        "text": "They perform for your event, not for themselves"
       },
       "slide4": {
-        "title": "Сопровождение мероприятий",
-        "text": "от продюсирования до подбора репертуара"
+        "title": "Full event support",
+        "text": "From production to choosing the repertoire"
       },
       "slide5": {
-        "title": "Возможность привоза артистов ",
-        "text": "с международного уровня"
+        "title": "International artists",
+        "text": "We bring in world-class performers"
       },
       "slide6": {
-        "title": "Гарантия уникальной атмосферы ",
-        "text": "и эмоционального эффекта для гостей"
+        "title": "Atmosphere and emotion",
+        "text": "A unique experience for every guest"
       }
     }
   },
