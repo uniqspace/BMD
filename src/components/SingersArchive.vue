@@ -89,7 +89,7 @@ const filteredSingers = computed<Singer[]>(() => {
                 <button
                     type="button"
                     @click="isBookOpen = true"
-                    class="relative w-full h-92.5 md:h-101.5 lg:h-124.25 cursor-pointer overflow-hidden bg-[#181818] text-left text-white flex flex-col justify-between p-6.5 lg:p-8"
+                    class="relative w-full h-92.5 md:h-101.5 lg:h-124.25 cursor-pointer overflow-hidden bg-white border border-[#1818181f] text-left text-[#181818] flex flex-col justify-between p-6.5 transition-colors duration-300 hover:border-[#18181840] lg:p-8"
                 >
                     <!-- Wall of genres; one word is lit up -->
                     <span class="flex flex-wrap gap-x-3.5 lg:gap-x-4">
@@ -97,7 +97,7 @@ const filteredSingers = computed<Singer[]>(() => {
                             v-for="(genre, gi) in genres"
                             :key="genre"
                             class="font-heading text-[34px]/[1.08] tracking-[-1px] transition-colors duration-500 lg:text-[38px]/[1.08] xl:text-[46px]/[1.08] xl:tracking-[-1.2px]"
-                            :class="[gi === litGenre ? 'text-white' : 'text-white/16 group-hover:text-white/24', gi % 3 === 1 && 'italic']"
+                            :class="[gi === litGenre ? 'text-[#181818]' : 'text-[#18181824] group-hover:text-[#18181838]', gi % 3 === 1 && 'italic']"
                         >{{ genre }}</span>
                     </span>
                 </button>
