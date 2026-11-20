@@ -68,7 +68,7 @@
           class="mt-3 max-w-270 font-heading md:mt-4 lg:mt-6 font-normal text-[28px]/[1.2] tracking-[-0.6px] md:text-[36px]/[1.2] md:tracking-[-1px] lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
         />
         <!-- Signature sits exactly halfway between the quote and the text -->
-        <span class="mt-[41px] text-[12px]/[1.4] uppercase tracking-[2px] text-[#18181899] md:mt-[51px] md:text-[13px]/[1.4] lg:mt-14">{{ t('about.quoteBy') }}</span>
+        <span class="mt-[41px] text-[12px]/[1.4] uppercase tracking-[2px] text-[#18181866] md:mt-[51px] md:text-[13px]/[1.4] lg:mt-14">{{ t('about.quoteBy') }}</span>
 
         <!-- Body text: left-aligned on mobile and tablet (easier to read), centered on desktop -->
         <div class="mt-9 max-w-190 flex flex-col gap-5 text-left md:mt-[46px] lg:mt-[50px] lg:text-center">
