@@ -22,6 +22,9 @@
     "title": "{years} of creating events <br> that inspire, unite and deliver results"
   },
   "about": {
+    "projectsMore": "Details",
+    "projectsLess": "Hide",
+    "projectsAbout": "About the project",
     "advEyebrow": "Approach",
     "advTitle": "What the <i>result</i> rests on",
     "quote": "We create events of any scale and complexity — <i>from the creative concept to the final chord.</i>",

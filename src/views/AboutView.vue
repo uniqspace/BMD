@@ -4,7 +4,7 @@
   import AboutFounders from '@/components/AboutFounders.vue'
   import AboutAdvantages from '@/components/AboutAdvantages.vue'
   import AboutPartners from '@/components/AboutPartners.vue'
-  import AboutEvents from '@/components/AboutEvents.vue'
+  import AboutProjects from '@/components/AboutProjects.vue'
   import { computed, onMounted, ref } from 'vue'
 
   const { t, locale } = useI18n()
@@ -92,8 +92,8 @@
       </div>
     </section>
 
-    <!-- Featured Events -->
-    <AboutEvents />
+    <!-- Completed projects (card-stack carousel) -->
+    <AboutProjects />
 
     <!-- Founders (swipeable slider on tablet / mobile) -->
     <AboutFounders />
