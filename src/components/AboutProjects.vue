@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, computed, onMounted, onUnmounted } from 'vue'
+  import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
   import { useI18n } from 'vue-i18n'
   import eventsData from '@/data/events.json'
   import { useBodyScrollLock } from '@/composables/useBodyScrollLock'
@@ -28,8 +28,45 @@
     if (e.key === 'ArrowRight') go(1)
     if (e.key === 'ArrowLeft') go(-1)
   }
-  onMounted(() => window.addEventListener('keydown', onKeydown))
-  onUnmounted(() => window.removeEventListener('keydown', onKeydown))
+
+  // Big project title: always two lines. Font size is fitted so the title fills
+  // two lines of its box (max size per breakpoint comes from --fit-max).
+  const titleEl = ref<HTMLElement | null>(null)
+  const stackEl = ref<HTMLElement | null>(null)
+  const titleSize = ref('')
+  // Where the photo starts, measured from the title's left edge (beyond the title = no overlap)
+  const overlapX = ref(9999)
+  async function fitTitle() {
+    await nextTick()
+    const el = titleEl.value
+    if (!el) return
+    const max = parseFloat(getComputedStyle(el).getPropertyValue('--fit-max')) || 64
+    let lo = 24
+    let hi = max
+    for (let i = 0; i < 12; i++) {
+      const mid = (lo + hi) / 2
+      el.style.fontSize = `${mid}px`
+      // offsetHeight, not scrollHeight: italic/descender glyphs overflow the tight line box
+      if (el.offsetHeight <= mid * 1.02 * 2 + 2) lo = mid
+      else hi = mid
+    }
+    el.style.fontSize = `${Math.floor(lo)}px`
+    titleSize.value = el.style.fontSize
+    const photo = stackEl.value?.getBoundingClientRect()
+    const box = el.getBoundingClientRect()
+    overlapX.value = photo && photo.left > box.left && photo.top < box.bottom && photo.bottom > box.top ? photo.left - box.left : 9999
+  }
+  watch(() => current.value.id, fitTitle)
+  onMounted(() => {
+    window.addEventListener('keydown', onKeydown)
+    window.addEventListener('resize', fitTitle)
+    fitTitle()
+    document.fonts?.ready.then(fitTitle)
+  })
+  onUnmounted(() => {
+    window.removeEventListener('keydown', onKeydown)
+    window.removeEventListener('resize', fitTitle)
+  })
   const paragraphs = computed(() => t(`about.events.${current.value.id}.description`).split('\n\n'))
 
   const go = (step: number) => {
@@ -78,7 +115,19 @@
         <div class="order-2 flex flex-col gap-4 lg:gap-5 xl:order-1">
           <span class="font-heading text-[56px]/[0.85] tracking-[-2px] text-[#18181833] md:text-[72px]/[0.85] lg:text-[96px]/[0.85] lg:tracking-[-4px]">{{ pad(active + 1) }}</span>
           <span class="text-[12px]/[1.4] uppercase tracking-[1.5px] text-[#18181899]">{{ t(`about.events.${current.id}.location`) }}</span>
-          <span class="font-heading text-[30px]/[1.1] tracking-[-0.8px] md:text-[36px]/[1.1] lg:text-[40px]/[1.08] lg:tracking-[-1.2px]">{{ t(`about.events.${current.id}.title`) }}</span>
+          <!-- Big two-line title. On wide screens it runs over the photo: the part over the
+               photo is drawn by a white copy clipped to the photo's area. -->
+          <span class="relative z-20 block lg:max-w-160 xl:w-[600px] xl:max-w-none">
+            <span
+              ref="titleEl"
+              class="block font-heading text-[40px]/[1.02] tracking-[-0.03em] [--fit-max:46px] md:[--fit-max:64px] lg:[--fit-max:72px] xl:[--fit-max:80px]"
+            >{{ t(`about.events.${current.id}.title`) }}</span>
+            <span
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-0 font-heading leading-[1.02] tracking-[-0.03em] text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.35)]"
+              :style="{ fontSize: titleSize, clipPath: `inset(0 0 0 ${overlapX}px)` }"
+            >{{ t(`about.events.${current.id}.title`) }}</span>
+          </span>
           <div class="mt-2 flex items-center justify-between gap-6 xl:flex-col xl:items-start xl:gap-10">
             <button
               type="button"
@@ -114,7 +163,7 @@
           @touchstart.passive="onTouchStart"
           @touchend="onTouchEnd"
         >
-          <div class="relative aspect-[3/2]">
+          <div ref="stackEl" class="relative aspect-[3/2]">
             <button
               v-for="(p, i) in projects"
               :key="p.id"
