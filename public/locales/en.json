@@ -22,6 +22,12 @@
     "title": "Artists for the format of your event",
     "subtitle": "This is more than a list of names. We know who will fill the dance floor at a wedding, who will set the mood over dinner, who will hold the room at a corporate event and who will sell out a concert hall. Tell us about your guests, the venue and the mood of the evening — and we'll find an artist who works for your event, not just plays their set."
   },
+  "anyArtist": {
+    "tag": "Any artist",
+    "title": "Name the artist — <i>we'll bring them</i>",
+    "text": "Didn't find who you want on stage? Tell us the name of any performer, local or world-class. We'll reach out, agree on the terms and organize the whole performance.",
+    "cta": "Invite your artist"
+  },
   "about": {
     "projectsPrev": "Previous project",
     "projectsNext": "Next project",
