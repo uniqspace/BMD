@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { nextTick, onMounted, onUnmounted, reactive, ref, toRef, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { RouterLink } from 'vue-router'
 import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
 import { cn } from '@/lib/cn';
 import Spinner from './icons/Spinner.vue';
@@ -222,6 +223,16 @@ const errorClass = 'shadow-[inset_0_0_0_1.5px_#e5484d]'
                                 <Spinner v-if="isLoading" />
                                 <span v-else>{{ t('btns.submitBtn') }}</span>
                             </button>
+
+                            <!-- Consent: links to the legal pages (close the drawer when following them) -->
+                            <i18n-t keypath="bookModal.consent" tag="p" scope="global" class="mt-1 text-[12px]/[1.5] font-normal text-[#18181899]">
+                                <template #terms>
+                                    <RouterLink to="/terms" class="underline underline-offset-2 hover:no-underline" @click="close">{{ t('bookModal.consentTerms') }}</RouterLink>
+                                </template>
+                                <template #privacy>
+                                    <RouterLink to="/privacy-policy" class="underline underline-offset-2 hover:no-underline" @click="close">{{ t('bookModal.consentPrivacy') }}</RouterLink>
+                                </template>
+                            </i18n-t>
                             </div>
                         </form>
 

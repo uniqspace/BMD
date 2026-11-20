@@ -295,7 +295,7 @@
     "aboutText": "A full-cycle event agency: creative concept, the best artists, technical production and coordination — all in one place.",
     "rights": "All Rights Reserved",
     "privacyText": "Privacy Policy",
-    "termsText": "Terms and Conditions",
+    "termsText": "Terms of use",
     "contacts": "Contacts",
     "socials": "Social media",
     "ctaTitle": "Designing <i>immersive</i> events & <i>powerful</i> visual experiences <span>— from concept to execution.</span>",
@@ -309,6 +309,9 @@
     "contactName2": "dima mitch"
   },
   "bookModal": {
+    "consent": "By sending a request, you agree to the {terms} and the {privacy}.",
+    "consentTerms": "terms of use",
+    "consentPrivacy": "privacy policy",
     "title": "Send a request",
     "desc": "Fill in the form — tell us as much as you can about your event: date, venue, format.",
     "nameInput": "Name",
@@ -321,6 +324,78 @@
     "close": "Close",
     "orCall": "Or call us",
     "tryAgain": "Try again"
+  },
+  "Terms": {
+    "title": "Terms of use",
+    "content": [
+      {
+        "title": "1. General provisions",
+        "text": [
+          "These terms set out the rules for using the website of The Show Time agency (the “Agency”, “we”) and the relationship between the Agency and visitors to the website.",
+          "By opening and using the website you confirm that you have read these terms and accept them. How we handle personal data is described separately in our <a href=\"/privacy-policy\" class=\"underline underline-offset-4 hover:no-underline\">Privacy policy</a>."
+        ]
+      },
+      {
+        "title": "2. Purpose of the website and status of information",
+        "text": [
+          "The website presents the Agency, its artists and past events. All information is provided for reference only and is not a public offer.",
+          "The artist roster, descriptions, photos and videos may be updated without prior notice. An artist being listed on the website does not mean they are available on a particular date."
+        ]
+      },
+      {
+        "title": "3. Event requests",
+        "text": [
+          "A request sent through the form on the website is not a booking and creates no obligation for you or the Agency. Once we receive it, a manager will contact you to discuss the details.",
+          "Artist bookings, fees, dates and performance conditions are agreed individually and set out in a separate contract."
+        ]
+      },
+      {
+        "title": "4. Rights to materials",
+        "text": [
+          "Texts, photos, videos, the website design, logo and names belong to the Agency, the artists or other right holders and are protected by intellectual property law.",
+          "You may share links to pages of the website. Copying, publishing or using the materials commercially is only allowed with the written consent of the right holder."
+        ]
+      },
+      {
+        "title": "5. Rules of use",
+        "text": [
+          "When using the website, you may not:",
+          "— disrupt the website or try to access its non-public areas;<br>— collect information from the website by automated means;<br>— submit requests with someone else’s or knowingly false details;<br>— pretend to represent the Agency or its artists."
+        ]
+      },
+      {
+        "title": "6. Third-party services",
+        "text": [
+          "The website links to third-party resources such as Instagram, Telegram and music and video platforms. They operate under their own rules, and the Agency is not responsible for their content or operation."
+        ]
+      },
+      {
+        "title": "7. Limitation of liability",
+        "text": [
+          "We do our best to keep the information on the website accurate and up to date, but the website is provided “as is”. The Agency is not liable for temporary interruptions of the website or for decisions made solely on the basis of the information published on it.",
+          "This limitation does not affect your statutory rights or the parties’ obligations under signed contracts."
+        ]
+      },
+      {
+        "title": "8. Governing law and disputes",
+        "text": [
+          "These terms are governed by the laws of the Republic of Uzbekistan. Disputes are settled through negotiation and, if no agreement is reached, in court at the Agency’s location."
+        ]
+      },
+      {
+        "title": "9. Changes to these terms",
+        "text": [
+          "The Agency may update these terms. The new version applies from the moment it is published on this page; the date of the current version is shown below."
+        ]
+      },
+      {
+        "title": "10. Contact",
+        "text": [
+          "Questions about these terms can be asked by phone at <a href=\"tel:+998992226632\" class=\"transition-opacity hover:opacity-60\">+998 99 222 66 32</a>."
+        ]
+      }
+    ],
+    "updated": "Version of 20 November 2026"
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",

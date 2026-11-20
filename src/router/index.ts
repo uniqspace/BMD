@@ -43,6 +43,11 @@ const router = createRouter({
       component: () => import('../views/PrivacyPolicyView.vue'),
     },
     {
+      path: '/terms',
+      name: 'terms',
+      component: () => import('../views/TermsView.vue'),
+    },
+    {
       path: '/singers/:id',
       name: 'singer',
       component: SingerView,
