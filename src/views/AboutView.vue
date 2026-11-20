@@ -59,17 +59,12 @@
 
     </section>
 
-    <!-- Intro (variant 10): quote, signature, centered text, partner logos in two rows -->
+    <!-- Intro (variant 10): heading, signature, centered text, partner logos in two rows -->
     <section class="overflow-x-clip pt-10 pb-15 md:pt-14 md:pb-20 lg:pt-27.5 lg:pb-27.5">
       <div class="container flex flex-col items-center text-center">
-        <!-- Sparkle mark (replaces the big quote sign); box matches the old glyph's height -->
-        <svg class="size-[50px] text-[#18181829] md:size-[63px] lg:size-[108px]" viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" aria-hidden="true">
-          <path d="M36 6c2 16 6 26 30 30-24 4-28 14-30 30-2-16-6-26-30-30 24-4 28-14 30-30z" />
-          <path d="M58 10c.6 4 2 5.6 6 6-4 .6-5.4 2-6 6-.6-4-2-5.4-6-6 4-.4 5.4-2 6-6z" />
-        </svg>
         <h2
           v-html="t('about.quote')"
-          class="mt-3 max-w-270 font-heading md:mt-4 lg:mt-6 font-normal text-[28px]/[1.2] tracking-[-0.6px] md:text-[36px]/[1.2] md:tracking-[-1px] lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
+          class="max-w-270 font-heading font-normal text-[28px]/[1.2] tracking-[-0.6px] md:text-[36px]/[1.2] md:tracking-[-1px] lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
         />
         <!-- Signature sits exactly halfway between the quote and the text -->
         <span class="mt-[41px] text-[12px]/[1.4] uppercase tracking-[2px] text-[#1818184d] md:mt-[51px] md:text-[13px]/[1.4] lg:mt-14">{{ t('about.quoteBy') }}</span>
