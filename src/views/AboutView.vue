@@ -62,11 +62,10 @@
     <!-- Intro (variant 10): quote, signature, centered text, partner logos in two rows -->
     <section class="overflow-x-clip pt-10 pb-15 md:pt-14 md:pb-20 lg:pt-27.5 lg:pb-27.5">
       <div class="container flex flex-col items-center text-center">
-        <!-- Firework mark (replaces the big quote sign); box matches the old glyph's height -->
-        <svg class="size-[50px] text-[#18181866] md:size-[63px] lg:size-[108px]" viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" vector-effect="non-scaling-stroke" aria-hidden="true">
-          <circle cx="36" cy="30" r="2" />
-          <path d="M44.0 30.0L58.0 30.0" /><path d="M41.7 35.7L51.6 45.6" /><path d="M36.0 38.0L36.0 52.0" /><path d="M30.3 35.7L20.4 45.6" /><path d="M28.0 30.0L14.0 30.0" /><path d="M30.3 24.3L20.4 14.4" /><path d="M36.0 22.0L36.0 8.0" /><path d="M41.7 24.3L51.6 14.4" />
-          <path d="M36 52v14" opacity=".5" />
+        <!-- Sparkle mark (replaces the big quote sign); box matches the old glyph's height -->
+        <svg class="size-[50px] text-[#18181866] md:size-[63px] lg:size-[108px]" viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" aria-hidden="true">
+          <path d="M36 6c2 16 6 26 30 30-24 4-28 14-30 30-2-16-6-26-30-30 24-4 28-14 30-30z" />
+          <path d="M58 10c.6 4 2 5.6 6 6-4 .6-5.4 2-6 6-.6-4-2-5.4-6-6 4-.4 5.4-2 6-6z" />
         </svg>
         <h2
           v-html="t('about.quote')"
