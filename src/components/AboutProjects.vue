@@ -73,13 +73,13 @@
         {{ t('about.eventsTitle') }}
       </h2>
 
-      <div class="mt-10 flex flex-col gap-8 md:mt-12 lg:mt-15 lg:grid lg:grid-cols-[340px_1fr] lg:items-center lg:gap-15 xl:grid-cols-[360px_1fr]">
+      <div class="mt-10 flex flex-col gap-8 md:mt-12 lg:mt-15 xl:grid xl:grid-cols-[320px_1fr] xl:items-center xl:gap-15">
         <!-- Info column -->
-        <div class="order-2 flex flex-col gap-4 lg:order-1 lg:gap-5">
+        <div class="order-2 flex flex-col gap-4 lg:gap-5 xl:order-1">
           <span class="font-heading text-[56px]/[0.85] tracking-[-2px] text-[#18181833] md:text-[72px]/[0.85] lg:text-[96px]/[0.85] lg:tracking-[-4px]">{{ pad(active + 1) }}</span>
           <span class="text-[12px]/[1.4] uppercase tracking-[1.5px] text-[#18181899]">{{ t(`about.events.${current.id}.location`) }}</span>
           <span class="font-heading text-[30px]/[1.1] tracking-[-0.8px] md:text-[36px]/[1.1] lg:text-[40px]/[1.08] lg:tracking-[-1.2px]">{{ t(`about.events.${current.id}.title`) }}</span>
-          <div class="mt-2 flex items-center justify-between gap-6 lg:flex-col lg:items-start lg:gap-10">
+          <div class="mt-2 flex items-center justify-between gap-6 xl:flex-col xl:items-start xl:gap-10">
             <button
               type="button"
               @click="openModal"
@@ -110,7 +110,7 @@
 
         <!-- Card stack -->
         <div
-          class="order-1 pr-[calc(var(--peek)*2)] [--peek:18px] md:[--peek:30px] lg:order-2 lg:[--peek:44px]"
+          class="order-1 pr-[calc(var(--peek)*2)] [--peek:18px] md:[--peek:30px] lg:[--peek:40px] xl:order-2 xl:-mr-[max(60px,calc((100vw-1382px)/2+60px))] xl:pr-[calc(var(--peek)*2+24px)] xl:[--peek:48px]"
           @touchstart.passive="onTouchStart"
           @touchend="onTouchEnd"
         >
