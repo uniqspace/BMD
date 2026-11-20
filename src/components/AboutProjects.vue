@@ -73,7 +73,7 @@
         {{ t('about.eventsTitle') }}
       </h2>
 
-      <div class="mt-10 flex flex-col gap-8 md:mt-12 lg:mt-15 xl:grid xl:grid-cols-[320px_1fr] xl:items-center xl:gap-15">
+      <div class="mt-10 flex flex-col gap-8 md:mt-12 lg:mt-15 xl:grid xl:grid-cols-[360px_1fr] xl:items-center xl:gap-15">
         <!-- Info column -->
         <div class="order-2 flex flex-col gap-4 lg:gap-5 xl:order-1">
           <span class="font-heading text-[56px]/[0.85] tracking-[-2px] text-[#18181833] md:text-[72px]/[0.85] lg:text-[96px]/[0.85] lg:tracking-[-4px]">{{ pad(active + 1) }}</span>
@@ -110,7 +110,7 @@
 
         <!-- Card stack -->
         <div
-          class="order-1 pr-[calc(var(--peek)*2)] [--peek:18px] md:[--peek:30px] lg:[--peek:40px] xl:order-2 xl:-mr-[max(60px,calc((100vw-1382px)/2+60px))] xl:pr-[calc(var(--peek)*2+24px)] xl:[--peek:48px]"
+          class="order-1 pr-[calc(var(--peek)*2)] [--peek:18px] md:[--peek:30px] lg:mx-auto lg:w-full lg:max-w-190 lg:[--peek:36px] xl:order-2 xl:mr-0 xl:ml-auto xl:max-w-200 xl:[--peek:40px]"
           @touchstart.passive="onTouchStart"
           @touchend="onTouchEnd"
         >
