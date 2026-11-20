@@ -59,15 +59,15 @@
 
     </section>
 
-    <!-- Intro (variant 10): heading, signature, centered text, partner logos in two rows -->
+    <!-- Intro (variant 10): signature, heading, centered text, partner logos in two rows -->
     <section class="overflow-x-clip pt-10 pb-15 md:pt-14 md:pb-20 lg:pt-27.5 lg:pb-27.5">
       <div class="container flex flex-col items-center text-center">
+        <!-- Signature above the heading -->
+        <span class="text-[12px]/[1.4] uppercase tracking-[2px] text-[#1818184d] md:text-[13px]/[1.4]">{{ t('about.quoteBy') }}</span>
         <h2
           v-html="t('about.quote')"
-          class="max-w-270 font-heading font-normal text-[28px]/[1.2] tracking-[-0.6px] md:text-[36px]/[1.2] md:tracking-[-1px] lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
+          class="mt-5 max-w-270 font-heading font-normal text-[28px]/[1.2] tracking-[-0.6px] md:mt-6 md:text-[36px]/[1.2] md:tracking-[-1px] lg:mt-7 lg:text-[42px]/[1.2] lg:tracking-[-1.2px]"
         />
-        <!-- Signature sits exactly halfway between the quote and the text -->
-        <span class="mt-[41px] text-[12px]/[1.4] uppercase tracking-[2px] text-[#1818184d] md:mt-[51px] md:text-[13px]/[1.4] lg:mt-14">{{ t('about.quoteBy') }}</span>
 
         <!-- Body text: left-aligned on mobile and tablet (easier to read), centered on desktop -->
         <div class="mt-9 max-w-190 flex flex-col gap-5 text-left md:mt-[46px] lg:mt-[50px] lg:text-center">

@@ -29,7 +29,7 @@
           if (entries.some((e) => e.isIntersecting)) {
             const now = performance.now()
             if (binding.value === 'head') headAt = now
-            else if (now - headAt < 400 || !seen.head) extra[binding.value] = 650
+            else if (now - headAt < 400 || !seen.head) extra[binding.value] = 1300
             seen[binding.value] = true
             io.disconnect()
           }
@@ -40,9 +40,9 @@
     },
   }
 
-  const WORD_MS = 110
+  const WORD_MS = 220
   // Cells start after the heading has had time to appear; then stagger along a row (3 per row on desktop)
-  const cellDelay = (index: number) => `${(index % 3) * 120 + (extra['cell' + (index + 1)] ?? 0)}ms`
+  const cellDelay = (index: number) => `${(index % 3) * 240 + (extra['cell' + (index + 1)] ?? 0)}ms`
 </script>
 
 <template>
@@ -51,7 +51,7 @@
       <span class="reveal-fade text-[12px]/[100%] uppercase tracking-[3px] text-[#18181880]">{{ t('about.advEyebrow') }}</span>
       <h2 class="font-heading font-normal text-[#181818] text-[36px]/[1.05] tracking-[-1.2px] md:text-[48px]/[1.05] md:tracking-[-1.6px] lg:text-[56px]/[1.05] lg:tracking-[-2px]">
         <template v-for="(w, wi) in titleWords" :key="wi">
-          <span class="reveal-word" :style="{ transitionDelay: `${150 + wi * WORD_MS}ms` }"><i v-if="w.italic">{{ w.text }}</i><template v-else>{{ w.text }}</template></span>{{ ' ' }}
+          <span class="reveal-word" :style="{ transitionDelay: `${300 + wi * WORD_MS}ms` }"><i v-if="w.italic">{{ w.text }}</i><template v-else>{{ w.text }}</template></span>{{ ' ' }}
         </template>
       </h2>
     </div>
@@ -71,7 +71,7 @@
         <span class="reveal-up font-heading text-[56px]/[0.9] tracking-[-2px] text-[#18181833] md:text-[64px]/[0.9] lg:text-[72px]/[0.9]" :style="{ transitionDelay: cellDelay(index) }">
           {{ String(i).padStart(2, '0') }}
         </span>
-        <div class="reveal-up flex flex-col gap-2.5" :style="{ transitionDelay: `calc(${cellDelay(index)} + 120ms)` }">
+        <div class="reveal-up flex flex-col gap-2.5" :style="{ transitionDelay: `calc(${cellDelay(index)} + 240ms)` }">
           <p class="text-[18px]/[1.25] tracking-[-0.4px] text-[#181818] md:text-[20px]/[1.25]">{{ t(`about.slider.slide${i}.title`) }}</p>
           <p class="font-normal text-[15px]/[1.5] text-[#18181899]">{{ t(`about.slider.slide${i}.text`) }}</p>
         </div>
@@ -86,16 +86,16 @@
   opacity: 0;
   transform: translateY(0.45em);
   filter: blur(6px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease;
+  transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), filter 1.2s ease;
 }
 .reveal-fade {
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 1s ease;
 }
 .reveal-up {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 1.2s ease, transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .is-in .reveal-word,
 .is-in .reveal-up,
