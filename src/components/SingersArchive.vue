@@ -100,7 +100,6 @@ const filteredSingers = computed<Singer[]>(() => {
                             :class="[gi === litGenre ? 'text-white' : 'text-white/16 group-hover:text-white/24', gi % 3 === 1 && 'italic']"
                         >{{ genre }}</span>
                     </span>
-                    <span class="max-w-65 font-normal text-[15px]/[1.5] text-white/70">{{ t('anyArtist.text') }}</span>
                 </button>
                 <button type="button" @click="isBookOpen = true" class="flex gap-3 items-center cursor-pointer text-left">
                     <h4 class="text-[18px] md:text-[22px] uppercase">{{ t('anyArtist.cta') }}</h4>
