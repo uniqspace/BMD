@@ -38,6 +38,40 @@
     ]
   },
   "about": {
+    "services": {
+      "eyebrow": "Services",
+      "title": "What we <i>do</i>",
+      "items": [
+        {
+          "title": "Turnkey events",
+          "text": "Private and public events of any scale: concept, programme, artists, production and on-the-day coordination."
+        },
+        {
+          "title": "State events",
+          "text": "Holidays, forums and official ceremonies that follow protocol, deadlines and security requirements."
+        },
+        {
+          "title": "Corporate events",
+          "text": "New Year parties, company anniversaries, presentations and team building — with a programme that brings the team together."
+        },
+        {
+          "title": "Music and art direction for venues",
+          "text": "We shape the sound and atmosphere of a restaurant, bar or club: concept, residents, playlists and evening programmes."
+        },
+        {
+          "title": "Programmes for HoReCa",
+          "text": "Regular nights, seasonal events and special projects for hotels, restaurants and cafés."
+        },
+        {
+          "title": "Artist booking and travel",
+          "text": "From local performers to world-class stars: negotiations, rider, logistics and support at the venue."
+        },
+        {
+          "title": "Consulting for hotels and cafés",
+          "text": "We help build a venue's entertainment strategy: format, budget, team and contractors."
+        }
+      ]
+    },
     "projectsPrev": "Previous project",
     "projectsNext": "Next project",
     "projectsMore": "Details",

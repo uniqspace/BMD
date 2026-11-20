@@ -5,6 +5,7 @@
   import AboutAdvantages from '@/components/AboutAdvantages.vue'
   import AboutPartners from '@/components/AboutPartners.vue'
   import AboutProjects from '@/components/AboutProjects.vue'
+  import AboutServices from '@/components/AboutServices.vue'
   import { computed, onMounted, ref } from 'vue'
 
   const { t, locale } = useI18n()
@@ -91,6 +92,9 @@
 
     <!-- Completed projects (card-stack carousel) -->
     <AboutProjects />
+
+    <!-- Services (big list, photo follows the cursor) -->
+    <AboutServices />
 
     <!-- Founders (swipeable slider on tablet / mobile) -->
     <AboutFounders />
