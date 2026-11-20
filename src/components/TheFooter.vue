@@ -18,7 +18,7 @@ const { t } = useI18n()
 
 // Same rows as the mobile menu (MobileMenuModal.vue)
 const mobileRowClass = 'flex justify-between items-center py-5 border-b border-white/12 text-[17px]/[100%]'
-const linkClass = 'text-[15px]/[100%] transition-opacity hover:opacity-60'
+const linkClass = 'text-[14px]/[100%] transition-opacity hover:opacity-60'
 // Dark footer on mobile/tablet, light on desktop (lg+)
 const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.5px] text-white/50 lg:text-[#6b6b6b]'
 </script>
@@ -69,7 +69,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <!-- Navigation column (tablet and desktop) -->
                     <div>
                         <span :class="titleClass">{{ t("nav.nav") }}</span>
-                        <ul class="flex flex-col gap-3">
+                        <ul class="flex flex-col gap-2.5 leading-none">
                             <li><RouterLink to="/" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
                             <li><RouterLink to="/artists" :class="linkClass">{{ t("nav.artists") }}</RouterLink></li>
                             <li><RouterLink to="/#events" :class="linkClass">{{ t("nav.events") }}</RouterLink></li>
