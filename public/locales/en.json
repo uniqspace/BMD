@@ -77,8 +77,24 @@
         "text": "They brought the artist we had only dreamed of and organised everything themselves.",
         "name": "Dilnoza A.",
         "role": "Private client"
+      },
+      {
+        "text": "The wedding went exactly as we wanted. Not a single hitch all evening.",
+        "name": "Kamila & Rustam",
+        "role": "Private clients"
+      },
+      {
+        "text": "A corporate party for 400 people and not one question from our side. They took care of everything.",
+        "name": "Sardor M.",
+        "role": "Marketing Director"
+      },
+      {
+        "text": "They put together a music programme for our restaurant, and guests started staying longer.",
+        "name": "Elena V.",
+        "role": "Restaurant owner"
       }
-    ]
+    ],
+    "of": "of"
   },
   "about": {
     "services": {
