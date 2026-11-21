@@ -39,9 +39,46 @@
     ]
   },
   "aboutPage": {
-    "title": "The team that <i>makes events happen</i>",
-    "lead": "The Show Time Agency is a full-cycle event agency from Tashkent. Since 2009 we have created events of every scale, from private evenings to state celebrations and concerts for thousands of guests. We take care of everything, from the idea and the artists to production and quality control on the day.",
-    "foundersTitle": "Founders"
+    "title": "We make <i>events</i>",
+    "lead": "The Show Time Agency is an event agency from Tashkent. We take care of the concept, artists, production and coordination so that on the day you can simply be with your guests.",
+    "photoAlt": "The Show Time team on set",
+    "principlesTitle": "Principles",
+    "principles": [
+      {
+        "title": "Responsibility",
+        "text": "We answer for the result, not just the process."
+      },
+      {
+        "title": "Attention to detail",
+        "text": "Timing, sound, light and guests — under control."
+      },
+      {
+        "title": "Honest estimate",
+        "text": "We name the real cost upfront, with no surprises later."
+      },
+      {
+        "title": "Peace of mind",
+        "text": "We handle the organisation, you stay with your guests."
+      }
+    ],
+    "reviewsTitle": "Reviews",
+    "reviews": [
+      {
+        "text": "The team delivered a complex project on a tight deadline. Guests still remember that evening.",
+        "name": "Anna K.",
+        "role": "HR Director, bank"
+      },
+      {
+        "text": "Everything on time, artists punctual, no surprises. Working together felt easy.",
+        "name": "Timur R.",
+        "role": "Manager, hotel"
+      },
+      {
+        "text": "They brought the artist we had only dreamed of and organised everything themselves.",
+        "name": "Dilnoza A.",
+        "role": "Private client"
+      }
+    ]
   },
   "about": {
     "services": {
