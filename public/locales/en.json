@@ -1,6 +1,7 @@
 {
   "meta": {
-    "homeTitle": "The Show Time Agency"
+    "homeTitle": "The Show Time Agency",
+    "aboutTitle": "About — The Show Time Agency"
   },
   "nav": {
     "artists": "Artists",
@@ -36,6 +37,11 @@
       "Ethno",
       "Show"
     ]
+  },
+  "aboutPage": {
+    "title": "The team that <i>makes events happen</i>",
+    "lead": "The Show Time Agency is a full-cycle event agency from Tashkent. Since 2009 we have created events of every scale, from private evenings to state celebrations and concerts for thousands of guests. We take care of everything, from the idea and the artists to production and quality control on the day.",
+    "foundersTitle": "Founders"
   },
   "about": {
     "services": {

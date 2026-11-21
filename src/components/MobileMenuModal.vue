@@ -56,7 +56,7 @@ function goToContacts() {
         <div class="flex-1 flex flex-col pt-6 pb-8">
         <div class="container flex-1 flex flex-col w-full">
             <nav :aria-label="t('nav.nav')" class="border-t border-white/12">
-                <RouterLink to="/" :class="rowClass" @click="close">{{ t('nav.about') }}<ArrowIcon /></RouterLink>
+                <RouterLink to="/about" :class="rowClass" @click="close">{{ t('nav.about') }}<ArrowIcon /></RouterLink>
                 <RouterLink to="/artists" :class="rowClass" @click="close">{{ t('nav.artists') }}<ArrowIcon /></RouterLink>
                 <RouterLink to="/#events" :class="rowClass" @click="close">{{ t('nav.events') }}<ArrowIcon /></RouterLink>
                 <button type="button" :class="[rowClass, 'w-full cursor-pointer']" @click="goToContacts">{{ t('nav.feedback') }}<ArrowIcon /></button>

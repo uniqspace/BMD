@@ -40,7 +40,7 @@
     })
 
     const navItems = computed(() => [
-        { to: '/', label: t('nav.about'), active: route.path === '/' && route.hash !== '#events' },
+        { to: '/about', label: t('nav.about'), active: route.path === '/about' },
         { to: '/artists', label: t('nav.artists'), active: route.path === '/artists' || route.path.startsWith('/singers') },
         { to: '/#events', label: t('nav.events'), active: route.path === '/' && route.hash === '#events' },
         { to: '#contacts', label: t('nav.feedback'), active: false, scroll: true },

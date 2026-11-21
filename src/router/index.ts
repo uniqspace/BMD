@@ -24,12 +24,21 @@ const router = createRouter({
   },
   routes: [
     {
-      // Main page of the site: the agency ("О нас")
+      // Main page of the site
       path: '/',
       name: 'home',
       component: AboutView,
       meta: {
         titleKey: 'meta.homeTitle'
+      }
+    },
+    {
+      // Inner page: about the agency and its founders
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AgencyView.vue'),
+      meta: {
+        titleKey: 'meta.aboutTitle'
       }
     },
     {

@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
   import { yearsInBusiness } from '@/lib/agency'
-  import AboutFounders from '@/components/AboutFounders.vue'
   import AboutAdvantages from '@/components/AboutAdvantages.vue'
   import AboutPartners from '@/components/AboutPartners.vue'
   import AboutProjects from '@/components/AboutProjects.vue'
@@ -96,8 +95,6 @@
     <!-- Services (big list, photo follows the cursor) -->
     <AboutServices />
 
-    <!-- Founders (swipeable slider on tablet / mobile) -->
-    <AboutFounders />
   </main>
 
 </template>

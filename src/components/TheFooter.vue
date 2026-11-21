@@ -44,7 +44,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
             <!-- Mobile: menu as full-width rows, round contact buttons, phone and address -->
             <div class="mt-11 md:hidden">
                 <nav :aria-label="t('nav.nav')" class="border-t border-white/12">
-                    <RouterLink to="/" :class="mobileRowClass">{{ t("nav.about") }}<ArrowIcon /></RouterLink>
+                    <RouterLink to="/about" :class="mobileRowClass">{{ t("nav.about") }}<ArrowIcon /></RouterLink>
                     <RouterLink to="/artists" :class="mobileRowClass">{{ t("nav.artists") }}<ArrowIcon /></RouterLink>
                     <RouterLink to="/#events" :class="mobileRowClass">{{ t("nav.events") }}<ArrowIcon /></RouterLink>
                     <button type="button" :class="[mobileRowClass, 'w-full cursor-pointer']" @click="scrollToContacts">{{ t("nav.feedback") }}<ArrowIcon /></button>
@@ -70,7 +70,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                     <div>
                         <span :class="titleClass">{{ t("nav.nav") }}</span>
                         <ul class="flex flex-col gap-2.5 leading-none">
-                            <li><RouterLink to="/" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
+                            <li><RouterLink to="/about" :class="linkClass">{{ t("nav.about") }}</RouterLink></li>
                             <li><RouterLink to="/artists" :class="linkClass">{{ t("nav.artists") }}</RouterLink></li>
                             <li><RouterLink to="/#events" :class="linkClass">{{ t("nav.events") }}</RouterLink></li>
                             <li><button type="button" :class="[linkClass, 'cursor-pointer']" @click="scrollToContacts">{{ t("nav.feedback") }}</button></li>
