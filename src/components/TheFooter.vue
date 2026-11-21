@@ -102,7 +102,7 @@ const titleClass = 'block mb-4 md:mb-5 text-[12px]/[100%] uppercase tracking-[0.
                 </div>
             </div>
 
-            <div class="font-normal flex flex-col gap-2 mt-11 pt-8 border-t border-white/12 lg:border-t-0 lg:pt-0 text-[13px]/[100%] md:gap-3 md:mt-12 md:pt-10 text-white/55 lg:text-[#b8b8b8] md:flex-row md:flex-wrap md:gap-x-8 md:mt-14 md:text-[14px]/[100%]">
+            <div class="font-light flex flex-col gap-2 mt-11 pt-8 border-t border-white/12 lg:border-t-0 lg:pt-0 text-[13px]/[100%] md:gap-3 md:mt-12 md:pt-10 text-white/55 lg:text-[#b8b8b8] md:flex-row md:flex-wrap md:gap-x-8 md:mt-14 md:text-[14px]/[100%]">
                 <span>{{ FOUNDED_YEAR }}-{{ currentYear }}, The Show Time. {{ t("footer.rights") }}.</span>
                 <div class="flex flex-col gap-2 md:flex-row md:gap-5 lg:text-[#cbcbcb]">
                     <RouterLink to="/terms" class="underline underline-offset-4 hover:no-underline">
